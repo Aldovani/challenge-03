@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 export function Footer() {
   return (
-    <footer className="    border-t border-black/15">
+    <footer className="bg-white  border-t border-black/15">
       <div className="container mx-auto ">
         <div className="flex max-lg:flex-wrap gap-10 px-4 py-12 justify-between">
           <div>
