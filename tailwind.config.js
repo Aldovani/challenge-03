@@ -25,6 +25,9 @@ export default {
           50: '#F4F5F7',
         },
       },
+      boxShadow: {
+        'social-link': '0px 4px 14px 0px rgba(0, 0, 0, 0.15)',
+      },
     },
   },
   plugins: [],
