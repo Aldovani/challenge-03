@@ -3,7 +3,7 @@ import { ActiveLink } from './active-link'
 
 export function Header() {
   return (
-    <header className="py-8  fixed bg-white w-full">
+    <header className="py-8 z-50 fixed bg-white w-full">
       <div className="container mx-auto  flex  justify-between">
         <NavLink to="/">
           <img src="/logo.svg" alt="" />
