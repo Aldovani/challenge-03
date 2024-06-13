@@ -6,10 +6,10 @@ export function CartTable() {
       <thead className="bg-primary-100 ">
         <tr>
           <th></th>
-          <th className="py-4 text-start font-medium">Product</th>
-          <th className="py-4 text-start font-medium">Price</th>
-          <th className="py-4 text-start font-medium">Quantity</th>
-          <th className="py-4 text-start font-medium">Subtotal</th>
+          <th className="p-4 text-start font-medium">Product</th>
+          <th className="p-4 text-start font-medium">Price</th>
+          <th className="p-4 text-start font-medium">Quantity</th>
+          <th className="p-4 text-start font-medium">Subtotal</th>
           <th></th>
         </tr>
       </thead>

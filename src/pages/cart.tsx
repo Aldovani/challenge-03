@@ -7,8 +7,8 @@ export function CartPage() {
   return (
     <main className=" w-full   pt-[6.25rem] ">
       <Banner page="Cart" />
-      <div className="relative mt-[4.5rem] container mx-auto pt-24 pb-16 max-sm:px-6 grid  lg:grid-cols-[1fr_24.5625rem] gap-8 ">
-        <div className="w-full overflow-x-auto">
+      <div className="relative mt-[4.5rem] container mx-auto pt-24 pb-16 max-sm:px-6 grid  lg:grid-cols-[1fr_24.5625rem] gap-16 ">
+        <div className="pb-6  w-full overflow-x-auto">
           <CartTable />
         </div>
         <div className="sticky   top-[100px] left-0 h-fit flex  flex-col items-center  pt-4 pb-20 bg-primary-200">
