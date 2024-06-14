@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex max-lg:flex-wrap gap-10 px-4 py-12 justify-between">
           <div>
             <NavLink to="/" className="text-2xl font-bold">
-              Funino
+              Funiro
             </NavLink>
             <p className="mt-14 text-gray-200 max-w-[17.8125rem]">
               400 University Drive Suite 200 Coral Gables, <br /> FL 33134 USA
@@ -116,7 +116,7 @@ export function Footer() {
                 placeholder="Enter Your Email Address"
                 className="focus:border-primary-500 w-[12.5rem] text-sm border-b outline-none pb-1 border-black placeholder:text-gray-200"
               />
-              <button className="text-sm font-medium border-b border-black relative hover:border-primary-500 focus:border-primary-500 transition-colors hover:text-white after:absolute after:bottom-0 after:left-0 after:w-full after:block after:pointer-events-none hover:after:h-full after:translate-y-[1px] after:z-[-1] after:h-[1px] after:bg-primary-500 after:transition-all">
+              <button className="text-sm font-medium border-b border-black relative hover:border-primary-500 focus:border-primary-500 transition-colors hover:text-primary-500 ">
                 SUBSCRIBE
               </button>
             </form>
