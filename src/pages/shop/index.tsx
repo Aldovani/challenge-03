@@ -1,8 +1,8 @@
-import { Banner } from '../components/banner'
-import { Benefits } from '../components/benefits'
-import { FilterBar } from '../components/filter-bar'
-import { Pagination } from '../components/pagination'
-import { ProductList } from '../components/product/product-list'
+import { Banner } from '../../components/banner'
+import { Benefits } from '../../components/benefits'
+import { FilterBar } from '../../components/filter-bar'
+import { Pagination } from '../../components/pagination'
+import { ProductList } from '../../components/product/product-list'
 
 export function ShopPage() {
   return (
