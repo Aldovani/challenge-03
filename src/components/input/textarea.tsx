@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, forwardRef, Ref } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const textarea = tv({
@@ -7,6 +7,6 @@ const textarea = tv({
 
 type TextareaProps = ComponentProps<'textarea'> & VariantProps<typeof textarea>
 
-export function Textarea({ className, ...props }: TextareaProps) {
-  return <textarea className={textarea({ className })} {...props}></textarea>
-}
+export const Textarea=forwardRef(({ className, ...props }: TextareaProps,ref:Ref<HTMLTextAreaElement> | null)=> {
+  return <textarea ref={ref} className={textarea({ className })} {...props}></textarea>
+})
