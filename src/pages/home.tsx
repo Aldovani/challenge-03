@@ -1,5 +1,6 @@
 import { Link } from '../components/Link'
 import { ProductList } from '../components/product/product-list'
+import { Slide } from '../components/slide'
 
 export function HomePage() {
   return (
@@ -8,10 +9,10 @@ export function HomePage() {
         <main className="bg-[url(/hero.jpg)] pt-40 pb-32">
           <div className="mx-auto container grid grid-cols-1 lg:grid-cols-2  max-sm:px-8 ">
             <div className="pt-16 px-10 pb-10  bg-primary-400 rounded-[0.625rem] col-start-2 col-end-3">
-              <span className="text-2xl font-semibold text-[#333] tracking-[3px]">
+              <span className="text-xl lg:text-2xl font-semibold text-[#333] tracking-[3px]">
                 New Arrival
               </span>
-              <h1 className="text-[52px] font-bold text-primary-500">
+              <h1 className="lg:text-[52px] text-5xl font-bold text-primary-500">
                 Discover Our New Collection
               </h1>
               <p className="mt-4 text-lg text-[#333] font-medium max-w-[546px]">
@@ -27,12 +28,12 @@ export function HomePage() {
         </main>
       </div>
 
-      <section className="container mx-auto py-14 flex flex-col items-center">
+      <section className="container mx-auto max-sm:px-8 py-14 flex flex-col items-center">
         <h3 className="font-bold text-[2rem] ">Browse The Range</h3>
-        <p className="text-[#666] text-xl">
+        <p className="text-[#666] text-xl text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <div className="grid mt-16 justify-center grid-cols-[380px_380px_380px] gap-5">
+        <div className="grid mt-16 justify-center    grid-cols-1  lg:grid-cols-[380px_380px_380px] gap-5">
           <div className="flex flex-col gap-8 items-center">
             <div className="overflow-hidden rounded-[10px] ">
               <img
@@ -78,15 +79,36 @@ export function HomePage() {
         </Link>
       </section>
 
-      <section></section>
+      <section className="bg-primary-100 py-11  mt-16">
+        <div className="container mx-auto relative max-md:px-8  grid-cols-1 grid lg:grid-cols-[422px_1fr] items-center  gap-10">
+          <div>
+            <h2 className="text-[2.5rem] font-bold text-gray-500 ">
+              50+ Beautiful rooms inspiration
+            </h2>
+            <p className="font-medium text-gray-400 mt-2">
+              Our designer already made a lot of beautiful prototipe of rooms
+              that inspire you
+            </p>
+            <Link to="/shop" className="mt-6">
+              Explore More
+            </Link>
+          </div>
 
-      <section className=" max-w-[1440px] overflow-hidden mx-auto  ">
-        <div>
-          <span>Share your setup with</span>
-          <h3>#FuniroFurniture</h3>
+          <Slide />
+        </div>
+      </section>
+
+      <section className=" container mt-16  mx-auto  ">
+        <div className=" flex flex-col justify-center items-center">
+          <span className="text-gray-400 font-semibold text-xl">
+            Share your setup with
+          </span>
+          <h3 className="text-[2.5rem] font-bold text-gray-500 mt-2">
+            #FuniroFurniture
+          </h3>
         </div>
 
-        <div className="relative w-[1440px]  h-[780px] xl:overflow-hidden">
+        <div className="relative w-[1440px]  h-[780px] ">
           <img
             src="/image 1-1.png"
             alt=""
