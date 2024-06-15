@@ -7,6 +7,19 @@ const textarea = tv({
 
 type TextareaProps = ComponentProps<'textarea'> & VariantProps<typeof textarea>
 
-export const Textarea=forwardRef(({ className, ...props }: TextareaProps,ref:Ref<HTMLTextAreaElement> | null)=> {
-  return <textarea ref={ref} className={textarea({ className })} {...props}></textarea>
-})
+export const Textarea = forwardRef(
+  (
+    { className, ...props }: TextareaProps,
+    ref: Ref<HTMLTextAreaElement> | null,
+  ) => {
+    return (
+      <textarea
+        ref={ref}
+        className={textarea({ className })}
+        {...props}
+      ></textarea>
+    )
+  },
+)
+
+Textarea.displayName = 'Textarea'
