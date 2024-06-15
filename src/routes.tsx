@@ -4,7 +4,7 @@ import { DefaultLayout } from './layouts/default-layout'
 import { HomePage } from './pages/home'
 import { ShopPage } from './pages/shop'
 import { ProductDetailsPage } from './pages/shop/name'
-import { ContactPage } from './pages/contact'
+import { ContactPage } from './pages/contact/'
 import { CartPage } from './pages/cart'
 import { CheckoutPage } from './pages/checkout'
 
