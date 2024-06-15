@@ -7,6 +7,8 @@ import { ProductDetailsPage } from './pages/shop/name'
 import { ContactPage } from './pages/contact/'
 import { CartPage } from './pages/cart'
 import { CheckoutPage } from './pages/checkout'
+import { AuthLayout } from './layouts/auth-layout'
+import { SignInPage } from './pages/auth/sign-in'
 
 export const router = createBrowserRouter([
   {
@@ -20,5 +22,10 @@ export const router = createBrowserRouter([
       { element: <CartPage />, path: '/cart' },
       { element: <CheckoutPage />, path: '/check-out' },
     ],
+  },
+  {
+    path: '/auth',
+    element: <AuthLayout />,
+    children: [{ element: <SignInPage />, path: '/auth/sign-in' }],
   },
 ])
