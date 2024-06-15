@@ -8,7 +8,7 @@ const link = tv({
   base: ' flex   justify-center   py-3 px-20 font-semibold',
   variants: {
     variants: {
-      filled: 'bg-primary-500 text-white',
+      filled: 'bg-primary-500 text-white hover:bg-opacity-80',
       outline:
         ' border border-primary-500 text-primary-500  transition-colors hover:text-white hover:bg-primary-500',
     },
