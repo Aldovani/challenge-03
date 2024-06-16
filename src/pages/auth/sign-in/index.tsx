@@ -4,7 +4,13 @@ import { Input } from '../../../components/input'
 import { useSignIn } from './use-sign-in'
 
 export function SignInPage() {
-  const { errors, handleSubmit, register } = useSignIn()
+  const {
+    errors,
+    handleSubmit,
+    register,
+    handleSignInWithFacebook,
+    handleSignInWithGoogle,
+  } = useSignIn()
 
   return (
     <main className="flex flex-col py-8  sm:py-10 px-8 sm:px-20">
@@ -38,17 +44,6 @@ export function SignInPage() {
           />
           <Input.MessageError error={errors.email?.message} />
         </Input.Label>
-        <Input.Label className="mt-4" name="Password" htmlFor="password">
-          <Input.Field
-            id="password"
-            type="password"
-            placeholder="••••••••••"
-            className="mt-5"
-            isError={!!errors.password}
-            {...register('password')}
-          />
-          <Input.MessageError error={errors.password?.message} />
-        </Input.Label>
 
         <Button type="submit" className="mt-4">
           Sign-in
@@ -62,8 +57,12 @@ export function SignInPage() {
       </div>
 
       <div className="flex flex-col gap-4 mt-8">
-        <Button variants="outline">Sign with Google</Button>
-        <Button variants="outline">Sign with Facebook</Button>
+        <Button variants="outline" onClick={handleSignInWithGoogle}>
+          Sign-in with Google
+        </Button>
+        <Button variants="outline" onClick={handleSignInWithFacebook}>
+          Sign-in with Facebook
+        </Button>
       </div>
     </main>
   )
