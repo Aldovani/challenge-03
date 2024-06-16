@@ -28,6 +28,21 @@ export default {
       boxShadow: {
         'social-link': '0px 4px 14px 0px rgba(0, 0, 0, 0.15)',
       },
+      keyframes: {
+        'open-cart': {
+          '0%': { transform: 'translateX(100%)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        'close-cart': {
+          '0%': { transform: 'translateX(0)', opacity: 1 },
+          '100%': { transform: 'translateX(100%)', opacity: 0 },
+        },
+      },
+
+      animation: {
+        'open-cart': 'open-cart 0.2s ease forwards',
+        'close-cart': 'close-cart 0.2s ease forwards',
+      },
     },
   },
   plugins: [],
