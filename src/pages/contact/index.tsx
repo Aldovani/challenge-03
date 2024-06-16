@@ -1,3 +1,4 @@
+import { ICONS } from '../../assets/icons.js'
 import { Banner } from '../../components/banner/index.js'
 import { Benefits } from '../../components/benefits/index.js'
 import { Button } from '../../components/button/index.js'
@@ -25,7 +26,7 @@ export function ContactPage() {
         <div className="max-w-[953px] mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 mt-28">
           <div className="flex flex-col gap-11">
             <div className="flex items-start gap-8">
-              <img src="/location.svg" alt="" />
+              <img src={ICONS.location} alt="location icon" />
               <div>
                 <h5 className="text-2xl font-medium ">Address</h5>
                 <p className="max-w-[13.25rem]">
@@ -34,7 +35,7 @@ export function ContactPage() {
               </div>
             </div>
             <div className="flex items-start gap-8">
-              <img src="/phone.svg" alt="" />
+              <img src={ICONS.phone} alt="phone icon" />
 
               <div>
                 <h5 className="text-2xl font-medium">Phone</h5>
@@ -45,7 +46,7 @@ export function ContactPage() {
               </div>
             </div>
             <div className="flex items-start gap-8">
-              <img src="/clock-fill.svg" alt="" />
+              <img src={ICONS['clock-fill']} alt=" clock icon" />
 
               <div>
                 <h5 className="text-2xl font-medium">Working Time</h5>

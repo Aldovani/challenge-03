@@ -1,15 +1,25 @@
+import { ICONS } from '../../assets/icons'
+
 export function FilterBar() {
   return (
     <div className="bg-primary-200 px-8">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex gap-8 items-center">
           <div className="flex gap-6">
-            <div className="flex items-center">
-              <img src="/filtering.svg" alt="" />
+            <div className="flex gap-2 items-center cursor-pointer hover:opacity-50">
+              <img src={ICONS.filtering} alt="filter icon" />
               <span>filter</span>
             </div>
-            <img src="/grid-big-round.svg" alt="" />
-            <img src="/view-list.svg" alt="" />
+            <img
+              src={ICONS['grid-big-round']}
+              alt="grid icon"
+              className="cursor-pointer hover:opacity-50"
+            />
+            <img
+              src={ICONS['view-list']}
+              alt="view-list icon"
+              className="cursor-pointer hover:opacity-50"
+            />
           </div>
           <span className="block h-[37px] w-[1px] bg-gray-300 "></span>
           <p>Showing 1–16 of 32 results</p>

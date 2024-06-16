@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { ICONS } from '../../assets/icons'
 
 export function ProductItem() {
   const navigate = useNavigate()
@@ -46,15 +47,15 @@ export function ProductItem() {
 
         <div className="flex items-center gap-5 mt-6">
           <div className="flex gap-1 hover:brightness-50">
-            <img src="/gridicons_share.svg" alt="" />
+            <img src={ICONS.share} alt="share icon" />
             <span className="font-semibold text-white ">Share</span>
           </div>
           <div className="flex gap-1 hover:brightness-50">
-            <img src="/compare-svgrepo-com 1.svg" alt="" />
+            <img src={ICONS.compare} alt="compare icon" />
             <span className="font-semibold text-white ">Compare</span>
           </div>
           <div className="flex gap-1 hover:brightness-50">
-            <img src="/Heart.svg" alt="" />
+            <img src={ICONS.heart} alt="liked icon" />
             <span className="font-semibold text-white ">Like</span>
           </div>
         </div>

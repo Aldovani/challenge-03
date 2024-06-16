@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { ICONS } from '../../assets/icons'
 
 export function Footer() {
   return (
@@ -17,34 +18,58 @@ export function Footer() {
               <ul className="flex gap-4">
                 <li>
                   <a
-                    href=""
+                    href="https://www.facebook.com"
+                    target="_blank"
                     className="shadow-social-link  size-8 items-center justify-center flex rounded-full hover:bg-primary-400  transition-colors "
+                    rel="noreferrer"
                   >
-                    <img src="/facebook.svg" alt="" className="size-3" />
+                    <img
+                      src={ICONS.facebook}
+                      alt="facebook icon"
+                      className="size-3"
+                    />
                   </a>
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="https://www.instagram.com"
+                    target="_blank"
                     className="shadow-social-link size-8 items-center justify-center flex rounded-full hover:bg-primary-400  transition-colors"
+                    rel="noreferrer"
                   >
-                    <img src="/instagram.svg" alt="" className="size-3" />
+                    <img
+                      src={ICONS.instagram}
+                      alt="instagram icon"
+                      className="size-3"
+                    />
                   </a>
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="https://www.twitter.com"
+                    target="_blank"
                     className="shadow-social-link size-8 items-center justify-center flex rounded-full hover:bg-primary-400  transition-colors"
+                    rel="noreferrer"
                   >
-                    <img src="/twitter.svg" alt="" className="size-3" />
+                    <img
+                      src={ICONS.twitter}
+                      alt="twitter icon"
+                      className="size-3"
+                    />
                   </a>
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="https://www.linkedin.com"
+                    target="_blank"
                     className="shadow-social-link size-8 items-center justify-center flex rounded-full hover:bg-primary-400  transition-colors"
+                    rel="noreferrer"
                   >
-                    <img src="/linkedin.svg" alt="" className="size-3" />
+                    <img
+                      src={ICONS.linkedin}
+                      alt="linkedin icon"
+                      className="size-3"
+                    />
                   </a>
                 </li>
               </ul>

@@ -1,5 +1,6 @@
 import { SplideSlide } from '@splidejs/react-splide'
 import { Link } from 'react-router-dom'
+import { ICONS } from '../../assets/icons'
 
 type SlideItemProps = {
   imgUrl: string
@@ -32,7 +33,7 @@ export function SlideItem({ imgUrl, name, number, room }: SlideItemProps) {
             to="/shop"
             className="bg-primary-500 size-12 flex items-center justify-center hover:opacity-90"
           >
-            <img src="/arrow-right.svg" alt="" />
+            <img src={ICONS['arrow-right']} alt="arrow right icon" />
           </Link>
         </footer>
       </article>

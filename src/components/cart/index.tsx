@@ -2,6 +2,7 @@ import { CartList } from './list'
 import { CartFooter } from './footer'
 import { ReactPortal } from '../react-portal'
 import { useCart } from './useCart'
+import { ICONS } from '../../assets/icons'
 
 type CartProps = {
   isOpen: boolean
@@ -30,7 +31,7 @@ export function Cart({ isOpen, isOpening, onClose }: CartProps) {
               <header className="flex items-center justify-between pr-10 pt-7 pl-8">
                 <h2 className="font-semibold text-2xl">Shopping Cart</h2>
                 <button onClick={handleClose}>
-                  <img src="/close-cart.svg" alt="" />
+                  <img src={ICONS['close-cart']} alt="close cart icon" />
                 </button>
               </header>
               <div className="px-16 pl-8 pr-[100px] mt-6">

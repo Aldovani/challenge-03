@@ -1,3 +1,4 @@
+import { IMAGES } from '../assets/images'
 import { Link } from '../components/Link'
 import { ProductList } from '../components/product/product-list'
 import { Slide } from '../components/slide'
@@ -6,7 +7,10 @@ export function HomePage() {
   return (
     <>
       <div className="pt-28">
-        <main className="bg-[url(/hero.jpg)] pt-40 pb-32">
+        <main
+          style={{ backgroundImage: `url(${IMAGES.hero})` }}
+          className="pt-40 pb-32"
+        >
           <div className="mx-auto container grid grid-cols-1 lg:grid-cols-2  max-sm:px-8 ">
             <div className="pt-16 px-10 pb-10  bg-primary-400 rounded-[0.625rem] col-start-2 col-end-3">
               <span className="text-xl lg:text-2xl font-semibold text-[#333] tracking-[3px]">
@@ -37,7 +41,7 @@ export function HomePage() {
           <div className="flex flex-col gap-8 items-center">
             <div className="overflow-hidden rounded-[10px] ">
               <img
-                src="/dining.png"
+                src={IMAGES.dining}
                 className="hover:scale-125 transition-transform "
                 alt=""
               />
@@ -47,7 +51,7 @@ export function HomePage() {
           <div className="flex flex-col gap-8 items-center">
             <div className="overflow-hidden rounded-[10px] ">
               <img
-                src="/livingroom.png"
+                src={IMAGES.livingroom}
                 className="hover:scale-125  transition-transform "
                 alt=""
               />
@@ -57,7 +61,7 @@ export function HomePage() {
           <div className="flex flex-col gap-8 items-center">
             <div className="overflow-hidden rounded-[10px] ">
               <img
-                src="/bedroom.png"
+                src={IMAGES.bedroom}
                 className="hover:scale-125 transition-transform "
                 alt=""
               />
@@ -110,47 +114,47 @@ export function HomePage() {
 
         <div className="relative w-[1440px]  h-[780px] ">
           <img
-            src="/image 1-1.png"
+            src={IMAGES['furniture-1']}
             alt=""
             className="absolute left-0 top-0  -translate-x-[196px]"
           />
           <img
-            src="/image 2.png"
+            src={IMAGES['furniture-2']}
             alt=""
             className="absolute  top-[70px] left-[94px] "
           />
           <img
-            src="/image 3.png"
+            src={IMAGES['furniture-3']}
             alt=""
             className="absolute top-[156px] left-[561px] "
           />
           <img
-            src="/image 4.png"
+            src={IMAGES['furniture-4']}
             alt=""
             className="absolute top-[85px] right-[278px]  "
           />
           <img
-            src="/image 5.png"
+            src={IMAGES['furniture-5']}
             alt=""
             className="absolute  right-0  translate-x-[163px]"
           />
           <img
-            src="/image 6.png"
+            src={IMAGES['furniture-6']}
             alt=""
             className="absolute left-0 top-[398px] -translate-x-[196px]"
           />
           <img
-            src="/image 7.png"
+            src={IMAGES['furniture-7']}
             alt=""
             className="absolute left-[201px] top-[398px] "
           />
           <img
-            src="/image 8.png"
+            src={IMAGES['furniture-8']}
             alt=""
             className="absolute right-[390px] top-[449px] "
           />
           <img
-            src="/image 9.png"
+            src={IMAGES['furniture-9']}
             alt=""
             className="absolute right-[116px] top-[449px]"
           />

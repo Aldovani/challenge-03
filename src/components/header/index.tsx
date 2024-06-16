@@ -5,6 +5,7 @@ import { UserMenu } from './user-menu/'
 import { Cart } from '../cart'
 import { useState } from 'react'
 import { MobileMenu } from './mobile-menu'
+import { ICONS } from '../../assets/icons'
 
 export function Header() {
   const { user } = useAuth()
@@ -21,7 +22,7 @@ export function Header() {
     <header className="py-8 z-50 fixed bg-white w-full max-sm:px-8">
       <div className="container mx-auto  flex items-center justify-between">
         <NavLink to="/" className="max-sm:w-32">
-          <img src="/logo.svg" alt="" />
+          <img src={ICONS.logo} alt="Furniro logo" />
         </NavLink>
         <nav className="max-lg:hidden">
           <ul className="flex  gap-x-6 lg:gap-x-[4.5rem]">
@@ -39,17 +40,25 @@ export function Header() {
             </li>
           </ul>
         </nav>
-        <div className="flex lg:gap-8 gap-4  items-center">
+        <div className="flex lg:gap-8 gap-4   items-center">
           {!user && (
             <NavLink to="/auth/sign-in">
-              <img src="/user.svg" alt="" className="size-7" />
+              <img
+                src={ICONS.user}
+                alt="user icon sign-in"
+                className="size-7"
+              />
             </NavLink>
           )}
 
           {user && <UserMenu />}
           <div>
             <button onClick={handleOpenCart} className="hover:opacity-50">
-              <img src="/shopping-cart.svg" alt="" className="size-7" />
+              <img
+                src={ICONS['shopping-cart']}
+                alt="shopping cart icon"
+                className="size-7"
+              />
             </button>
             <Cart isOpen={isCartOpen} onClose={handleCloseCart} isOpening />
           </div>

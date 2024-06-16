@@ -1,3 +1,4 @@
+import { ICONS } from '../../assets/icons'
 import { Quantity } from './quantity'
 
 export function CartTableItem() {
@@ -17,7 +18,11 @@ export function CartTableItem() {
       </td>
       <td className="px-4 pt-14">Rs. 250,000.00</td>
       <td className="px-4 pt-14">
-        <img src="/delete-filled.svg" alt="" className="w-7 h-7 " />
+        <img
+          src={ICONS['delete-filled']}
+          alt="delete-filled icon"
+          className="w-7 h-7 "
+        />
       </td>
     </tr>
   )

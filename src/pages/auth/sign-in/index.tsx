@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '../../../components/button'
 import { Input } from '../../../components/input'
 import { useSignIn } from './use-sign-in'
+import { ICONS } from '../../../assets/icons'
 
 export function SignInPage() {
   const {
@@ -15,7 +16,7 @@ export function SignInPage() {
   return (
     <main className="flex flex-col py-8  sm:py-10 px-8 sm:px-20">
       <Link to="/">
-        <img src="/logo.svg" alt="Logo platePeace" className="w-32" />
+        <img src={ICONS.logo} alt="Logo Furniro" className="w-32" />
       </Link>
 
       <div className="mt-10">

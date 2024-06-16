@@ -1,3 +1,5 @@
+import { ICONS } from '../../../assets/icons'
+
 export function CartList() {
   return (
     <ul className="pr-10 pl-8 mt-10 ">
@@ -20,7 +22,7 @@ export function CartList() {
           </div>
         </div>
         <button className="ml-auto hover:opacity-50">
-          <img src="/remove-item.svg" alt="" />
+          <img src={ICONS['remove-item']} alt="remove-item icon" />
         </button>
       </li>
     </ul>
