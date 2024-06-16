@@ -1,8 +1,17 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export function ProductItem() {
+  const navigate = useNavigate()
+
+  function handleNavigateTo() {
+    navigate('/shop/2')
+  }
+
   return (
-    <Link to="/" className="bg-gray-50 relative">
+    <div
+      onClick={handleNavigateTo}
+      className="cursor-pointer bg-gray-50 relative overflow-hidden group"
+    >
       <img src="/image 1.png" alt="" className="w-full" />
 
       <main className="pl-4 pr-5 pt-4 pb-8">
@@ -18,16 +27,38 @@ export function ProductItem() {
         </div>
       </main>
 
-      {/* <div className="size-12 flex absolute rounded-full items-center justify-center  top-6 right-6 bg-action-error">
+      <div className="size-12 flex absolute rounded-full items-center justify-center  top-6 right-6 bg-action-error">
         <span className="font-medium text-white">-50%</span>
-      </div> */}
+      </div>
       <div className="size-12 flex absolute rounded-full items-center justify-center  top-6 right-6 bg-action-success">
         <span className="font-medium text-white">New</span>
       </div>
 
-      {/* <div className="flex items-center justify-center flex-col absolute w-full h-full bg-gray-400 inset-0 opacity-[72%]">
-        <button className="px-4 py-2 bg-white">Add to cart</button>
-      </div> */}
-    </Link>
+      <div className="transition-all duration-500 translate-y-[calc(100%_+_5px)] group-hover:translate-y-0 flex items-center justify-center flex-col absolute w-full h-full bg-gray-500 inset-0 bg-opacity-[72%]">
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+          }}
+          className="hover:bg-primary-500 hover:text-white transition-colors px-14 py-3 bg-white text-primary-500 font-semibold"
+        >
+          Add to cart
+        </button>
+
+        <div className="flex items-center gap-5 mt-6">
+          <div className="flex gap-1 hover:brightness-50">
+            <img src="/gridicons_share.svg" alt="" />
+            <span className="font-semibold text-white ">Share</span>
+          </div>
+          <div className="flex gap-1 hover:brightness-50">
+            <img src="/compare-svgrepo-com 1.svg" alt="" />
+            <span className="font-semibold text-white ">Compare</span>
+          </div>
+          <div className="flex gap-1 hover:brightness-50">
+            <img src="/Heart.svg" alt="" />
+            <span className="font-semibold text-white ">Like</span>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
