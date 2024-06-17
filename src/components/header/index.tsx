@@ -6,6 +6,7 @@ import { Cart } from '../cart'
 import { useState } from 'react'
 import { MobileMenu } from './mobile-menu'
 import { ICONS } from '../../assets/icons'
+import { MenuCartButton } from './button-menu-cart'
 
 export function Header() {
   const { user } = useAuth()
@@ -53,13 +54,7 @@ export function Header() {
 
           {user && <UserMenu />}
           <div>
-            <button onClick={handleOpenCart} className="hover:opacity-50">
-              <img
-                src={ICONS['shopping-cart']}
-                alt="shopping cart icon"
-                className="size-7"
-              />
-            </button>
+            <MenuCartButton onOpenCart={handleOpenCart} />
             <Cart isOpen={isCartOpen} onClose={handleCloseCart} isOpening />
           </div>
 
