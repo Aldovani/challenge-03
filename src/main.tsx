@@ -5,9 +5,15 @@ import './libs/firebase'
 import './index.css'
 
 import { Providers } from './providers'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './routes'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Providers />
+    <BrowserRouter>
+      <Providers>
+        <Router />
+      </Providers>
+    </BrowserRouter>
   </React.StrictMode>,
 )
