@@ -22,12 +22,19 @@ export function deleteProductToCart(productId: number) {
     payload: { productId },
   }
 }
+export function clearProductToCart() {
+  return {
+    type: ActionTypes.clearProductToCart as const,
+  }
+}
 
 type AddProductToCartAction = ReturnType<typeof addProductToCart>
 type RemoveProductToCartAction = ReturnType<typeof removeProductToCart>
 type DeleteProductToCartAction = ReturnType<typeof deleteProductToCart>
+type ClearProductToCartAction = ReturnType<typeof clearProductToCart>
 
 export type ICartActions =
   | AddProductToCartAction
   | RemoveProductToCartAction
   | DeleteProductToCartAction
+  | ClearProductToCartAction

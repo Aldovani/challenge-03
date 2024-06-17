@@ -63,6 +63,10 @@ export const cart: Reducer<ICartState, ICartActions> = (
       return { items: newState }
     }
 
+    case ActionTypes.clearProductToCart: {
+      return { items: [] }
+    }
+
     default: {
       return { items: [...state.items] }
     }
