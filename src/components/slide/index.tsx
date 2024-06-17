@@ -40,7 +40,7 @@ export function Slide() {
           room="Bed Room"
         />
         <SlideItem
-          imgUrl={IMAGES['slide-1']}
+          imgUrl={IMAGES['furniture-5']}
           name="Inner Peace"
           number={4}
           room="Bed Room"
