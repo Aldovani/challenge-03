@@ -97,8 +97,9 @@ export function HomePage() {
               Explore More
             </Link>
           </div>
-
-          <Slide />
+          <div className="home-page">
+            <Slide />
+          </div>
         </div>
       </section>
 
