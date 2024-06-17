@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "name": "Contemporary Leather Sofa",
+      "id": "1",
+      "style": "Contemporary",
+      "price": 1999.0,
+      "description": "Make a statement in your living space with this sleek and sophisticated contemporary leather sofa. Its clean lines and rich leather upholstery exude luxury.",
+      "rate": 4.7,
+      "images": [
+        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+1.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": false,
+      "category": "Sofas",
+      "tags": ["Leather", "Contemporary", "Stylish", "Luxury"]
+    },
+    {
+      "name": "Mid-Century Modern Sofa",
+      "id": "2",
+      "style": "Mid-Century Modern",
+      "price": 1399.0,
+      "description": "Step back in time with the timeless elegance of a mid-century modern sofa. Tapered legs, soft curves, and plush cushions exude retro charm.",
+      "rate": 4.2,
+      "images": [
+        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+2.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "Sofas",
+      "tags": ["Mid-Century Modern", "Retro", "Stylish", "Comfortable"]
+    },
+    {
+      "name": "Scandinavian Sofa",
+      "id": "3",
+      "style": "Scandinavian",
+      "price": 1199.0,
+      "description": "Embrace the minimalist beauty of Scandinavian design with this sleek and functional Scandinavian sofa. Its clean lines and neutral tones create a sense of calm and tranquility.",
+      "rate": 4.6,
+      "images": [
+        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+3.png"
+      ],
+      "priceDiscount": 50,
+      "isNew": false,
+      "category": "Sofas",
+      "tags": ["Scandinavian", "Minimalist", "Functional", "Relaxing"]
+    },
+    {
+      "name": "Plush Velvet Sofa",
+      "id": 4,
+      "style": "Glamorous",
+      "price": 1799.0,
+      "description": "Add a touch of luxury to your living room with this sumptuous plush velvet sofa. Its soft, inviting texture and rich color will make you feel like royalty.",
+      "rate": 4.9,
+      "images": [
+        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+4.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "Sofas",
+      "tags": ["Velvet", "Glamorous", "Luxurious", "Inviting"]
+    }
+  ]
+}
