@@ -1,6 +1,11 @@
+import { useSelector } from 'react-redux'
 import { CartTableItem } from './cart-table-item'
+import { IState } from '../../stores'
+import { ICartItem } from '../../stores/modules/cart/types'
 
 export function CartTable() {
+  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+
   return (
     <table className="w-full">
       <thead className="bg-primary-100 ">
@@ -14,12 +19,13 @@ export function CartTable() {
         </tr>
       </thead>
       <tbody>
-        <CartTableItem />
-        <CartTableItem />
-        <CartTableItem />
-        <CartTableItem />
-        <CartTableItem />
-        <CartTableItem />
+        {products?.map((item) => (
+          <CartTableItem
+            product={item.product}
+            quantity={item.quantity}
+            key={item.product.id}
+          />
+        ))}
       </tbody>
     </table>
   )

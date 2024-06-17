@@ -1,7 +1,11 @@
+import { FormateMoney } from '../../utils/formate-money'
 import { Button } from '../button'
 import { Input } from '../input'
+import { CheckoutList } from './list'
+import { useCheckoutForm } from './useCheckoutForm'
 
 export function CheckoutForm() {
+  const { products, total } = useCheckoutForm()
   return (
     <form className="relative mt-[4.5rem] container mx-auto pt-24 pb-16 max-sm:px-6 grid justify-center gap-10 lg:gap-[144px]  lg:grid-cols-[453px_528px]  ">
       <div>
@@ -55,23 +59,15 @@ export function CheckoutForm() {
             <strong className="font-medium text-2xl">Product</strong>
             <strong className="font-medium text-2xl">Subtotal</strong>
           </div>
-          <ul className="flex flex-col mt-4">
-            <li className="flex justify-between items-center">
-              <div className="flex gap-3 items-center">
-                <span className="text-gray-200">Product</span>
-                <span className="text-xs">x 1</span>
-              </div>
-              <span className="font-light">Rs. 250,000.00</span>
-            </li>
-          </ul>
+          <CheckoutList products={products} />
           <div className="flex justify-between items-center mt-5">
             <span className="font-medium">Subtotal</span>
-            <span className="font-light">Rs. 250,000.00</span>
+            <span className="font-light">{FormateMoney(total)}</span>
           </div>
           <div className="flex justify-between items-center mt-4">
             <span className="font-medium">Total</span>
             <strong className="font-bold text-2xl text-primary-500">
-              Rs. 250,000.00
+              {FormateMoney(total)}
             </strong>
           </div>
         </div>

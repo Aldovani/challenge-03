@@ -1,9 +1,18 @@
+import { useSelector } from 'react-redux'
 import { Banner } from '../components/banner'
 import { Benefits } from '../components/benefits'
 import { CartTable } from '../components/cart-table'
 
 import { Link } from 'react-router-dom'
+import { IState } from '../stores'
+import { ICartItem } from '../stores/modules/cart/types'
+import { FormateMoney } from '../utils/formate-money'
+import { CalcTotal } from '../utils/calc-total'
 export function CartPage() {
+  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+
+  const { total } = CalcTotal(products)
+
   return (
     <main className=" w-full   pt-[6.25rem] ">
       <Banner page="Cart" />
@@ -16,11 +25,13 @@ export function CartPage() {
 
           <div className="w-full mt-16 px-16 flex justify-between">
             <span className="font-medium">Subtotal</span>
-            <span className="text-gray-200  ">Rs. 250,000.00</span>
+            <span className="text-gray-200  ">${FormateMoney(total)}</span>
           </div>
           <div className="px-16 mt-8 w-full flex justify-between">
             <span className="font-medium">Total</span>
-            <span className="text-primary-500 text-xl">Rs. 250,000.00</span>
+            <span className="text-primary-500 text-xl">
+              {FormateMoney(total)}
+            </span>
           </div>
 
           <Link

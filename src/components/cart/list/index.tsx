@@ -1,30 +1,20 @@
-import { ICONS } from '../../../assets/icons'
+import { useSelector } from 'react-redux'
+import { IState } from '../../../stores'
+import { CartListItem } from './item'
+import { ICartItem } from '../../../stores/modules/cart/types'
 
 export function CartList() {
+  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+
   return (
-    <ul className="pr-10 pl-8 mt-10 ">
-      <li className="flex items-center ">
-        <div>
-          <img
-            className="size-[105px] rounded-[0.625rem]"
-            src="/sofa-1.png"
-            alt=""
-          />
-        </div>
-        <div className="ml-8 ">
-          <span>Asgaard sofa</span>
-          <div className="flex gap-4 items-center mt-3">
-            <span>1</span>
-            <span>x</span>
-            <span className="text-primary-500 text-xs font-medium">
-              Rs. 250,000.00
-            </span>
-          </div>
-        </div>
-        <button className="ml-auto hover:opacity-50">
-          <img src={ICONS['remove-item']} alt="remove-item icon" />
-        </button>
-      </li>
+    <ul className="pr-10 pl-8 mt-10 flex flex-col gap-5 max-h-full overflow-y-auto ">
+      {products?.map((item) => (
+        <CartListItem
+          product={item.product}
+          quantity={item.quantity}
+          key={item.product.id}
+        />
+      ))}
     </ul>
   )
 }
