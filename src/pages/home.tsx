@@ -1,9 +1,25 @@
+import { useEffect, useState } from 'react'
 import { IMAGES } from '../assets/images'
 import { Link } from '../components/Link'
 import { ProductList } from '../components/product/product-list'
 import { Slide } from '../components/slide'
+import { Products } from '../services/api/products'
 
 export function HomePage() {
+  const [products, setProducts] = useState<Products[]>([])
+  const [isLoading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    Products.findProducts({ page: 1, perPage: 8 })
+      .then((result) => {
+        setProducts(result.response.data.data)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+  }, [])
+
   return (
     <>
       <div className="pt-28">
@@ -76,7 +92,7 @@ export function HomePage() {
           Our Products
         </h3>
 
-        <ProductList />
+        <ProductList items={products} isLoading={isLoading} />
 
         <Link to="/shop" variants="outline" className="mt-11 w-fit mx-auto">
           Show More
