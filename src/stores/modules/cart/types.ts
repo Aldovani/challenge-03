@@ -6,7 +6,7 @@ export enum ActionTypes {
 }
 
 export interface IProduct {
-  id: number
+  id: string
   name: string
   imgUrl: string
   price: number

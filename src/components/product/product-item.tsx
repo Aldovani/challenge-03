@@ -8,7 +8,7 @@ type Product = {
   name: string
   style: string
   price: number
-  id: number
+  id: string
   isNew: boolean
   priceDiscount: number
   images: string[]

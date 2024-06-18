@@ -9,14 +9,14 @@ export function addProductToCart(product: IProduct) {
   }
 }
 
-export function removeProductToCart(productId: number) {
+export function removeProductToCart(productId: string) {
   return {
     type: ActionTypes.removeProductToCart as const,
     payload: { productId },
   }
 }
 
-export function deleteProductToCart(productId: number) {
+export function deleteProductToCart(productId: string) {
   return {
     type: ActionTypes.deleteProductToCart as const,
     payload: { productId },
