@@ -3,6 +3,7 @@ import { ICONS } from '../../assets/icons'
 import { useDispatch } from 'react-redux'
 import { addProductToCart } from '../../stores/modules/cart/actions'
 import { FormateMoney } from '../../utils/formate-money'
+import { toast } from 'sonner'
 
 type Product = {
   name: string
@@ -21,7 +22,7 @@ type ProductItemProps = {
 export function ProductItem({ product }: ProductItemProps) {
   const navigate = useNavigate()
 
-  const handleAddProductToCart = useDispatch()
+  const dispatch = useDispatch()
 
   function handleNavigateTo() {
     navigate(`/shop/${product.id}`)
@@ -75,9 +76,8 @@ export function ProductItem({ product }: ProductItemProps) {
           onClick={(e) => {
             e.stopPropagation()
             const { id, images, name, price } = product
-            handleAddProductToCart(
-              addProductToCart({ id, imgUrl: images[0], name, price }),
-            )
+            dispatch(addProductToCart({ id, imgUrl: images[0], name, price }))
+            toast.success('Item adicionado ao carinho')
           }}
           className="hover:bg-primary-500 hover:text-white transition-colors px-14 py-3 bg-white text-primary-500 font-semibold"
         >
