@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from 'react-redux'
 import { Products } from '../../services/api/products'
 import { FormateMoney } from '../../utils/formate-money'
 import { Button } from '../button'
@@ -7,11 +8,24 @@ import { Infos } from './Infos'
 import { SelectColor } from './select-color'
 import { SelectSize } from './select-size'
 import { StarsRate } from './stars-rate'
+import { IState } from '../../stores'
+import { ICartItem } from '../../stores/modules/cart/types'
+import {
+  addProductToCart,
+  deleteProductToCart,
+} from '../../stores/modules/cart/actions'
+import { toast } from 'sonner'
 
 type ProductDetailsProps = {
   product: Products
 }
 export function ProductDetails({ product }: ProductDetailsProps) {
+  const productInCar = useSelector<IState, ICartItem | undefined>((state) =>
+    state.cart.items.find((item) => item.product.id === product.id),
+  )
+
+  const dispatch = useDispatch()
+
   return (
     <>
       <section>
@@ -33,15 +47,45 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               <SelectColor />
 
               <div className="flex gap-4 mt-8">
-                <Quantity
-                  product={{
-                    name: product.name,
-                    price: product.price,
-                    id: product.id,
-                    imgUrl: product.images[0],
-                  }}
-                />
-                <Button variants="outline">Add To Cart</Button>
+                {productInCar ? (
+                  <>
+                    <Quantity
+                      product={{
+                        name: product.name,
+                        price: product.price,
+                        id: product.id,
+                        imgUrl: product.images[0],
+                      }}
+                    />
+                    <Button
+                      variants="outline"
+                      onClick={() => {
+                        dispatch(deleteProductToCart(product.id))
+                        toast.success('Item removido ao carrinho')
+                      }}
+                    >
+                      Remove from Cart
+                    </Button>
+                  </>
+                ) : (
+                  <Button
+                    variants="outline"
+                    onClick={() => {
+                      dispatch(
+                        addProductToCart({
+                          id: product.id,
+                          imgUrl: product.images[0],
+                          name: product.name,
+                          price: product.price,
+                        }),
+                      )
+
+                      toast.success('Item adicionado ao carrinho')
+                    }}
+                  >
+                    Add To Cart
+                  </Button>
+                )}
               </div>
             </div>
             <Infos category={product.category} tags={product.tags} />
