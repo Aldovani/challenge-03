@@ -1,27 +1,37 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   addProductToCart,
   removeProductToCart,
 } from '../../stores/modules/cart/actions'
 import { IProduct } from '../../stores/modules/cart/types'
+import { IState } from '../../stores'
+import { tv } from 'tailwind-variants'
 
 type QuantityProps = {
-  quantity: number
   product: IProduct
+  className?: string
 }
 
-export function Quantity({ product, quantity }: QuantityProps) {
+const quantity = tv({
+  base: 'w-fit flex items-center  gap-6  border border-gray-200 rounded-[10px]',
+})
+
+export function Quantity({ product, className }: QuantityProps) {
   const dispatch = useDispatch()
+  const productsQuantity = useSelector<IState, number>(
+    (state) =>
+      state.cart.items.find((e) => e.product.id === product.id)?.quantity || 0,
+  )
 
   return (
-    <div className="w-fit flex items-center  gap-6  border border-gray-200 rounded-[10px]">
+    <div className={quantity({ className })}>
       <button
         onClick={() => dispatch(removeProductToCart(product.id))}
         className="py-4 px-3 hover:bg-primary-100 rounded-l-[10px]"
       >
         -
       </button>
-      <span>{quantity}</span>
+      <span>{productsQuantity}</span>
       <button
         onClick={() => dispatch(addProductToCart(product))}
         className="p-4 hover:bg-primary-100 rounded-r-[10px]"
