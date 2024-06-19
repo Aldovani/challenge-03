@@ -33,15 +33,25 @@ export default {
           '0%': { transform: 'translateX(100%)', opacity: 0 },
           '100%': { transform: 'translateX(0)', opacity: 1 },
         },
+        'open-filter': {
+          '0%': { transform: 'translateX(-100%)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
         'close-cart': {
           '0%': { transform: 'translateX(0)', opacity: 1 },
           '100%': { transform: 'translateX(100%)', opacity: 0 },
+        },
+        'close-filter': {
+          '0%': { transform: 'translateX(0)', opacity: 1 },
+          '100%': { transform: 'translateX(-100%)', opacity: 0 },
         },
       },
 
       animation: {
         'open-cart': 'open-cart 0.2s ease forwards',
         'close-cart': 'close-cart 0.2s ease forwards',
+        'open-filter': 'open-filter 0.2s ease forwards',
+        'close-filter': 'close-filter 0.2s ease forwards',
       },
     },
   },
