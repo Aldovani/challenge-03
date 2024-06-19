@@ -4,6 +4,12 @@ import { delay } from '../../../utils/delay'
 type FindProductsProps = {
   page?: number
   perPage?: number
+  sort?: string
+  priceFrom?: number | string
+  priceTo?: number | string
+  type?: string
+  isNew?: string
+  isOnSales?: string
 }
 
 export type Products = {
@@ -34,18 +40,38 @@ type GetProductsProps = {
   id: string
 }
 
-export async function findProducts({ page, perPage }: FindProductsProps) {
+export async function findProducts({
+  page,
+  perPage,
+  sort,
+  priceFrom,
+  priceTo,
+  type,
+  isNew,
+  isOnSales,
+}: FindProductsProps) {
   await delay(2000)
 
   const response = await productsApi.get<FindProductsResponse>('', {
-    params: { _per_page: perPage, _page: page },
+    params: {
+      _per_page: perPage,
+      _page: page,
+      _sort: sort,
+      price_get: priceFrom,
+      price_lte: priceTo,
+      category: type,
+      isNew,
+      isOnSales,
+    },
   })
 
   return { response }
 }
 
 export async function GetProduct({ id }: GetProductsProps) {
-  const data = await productsApi.get(`${id}`)
+  await delay(2000)
+
+  const { data } = await productsApi.get<Products>(`${id}`)
 
   return data
 }
