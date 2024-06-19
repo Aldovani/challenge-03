@@ -6,8 +6,8 @@ type FetchProductsProps = {
   perPage?: number
   page?: number
   sort?: string
-  priceFrom?: number
-  priceTo?: number
+  priceFrom?: number | string
+  priceTo?: number | string
   type?: string
   isNew?: string
   isOnSales?: string
