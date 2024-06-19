@@ -1,43 +1,60 @@
-import { useMemo } from 'react'
+import { IState } from '../../stores'
+import { useSelector } from 'react-redux'
+import { useSearchParams } from 'react-router-dom'
 
-type usePaginationProps = {
-  totalCount: number
-  pageSize: number
-  siblingCount: number
-  currentPage: number
-  onChangePage: (page: number) => void
+export const SIBLINGS_COUNT = 2
+
+function generatePagesArray(from: number, to: number) {
+  return [...new Array(to - from)]
+    .map((_, index) => {
+      return from + index + 1
+    })
+    .filter((page) => page > 0)
 }
 
-function getPaginationRange(start: number, end: number) {
-  const length = end - start + 1
-  return Array.from({ length }, (_, idx) => idx + start)
-}
+export function usePagination() {
+  const [searchParams, setSearchParams] = useSearchParams()
 
-export function usePagination({
-  totalCount,
-  pageSize,
-  siblingCount = 1,
-  onChangePage,
-}: usePaginationProps) {
-  function handlePreviousPage(page: number) {
-    onChangePage(page)
+  const pages =
+    useSelector<IState, number | null>((state) => state.products.pages) || 0
+
+  const totalOfElements =
+    useSelector<IState, number | null>(
+      (state) => state.products.totalOfElements,
+    ) || 0
+
+  const currentPage = Number(searchParams.get('page')) || 1
+  const perPage = Number(searchParams.get('perPage')) || 16
+
+  function handleChangePage(page: number) {
+    setSearchParams((state) => {
+      state.set('page', page.toString())
+
+      return state
+    })
   }
 
-  function handleNextPage(page: number) {
-    onChangePage(page)
-  }
+  const lastPage = Math.floor(totalOfElements / perPage)
 
-  const paginationRange = useMemo(() => {
-    const totalPageCount = Math.ceil(totalCount / pageSize)
-    const totalPageNumbers = siblingCount + 5
-    if (totalPageNumbers >= totalPageCount) {
-      return getPaginationRange(1, totalPageCount)
-    }
-  }, [totalCount, pageSize, siblingCount])
+  const previousPages =
+    currentPage > 1
+      ? generatePagesArray(currentPage - 1 - SIBLINGS_COUNT, currentPage - 1)
+      : []
+
+  const nextPages =
+    currentPage < lastPage
+      ? generatePagesArray(
+          currentPage,
+          Math.min(currentPage + SIBLINGS_COUNT, lastPage),
+        )
+      : []
 
   return {
-    paginationRange,
-    handleNextPage,
-    handlePreviousPage,
+    nextPages,
+    previousPages,
+    lastPage,
+    handleChangePage,
+    currentPage,
+    pages,
   }
 }
