@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { ActiveLink } from './active-link'
-import { useAuth } from '../../hooks/useAuth'
+import { useAuth } from '../../hooks/use-auth'
 import { UserMenu } from './user-menu/'
 import { Cart } from '../cart'
 import { ComponentProps, useState } from 'react'

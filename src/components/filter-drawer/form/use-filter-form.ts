@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useFilter } from '../../../hooks/useFilter'
+import { useFilter } from '../../../hooks/use-filter'
 
 type useFilterFormProps = {
   handleClose: () => void

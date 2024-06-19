@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { useForms } from '../../../hooks/useForms'
-import { useAuth } from '../../../hooks/useAuth'
+import { useForms } from '../../../hooks/use-forms'
+import { useAuth } from '../../../hooks/use-auth'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 
 const signInSchema = z.object({

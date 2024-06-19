@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useFilter } from '../../hooks/useFilter'
+import { useFilter } from '../../hooks/use-filter'
 import { useSelector } from 'react-redux'
 import { IState } from '../../stores'
 import { fetchProducts } from '../../stores/modules/products/fetchProducts'
