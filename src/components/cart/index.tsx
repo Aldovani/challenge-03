@@ -1,7 +1,7 @@
 import { CartList } from './list'
 import { CartFooter } from './footer'
 import { ReactPortal } from '../react-portal'
-import { useCart } from './useCart'
+import { useCart } from './use-cart'
 import { ICONS } from '../../assets/icons'
 
 type CartProps = {
