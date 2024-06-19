@@ -1,24 +1,26 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { IMAGES } from '../assets/images'
 import { Link } from '../components/Link'
 import { ProductList } from '../components/product/product-list'
 import { Slide } from '../components/slide'
-import { Products } from '../services/api/products'
+import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, IState } from '../stores'
+import { IProduct } from '../stores/modules/products/types'
+import { fetchProducts } from '../stores/modules/products/fetchProducts'
 
 export function HomePage() {
-  const [products, setProducts] = useState<Products[]>([])
-  const [isLoading, setLoading] = useState(false)
+  const products = useSelector<IState, IProduct[]>(
+    (state) => state.products.items,
+  )
+  const loading = useSelector<IState, boolean>(
+    (state) => state.products.loading,
+  )
+
+  const dispatch = useDispatch<AppDispatch>()
 
   useEffect(() => {
-    setLoading(true)
-    Products.findProducts({ page: 1, perPage: 8 })
-      .then((result) => {
-        setProducts(result.response.data.data)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-  }, [])
+    dispatch(fetchProducts({ page: 1, perPage: 8 }))
+  }, [dispatch])
 
   return (
     <>
@@ -92,7 +94,7 @@ export function HomePage() {
           Our Products
         </h3>
 
-        <ProductList items={products} isLoading={isLoading} />
+        <ProductList items={products} isLoading={loading} />
 
         <Link to="/shop" variants="outline" className="mt-11 w-fit mx-auto">
           Show More
