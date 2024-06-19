@@ -28,4 +28,8 @@ export const IMAGES = {
   'slide-1': 'https://furniro-pb.s3.us-east-2.amazonaws.com/images/slide-1.png',
   'slide-2': 'https://furniro-pb.s3.us-east-2.amazonaws.com/images/slide-2.png',
   'slide-3': 'https://furniro-pb.s3.us-east-2.amazonaws.com/images/slide-3.png',
+  'not-found-page':
+    'https://furniro-pb.s3.us-east-2.amazonaws.com/images/not-found-page.png',
+  'product-not-found':
+    'https://furniro-pb.s3.us-east-2.amazonaws.com/images/product-not-found.png',
 }
