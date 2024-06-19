@@ -10,3 +10,29 @@
     overflow-x: hidden;
   }
 }
+
+html {
+  @apply scroll-smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-100;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
