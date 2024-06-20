@@ -41,8 +41,8 @@ type GetProductsProps = {
 }
 
 export async function findProducts({
-  page,
-  perPage,
+  page = 1,
+  perPage = 16,
   sort,
   priceFrom,
   priceTo,

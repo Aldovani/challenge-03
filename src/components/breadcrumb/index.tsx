@@ -21,7 +21,7 @@ export function Breadcrumb({ name }: BreadcrumbProps) {
           </Link>
           <img src={ICONS['arrow-down']} alt="arrow down icon" />
         </div>
-        <span className="block h-[2.3125rem] w-[1px] bg-gray-300"> </span>
+        <div className="h-[2.3125rem] w-[1px] bg-gray-300" />
 
         <span>{name}</span>
       </nav>

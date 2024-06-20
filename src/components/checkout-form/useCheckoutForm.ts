@@ -57,7 +57,6 @@ export function useCheckoutForm() {
     clearErrors,
     setFocus,
     reset,
-
     formState: { errors },
   } = useForms<CheckoutSchema>({ validator: checkoutSchema })
 

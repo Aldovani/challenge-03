@@ -28,7 +28,7 @@ export function CartTableItem({ product, quantity }: CartTableItemProps) {
         {FormateMoney(product.price)}
       </td>
       <td className="px-4 pt-14">
-        <Quantity product={product} quantity={quantity} />
+        <Quantity product={product} />
       </td>
       <td className="px-4 pt-14">{FormateMoney(subTotal)}</td>
       <td className="px-4 pt-14">
