@@ -12,6 +12,7 @@ export function Banner({ page }: BannerProps) {
       style={{ backgroundImage: `url(${IMAGES.banner})` }}
       className=" h-[19.75rem]  flex flex-col items-center justify-center"
     >
+      <img src={ICONS.logo_symbol} alt="icon of logo symbol" />
       <h2 className="text-5xl font-medium">{page}</h2>
       <div className="flex items-center gap-2 mt-1">
         <Link to="/" className="hover:text-gray-300">
