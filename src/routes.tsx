@@ -11,6 +11,7 @@ import { SignInPage } from './pages/auth/sign-in'
 import { CheckoutPage } from './pages/checkout/'
 import { CheckoutSuccessPage } from './pages/checkout/success'
 import { NotFoundPage } from './pages/not-found'
+import { PrivateRouter } from './components/private-router'
 
 export function Router() {
   return (
@@ -21,7 +22,14 @@ export function Router() {
         <Route path="/shop/:id" element={<ProductDetailsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/check-out" element={<CheckoutPage />} />
+        <Route
+          path="/check-out"
+          element={
+            <PrivateRouter to="/auth/sign-in?redirectUrl=/check-out">
+              <CheckoutPage />
+            </PrivateRouter>
+          }
+        />
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/auth/sign-in" element={<SignInPage />} />
