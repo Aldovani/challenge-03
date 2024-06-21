@@ -11,6 +11,7 @@ export function SignInPage() {
     register,
     handleSignInWithFacebook,
     handleSignInWithGoogle,
+    handleSignInWithEmail,
   } = useSignIn()
 
   return (
@@ -30,9 +31,7 @@ export function SignInPage() {
 
       <form
         className="mt-12"
-        onSubmit={handleSubmit((data) => {
-          console.log(data)
-        })}
+        onSubmit={handleSubmit((data) => handleSignInWithEmail(data.email))}
       >
         <Input.Label name="Email" htmlFor="email">
           <Input.Field

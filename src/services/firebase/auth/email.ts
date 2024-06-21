@@ -1,16 +1,7 @@
 import { getAuth, sendSignInLinkToEmail } from 'firebase/auth'
 const actionCodeSettings = {
-  url: 'http://localhost:5173/auth/sign',
+  url: 'http://localhost:5173/shop',
   handleCodeInApp: true,
-  iOS: {
-    bundleId: 'com.example.ios',
-  },
-  android: {
-    packageName: 'com.example.android',
-    installApp: true,
-    minimumVersion: '12',
-  },
-  dynamicLinkDomain: 'http://localhost:5173/auth/sign',
 }
 
 export async function signWithEmailProvider(email: string) {

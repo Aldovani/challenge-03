@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { useForms } from '../../../hooks/use-forms'
 import { useAuth } from '../../../hooks/use-auth'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const signInSchema = z.object({
   email: z.string().email(),
@@ -10,7 +11,12 @@ const signInSchema = z.object({
 type SignInSchema = z.infer<typeof signInSchema>
 
 export function useSignIn() {
-  const { signInWithGoogle, signInWithFacebook } = useAuth()
+  const {
+    signInWithGoogle,
+    signInWithFacebook,
+    signInWithEmail,
+    setUserByEmail,
+  } = useAuth()
   const navigation = useNavigate()
   const [searchParams] = useSearchParams()
 
@@ -24,6 +30,18 @@ export function useSignIn() {
     await signInWithFacebook()
     navigation(redirectUrl)
   }
+  async function handleSignInWithEmail(email: string) {
+    await signInWithEmail(email)
+  }
+
+  useEffect(() => {
+    const apiKey = searchParams.get('apiKey') || ''
+
+    if (apiKey) {
+      setUserByEmail()
+      navigation('/shop')
+    }
+  }, [navigation, searchParams])
 
   const {
     register,
@@ -37,5 +55,6 @@ export function useSignIn() {
     errors,
     handleSignInWithFacebook,
     handleSignInWithGoogle,
+    handleSignInWithEmail,
   }
 }

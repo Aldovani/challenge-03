@@ -23,6 +23,7 @@ type AuthContextProps = {
   signInWithEmail: (email: string) => Promise<void>
   singOut: () => void
   user: User | undefined
+  setUserByEmail: () => void
 }
 
 export const AuthContext = createContext({} as AuthContextProps)
@@ -30,6 +31,15 @@ export const AuthContext = createContext({} as AuthContextProps)
 export function AuthContextProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | undefined>(undefined)
   const auth = getAuth()
+
+  function setUserByEmail() {
+    setUser({
+      displayName: '',
+      email: '',
+      phoneNumber: '',
+      photoURL: '',
+    })
+  }
 
   const handleSignWithGoogle = useCallback(async () => {
     const user = await signWithGoogleProvider()
@@ -81,6 +91,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
   return (
     <AuthContext.Provider
       value={{
+        setUserByEmail,
         user,
         singOut,
         signInWithEmail: handleSignWithEmail,
