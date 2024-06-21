@@ -3,11 +3,16 @@ import { Banner } from '../../components/banner/index.js'
 import { Benefits } from '../../components/benefits/index.js'
 import { Button } from '../../components/button/index.js'
 import { Input } from '../../components/input/index.js'
-import { delay } from '../../utils/delay.js'
 import { useContact } from './useContact.js'
 
 export function ContactPage() {
-  const { errors, register, handleSubmit } = useContact()
+  const {
+    errors,
+    register,
+    handleSubmit,
+    handleSaveContact,
+    isSaveContactIsLoading,
+  } = useContact()
   return (
     <main className=" w-full   pt-[6.25rem] ">
       <Banner page="Contact" />
@@ -59,45 +64,50 @@ export function ContactPage() {
           </div>
 
           <form
-            onSubmit={handleSubmit((e) => {
-              console.log(e)
-              delay()
-            })}
+            onSubmit={handleSubmit(handleSaveContact)}
             className="flex flex-col gap-9"
           >
-            <Input.Label name="Your name">
+            <Input.Label htmlFor="name" name="Your name">
               <Input.Field
                 className="mt-5"
+                id="name"
                 placeholder="Abc"
                 {...register('name')}
               />
               <Input.MessageError error={errors.name?.message} />
             </Input.Label>
-            <Input.Label name="Email address">
+            <Input.Label htmlFor="email" name="Email address">
               <Input.Field
+                id="email"
                 className="mt-5"
                 placeholder="Abc@def.com"
                 {...register('email')}
               />
               <Input.MessageError error={errors.email?.message} />
             </Input.Label>
-            <Input.Label name="Subject">
+            <Input.Label htmlFor="subject" name="Subject">
               <Input.Field
+                id="subject"
                 className="mt-5"
                 placeholder="This is an optional"
                 {...register('subject')}
               />
               <Input.MessageError error={errors.subject?.message} />
             </Input.Label>
-            <Input.Label name="Message">
+            <Input.Label htmlFor="Message" name="Message">
               <Input.Textarea
+                id="Message"
                 className="mt-5"
                 placeholder="Hi! i’d like to ask about"
                 {...register('message')}
               />
               <Input.MessageError error={errors.message?.message} />
             </Input.Label>
-            <Button type="submit" className="max-w-[14.8125rem]">
+            <Button
+              type="submit"
+              className="max-w-[14.8125rem]"
+              isLoading={isSaveContactIsLoading}
+            >
               Submit
             </Button>
           </form>
