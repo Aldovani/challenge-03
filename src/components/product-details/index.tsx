@@ -61,7 +61,9 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                       variants="outline"
                       onClick={() => {
                         dispatch(deleteProductToCart(product.id))
-                        toast.success('Item removido ao carrinho')
+                        toast.success('Item removed from cart', {
+                          duration: 2000,
+                        })
                       }}
                     >
                       Remove from Cart
@@ -80,7 +82,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                         }),
                       )
 
-                      toast.success('Item adicionado ao carrinho')
+                      toast.success('Item added to cart', { duration: 2000 })
                     }}
                   >
                     Add To Cart
