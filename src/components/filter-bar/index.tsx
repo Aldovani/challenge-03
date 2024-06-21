@@ -17,8 +17,8 @@ export function FilterBar() {
 
   return (
     <div className="bg-primary-200 px-8">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex gap-8 items-center">
+      <div className="container mx-auto flex items-center justify-between max-md:flex-col max-md:pt-8">
+        <div className="flex gap-8 items-center flex-wrap">
           <div className="flex gap-6">
             <button
               onClick={handleOpenFilterDrawer}
@@ -43,7 +43,7 @@ export function FilterBar() {
               className="cursor-pointer hover:opacity-50"
             />
           </div>
-          <span className="block h-[37px] w-[1px] bg-gray-300 "></span>
+          <span className="max-sm:hidden block h-[37px] w-[1px] bg-gray-300 "></span>
           <p>
             Showing {(page - 1) * perPage + 1}-
             {page * perPage > numbeOfElements
@@ -53,7 +53,7 @@ export function FilterBar() {
           </p>
         </div>
 
-        <form className="flex gap-8 py-6">
+        <form className="flex flex-wrap gap-8 py-6">
           <div className="flex gap-8 items-center">
             <label htmlFor="show" className="text-xl">
               show

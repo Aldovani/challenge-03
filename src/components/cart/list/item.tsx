@@ -17,12 +17,12 @@ export function CartListItem({ product, quantity }: CartListItemProps) {
     <li className="flex items-center ">
       <div>
         <img
-          className="size-[105px] rounded-[0.625rem]"
+          className="sm:size-[105px] size-[64px] rounded-[0.625rem]"
           src={product.imgUrl}
           alt={product.name}
         />
       </div>
-      <div className="ml-8 ">
+      <div className="sm:ml-8 ml-4 ">
         <span>Asgaard sofa</span>
         <div className="flex gap-4 items-center mt-3">
           <span>{quantity}</span>

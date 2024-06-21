@@ -67,3 +67,14 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+
+@media (max-width: 580px) {
+  .home-page .splide {
+    position: relative !important;
+  }
+
+  .home-page .splide__slide {
+    height: 582px;
+    width: 404px;
+  }
+}

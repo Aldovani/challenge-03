@@ -9,14 +9,14 @@ export function NotFoundPage() {
     <>
       <div
         style={{ backgroundImage: `url(${IMAGES['not-found-page']})` }}
-        className="bg-fixed  h-screen bg-repeat-x bg-cover after:block after:absolute after:inset-0 after:w-full after:h-full after:bg-black/20 after:z-[0]"
+        className="bg-fixed  h-screen bg-repeat-x bg-cover after:block after:absolute after:inset-0 after:w-full after:h-full after:bg-black/20 after:z-[0] max-sm:bg-center"
       >
         <Header
           logoUrl={ICONS['logo-white']}
-          className="bg-transparent  relative z-30 [&>div_nav_ul_li_a]:text-white [&>div_nav_ul_li_a:hover]:text-primary-500 [&>div_div_a_img]:invert [&>div_button_img[alt='shopping_cart_icon']]:invert"
+          className="bg-transparent  relative z-30 [&>div_nav_ul_li_a]:text-white [&>div_nav_ul_li_a:hover]:text-primary-500 [&>div_div_a_img]:invert [&>div_button_img[alt='shopping_cart_icon']]:invert [&>_div_button_span]:!bg-white"
         />
 
-        <main className="relative z-10 container flex items-center    mx-auto mt-32">
+        <main className="relative z-10 container flex items-center    mx-auto mt-32 max-sm:px-8">
           <div className=" max-w-[546px]">
             <span className="font-semibold text-white tracking-[3px]">
               It looks like you&prime;ve sat on the wrong couch!

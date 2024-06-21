@@ -26,7 +26,7 @@ export function CartFooter({ onCloseCart }: CartFooterProps) {
         <Link
           onClick={onCloseCart}
           to="/cart"
-          className="text-xs border py-2 rounded-[50px] px-[30px] hover:bg-primary-500 hover:text-white hover:border-primary-500 "
+          className="px-4 text-xs border py-2 rounded-[50px] sm:px-[30px] hover:bg-primary-500 hover:text-white hover:border-primary-500 "
         >
           Cart
         </Link>
@@ -34,14 +34,14 @@ export function CartFooter({ onCloseCart }: CartFooterProps) {
           onClick={onCloseCart}
           to="/check-out"
           data-disable={total === 0}
-          className="data-[disable='true']:opacity-50 data-[disable='true']:pointer-events-none   text-xs border py-2 rounded-[50px] px-[30px] hover:bg-primary-500 hover:text-white hover:border-primary-500"
+          className="px-4 data-[disable='true']:opacity-50 data-[disable='true']:pointer-events-none   text-xs border py-2 rounded-[50px] sm:px-[30px] hover:bg-primary-500 hover:text-white hover:border-primary-500"
         >
           Checkout
         </Link>
         <Link
           onClick={onCloseCart}
           to="/comparison"
-          className="text-xs border py-2 rounded-[50px] px-[30px] hover:bg-primary-500 hover:text-white hover:border-primary-500"
+          className="px-4 text-xs border py-2 rounded-[50px] sm:px-[30px] hover:bg-primary-500 hover:text-white hover:border-primary-500"
         >
           Comparison
         </Link>

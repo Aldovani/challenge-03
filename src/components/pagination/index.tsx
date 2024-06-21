@@ -11,12 +11,12 @@ export function Pagination() {
     pages,
   } = usePagination()
   return (
-    <footer className="flex justify-center items-center gap-8 my-16">
+    <footer className="flex justify-center items-center gap-4 sm:gap-8 my-16">
       {currentPage > 1 && (
         <button
           onClick={() => handleChangePage(currentPage - 1)}
           disabled={currentPage === 1}
-          className="rounded-lg bg-primary-100 text-xl py-4 px-7  flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors"
+          className="rounded-lg bg-primary-100 sm:text-xl text-base sm:py-4 py-2 sm:px-7 px-3  flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors"
         >
           previous
         </button>
@@ -63,7 +63,7 @@ export function Pagination() {
       <button
         onClick={() => handleChangePage(currentPage + 1)}
         disabled={pages === currentPage}
-        className="rounded-[0.625rem]  text-xl py-4 px-7 bg-primary-100  flex items-center justify-center disabled:opacity-30 hover:bg-primary-500 hover:text-white transition-colors"
+        className="rounded-[0.625rem] sm:text-xl text-base sm:py-4 py-2 sm:px-7 px-3 bg-primary-100  flex items-center justify-center disabled:opacity-30 hover:bg-primary-500 hover:text-white transition-colors"
       >
         Next
       </button>

@@ -13,13 +13,13 @@ export function FilterDrawer({ isOpen, onClose }: FilterDrawerProps) {
       {isOpen && (
         <div
           data-open={isOpen}
-          className="data-[open='true']:scale-x-100  data-[open='true']:translate-x-0   duration-200 fixed  grid grid-cols-[417px_1fr] w-full h-full bg-black bg-opacity-20 z-[100] inset-0"
+          className="data-[open='true']:scale-x-100  data-[open='true']:translate-x-0   duration-200 fixed  grid grid-cols-1  sm:grid-cols-[417px_1fr] w-full h-full bg-black bg-opacity-20 z-[100] inset-0 "
         >
           <div
             data-open={isOpen}
             data-close={isClosing}
             ref={containerRef}
-            className=" data-[close='true']:animate-close-filter bg-white h-full max-h-screen grid grid-rows-[64px_1fr_auto] translate-x-full animate-open-filter"
+            className="overflow-y-auto  data-[close='true']:animate-close-filter bg-white h-full min-h-screen grid grid-rows-[64px_1fr_auto] gap-8 translate-x-full animate-open-filter"
           >
             <div>
               <header className="flex items-center justify-between pr-10 pt-7 pl-8">

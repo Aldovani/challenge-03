@@ -20,9 +20,13 @@ export function Cart({ isOpen, isOpening, onClose }: CartProps) {
       {isOpen && (
         <div
           data-open={isOpening}
-          className="data-[open='true']:scale-x-100 data-[open='true']:translate-x-0  duration-200 fixed  grid grid-cols-[1fr_417px] w-full h-full bg-black bg-opacity-20 z-[100] inset-0"
+          className="data-[open='true']:scale-x-100 data-[open='true']:translate-x-0  duration-200 fixed  grid-cols-1 grid sm:grid-cols-[1fr_417px] w-full h-full bg-black bg-opacity-20 z-[100] inset-0"
         >
-          <div id="overlay" onClick={() => handleClose()}></div>
+          <div
+            id="overlay"
+            className="max-sm:hidden"
+            onClick={() => handleClose()}
+          ></div>
           <div
             data-open={isOpening}
             data-close={isClosing}

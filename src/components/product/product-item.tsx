@@ -39,21 +39,29 @@ export function ProductItem({ product }: ProductItemProps) {
         className="w-full max-h-[300px] h-full"
       />
 
-      <main className="pl-4 pr-5 pt-4 pb-8">
-        <h3 className="text-2xl font-semibold text-gray-500">{product.name}</h3>
+      <main className="pl-4 pr-5 pt-4 pb-20  sm:pb-8  h-[145px]">
+        <h3 className="text-2xl font-semibold text-gray-500 text-nowrap text-ellipsis max-w-full overflow-hidden">
+          {product.name}
+        </h3>
         <span className="mt-2 block font-medium text-gray-300">
           {product.style}
         </span>
         <div className="mt-2 flex justify-between items-center">
-          <strong className="text-gray-500 text-xl font-semibold">
-            {FormateMoney(product.price)}
-          </strong>
-          {product.priceDiscount > 0 && (
-            <span className="text-gray-100 line-through">
-              {FormateMoney(
-                product.price - product.price * (product.priceDiscount / 100),
-              )}
-            </span>
+          {product.priceDiscount > 0 ? (
+            <>
+              <strong className="text-gray-500 text-xl font-semibold">
+                {FormateMoney(
+                  product.price - product.price * (product.priceDiscount / 100),
+                )}
+              </strong>
+              <span className="text-gray-100 line-through">
+                {FormateMoney(product.price)}
+              </span>
+            </>
+          ) : (
+            <strong className="text-gray-500 text-xl font-semibold">
+              {FormateMoney(product.price)}
+            </strong>
           )}
         </div>
       </main>
@@ -71,7 +79,7 @@ export function ProductItem({ product }: ProductItemProps) {
         </div>
       )}
 
-      <div className="transition-all duration-500 translate-y-[calc(100%_+_5px)] group-hover:translate-y-0 flex items-center justify-center flex-col absolute w-full h-full bg-gray-500 inset-0 bg-opacity-[72%]">
+      <div className=" transition-all duration-500 translate-y-[calc(100%_+_5px)] group-hover:translate-y-0 flex items-center justify-center flex-col absolute w-full h-full bg-gray-500 inset-0 bg-opacity-[72%]">
         <button
           onClick={(e) => {
             e.stopPropagation()
@@ -84,7 +92,7 @@ export function ProductItem({ product }: ProductItemProps) {
           Add to cart
         </button>
 
-        <div className="flex items-center gap-5 mt-6">
+        <div className="max-sm:flex-col flex items-center gap-3 sm:gap-5 mt-6">
           <div className="flex gap-1 hover:brightness-50">
             <img src={ICONS.share} alt="share icon" />
             <span className="font-semibold text-white ">Share</span>

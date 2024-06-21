@@ -31,8 +31,8 @@ export function TypeSectionForm({ handleChange, value }: TypeSectionFormProps) {
             type="radio"
             name="type"
             id="armchair"
-            value="armchair"
-            checked={value === 'armchair'}
+            value="armchairs"
+            checked={value === 'armchairs'}
             onChange={(e) => handleChange(e.target.value)}
           />
           <label
@@ -48,8 +48,8 @@ export function TypeSectionForm({ handleChange, value }: TypeSectionFormProps) {
             type="radio"
             name="type"
             id="chair"
-            value="chair"
-            checked={value === 'chair'}
+            value="chairs"
+            checked={value === 'chairs'}
             onChange={(e) => handleChange(e.target.value)}
           />
           <label

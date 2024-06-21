@@ -3,16 +3,16 @@ export function ProductLoading() {
     <div className="w-full   pt-[6.25rem] ">
       <div className="w-full h-24 bg-zinc-100 animate-pulse"></div>
 
-      <div className="container mx-auto flex gap-20 mt-8 pb-16">
-        <div className="grid grid-cols-[80px_480px] gap-10 ">
-          <div className="flex flex-col gap-3 ">
+      <div className="container px-8 mx-auto flex max-md:flex-wrap gap-20 mt-8 pb-16">
+        <div className="grid grid-cols-1 max-md:w-full md:grid-cols-[80px_480px] gap-10 ">
+          <div className="flex flex-col gap-3 max-md:flex-row max-md:row-start-2 max-md:row-end-3 ">
             <span className="size-20 block bg-zinc-100 animate-pulse"></span>
             <span className="size-20 block  bg-zinc-100 animate-pulse"></span>
             <span className="size-20 block bg-zinc-100 animate-pulse"></span>
             <span className="size-20 block bg-zinc-100 animate-pulse"></span>
             <span className="size-20 block bg-zinc-100 animate-pulse"></span>
           </div>
-          <div className="w-full h-[423px] bg-zinc-100 animate-pulse"></div>
+          <div className="max-md:col-start-1 max-md:col-end-2 w-full h-[423px] bg-zinc-100 animate-pulse"></div>
         </div>
         <div className="w-full">
           <span className="block w-full max-w-96 h-20 bg-zinc-100 animate-pulse"></span>
@@ -58,7 +58,7 @@ export function ProductLoading() {
       </div>
 
       <div className="border-t border-zinc-200  mt-8 py-16">
-        <div className="container mx-auto">
+        <div className="container px-8 mx-auto">
           <div className="flex items-center justify-center gap-10">
             <span className="h-10 w-32 block animate-pulse bg-zinc-100"></span>
             <span className="h-10 w-60 block animate-pulse bg-zinc-100"></span>
@@ -76,7 +76,7 @@ export function ProductLoading() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div className="bg-zinc-100 w-full h-[380px]"></div>
             <div className="bg-zinc-100 w-full h-[380px]"></div>
           </div>
