@@ -68,7 +68,7 @@ export const cart: Reducer<ICartState, ICartActions> = (
     }
 
     default: {
-      return { items: [...state.items] }
+      return state
     }
   }
 }
