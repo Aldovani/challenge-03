@@ -2,7 +2,7 @@ import { IState } from '../../stores'
 import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
 
-export const SIBLINGS_COUNT = 2
+export const SIBLINGS_COUNT = 1
 
 function generatePagesArray(from: number, to: number) {
   return [...new Array(to - from)]
