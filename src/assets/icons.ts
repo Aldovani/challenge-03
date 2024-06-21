@@ -53,4 +53,6 @@ export const ICONS = {
   logo: 'https://furniro-pb.s3.us-east-2.amazonaws.com/icons/logo.svg',
   'logo-white':
     'https://furniro-pb.s3.us-east-2.amazonaws.com/icons/logo-white.svg',
+  logo_symbol:
+    'https://furniro-pb.s3.us-east-2.amazonaws.com/icons/logo_simb.png',
 }
