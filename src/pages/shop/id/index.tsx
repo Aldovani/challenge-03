@@ -13,6 +13,7 @@ export function ProductDetailsPage() {
     productsRelated,
     isProductLoading,
     isProductsRelatedLoading,
+    productCategory,
   } = useProductDetails()
 
   if (isProductLoading) return <ProductLoading />
@@ -34,7 +35,7 @@ export function ProductDetailsPage() {
           isLoading={isProductsRelatedLoading}
         />
         <Link
-          to="/shop"
+          to={`/shop?category=${productCategory}`}
           className="mt-11 flex w-fit  justify-center  mx-auto py-3 px-20 border border-primary-500 text-primary-500 font-semibold transition-colors hover:text-white hover:bg-primary-500"
         >
           Show More

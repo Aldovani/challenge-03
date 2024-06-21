@@ -30,6 +30,7 @@ export const Field = forwardRef(
           {...props}
           className={field({ className, isError })}
           {...props}
+          disabled={isLoading}
         />
         {isLoading && <Spinner className="absolute right-4 top-1/2" />}
       </div>

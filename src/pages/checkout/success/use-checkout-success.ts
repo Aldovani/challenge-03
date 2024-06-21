@@ -23,7 +23,7 @@ export function useCheckoutSuccess() {
     dispatch(clearProductToCart())
   }, [dispatch])
 
-  const { total } = CalcTotal(finishedCart.items)
+  const { total } = CalcTotal(finishedCart.items || [])
 
   return { total, finishedCart }
 }

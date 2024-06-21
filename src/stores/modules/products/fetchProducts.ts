@@ -1,4 +1,4 @@
-import { findProducts } from '../../../services/api/products'
+import { Products } from '../../../services/api/products'
 import { fetchDataFailure, fetchDataRequest, fetchDataSuccess } from './actions'
 import { Dispatch } from 'redux'
 
@@ -26,7 +26,7 @@ export const fetchProducts = ({
   return async (dispatch: Dispatch) => {
     dispatch(fetchDataRequest())
     try {
-      const { response } = await findProducts({
+      const data = await Products.FindProducts({
         page,
         perPage,
         sort,
@@ -36,7 +36,7 @@ export const fetchProducts = ({
         isNew,
         isOnSales,
       })
-      dispatch(fetchDataSuccess(response.data))
+      dispatch(fetchDataSuccess(data))
     } catch (error) {
       dispatch(fetchDataFailure(!!error))
     }

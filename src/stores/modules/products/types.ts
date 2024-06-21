@@ -31,7 +31,7 @@ export interface IProductState {
 }
 
 export type fetchDataSuccessProps = {
-  data: IProduct[]
+  products: IProduct[]
   first: number
   prev: number | null
   next: number | null

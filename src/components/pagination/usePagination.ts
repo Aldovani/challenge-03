@@ -16,15 +16,12 @@ export function usePagination() {
   const [searchParams, setSearchParams] = useSearchParams()
 
   const pages =
-    useSelector<IState, number | null>((state) => state.products.pages) || 0
+    useSelector<IState, number | null>((state) => state.products.pages) || 1
 
-  const totalOfElements =
-    useSelector<IState, number | null>(
-      (state) => state.products.totalOfElements,
-    ) || 0
+  const lastPage =
+    useSelector<IState, number | null>((state) => state.products.last) || 0
 
   const currentPage = Number(searchParams.get('page')) || 1
-  const perPage = Number(searchParams.get('perPage')) || 16
 
   function handleChangePage(page: number) {
     setSearchParams((state) => {
@@ -33,8 +30,6 @@ export function usePagination() {
       return state
     })
   }
-
-  const lastPage = Math.floor(totalOfElements / perPage)
 
   const previousPages =
     currentPage > 1

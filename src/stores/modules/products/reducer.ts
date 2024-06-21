@@ -48,7 +48,7 @@ export const products: Reducer<IProductState, IProductActions> = (
         pages: action.payload.pages,
         prev: action.payload.prev,
         totalOfElements: action.payload.items,
-        items: [...action.payload.data],
+        items: [...action.payload.products],
       }
 
     default:

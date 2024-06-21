@@ -16,6 +16,7 @@ export function Spinner({ className, colors }: SpinnerProps) {
   return (
     <div className={className}>
       <span
+        data-testid="spinner-test-id"
         className={`${spinner({ colors })} border-primary-500 border-t-transparent`}
       ></span>
       <span className={`${spinner({ colors })}  opacity-50 absolute`}></span>

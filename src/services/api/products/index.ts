@@ -40,9 +40,9 @@ type GetProductsProps = {
   id: string
 }
 
-export async function findProducts({
-  page,
-  perPage,
+export async function FindProducts({
+  page = 1,
+  perPage = 16,
   sort,
   priceFrom,
   priceTo,
@@ -52,7 +52,7 @@ export async function findProducts({
 }: FindProductsProps) {
   await delay(2000)
 
-  const response = await productsApi.get<FindProductsResponse>('', {
+  const { data } = await productsApi.get<FindProductsResponse>('', {
     params: {
       _per_page: perPage,
       _page: page,
@@ -65,7 +65,15 @@ export async function findProducts({
     },
   })
 
-  return { response }
+  return {
+    products: data.data,
+    items: data.items,
+    next: data.next,
+    pages: data.pages,
+    prev: data.prev,
+    last: data.last,
+    first: data.first,
+  }
 }
 
 export async function GetProduct({ id }: GetProductsProps) {
@@ -73,10 +81,10 @@ export async function GetProduct({ id }: GetProductsProps) {
 
   const { data } = await productsApi.get<Products>(`${id}`)
 
-  return data
+  return { product: data }
 }
 
 export const Products = {
-  findProducts,
+  FindProducts,
   GetProduct,
 }

@@ -1,6 +1,6 @@
 export function ProductListItemLoading() {
   return (
-    <div className=" bg-gray-50">
+    <div data-testid="ProductListItemLoading" className="bg-gray-50">
       <div className="animate-pulse bg-zinc-200 w-full h-[300px]"></div>
 
       <main className="pl-4 pr-5 pt-4 pb-8">

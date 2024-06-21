@@ -9,7 +9,7 @@ import { useCheckoutSuccess } from './use-checkout-success'
 export function CheckoutSuccessPage() {
   const { finishedCart, total } = useCheckoutSuccess()
 
-  if (Array.isArray(finishedCart)) return <Navigate to="/shop" />
+  if (total === 0) return <Navigate to="/shop" />
 
   return (
     <div className="grid lg:grid-cols-[50%_50%] overflow-y-hidden min-h-screen ">

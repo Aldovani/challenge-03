@@ -1,6 +1,6 @@
 export function ProductLoading() {
   return (
-    <div className="w-full   pt-[6.25rem] ">
+    <div data-testid="ProductLoading" className="w-full   pt-[6.25rem] ">
       <div className="w-full h-24 bg-zinc-100 animate-pulse"></div>
 
       <div className="container px-8 mx-auto flex max-md:flex-wrap gap-20 mt-8 pb-16">

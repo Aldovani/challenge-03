@@ -16,16 +16,16 @@ export function useProductDetails() {
       setIsProductLoading(true)
       setIsProductsRelatedLoading(true)
 
-      const product = await Products.GetProduct({ id })
+      const { product } = await Products.GetProduct({ id })
       setProduct(product)
 
-      Products.findProducts({
+      Products.FindProducts({
         type: product.category,
         page: 1,
         perPage: 4,
       })
-        .then(({ response }) => {
-          setProductsRelated(response.data.data)
+        .then((data) => {
+          setProductsRelated(data.products)
         })
         .finally(() => {
           setIsProductsRelatedLoading(false)
@@ -49,5 +49,6 @@ export function useProductDetails() {
     productError,
     productsRelated,
     isProductLoading,
+    productCategory: product?.category,
   }
 }

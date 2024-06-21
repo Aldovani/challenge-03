@@ -16,7 +16,6 @@ export function Slide() {
         fixedWidth: 486,
         type: 'loop',
         focus: 0,
-        drag: false,
       }}
       aria-label="teste"
     >

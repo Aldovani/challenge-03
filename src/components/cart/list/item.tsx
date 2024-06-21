@@ -22,8 +22,8 @@ export function CartListItem({ product, quantity }: CartListItemProps) {
           alt={product.name}
         />
       </div>
-      <div className="sm:ml-8 ml-4 ">
-        <span>Asgaard sofa</span>
+      <div className="sm:ml-8 ml-4  ">
+        <span>{product.name}</span>
         <div className="flex gap-4 items-center mt-3">
           <span>{quantity}</span>
           <span>x</span>
