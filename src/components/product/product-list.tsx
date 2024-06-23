@@ -3,7 +3,7 @@ import { ProductListLoading } from './loading'
 import { ProductItem } from './product-item'
 
 type ProductListProps = {
-  items: Products[]
+  items: Products[] | undefined
   isLoading?: boolean
 }
 

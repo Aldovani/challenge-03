@@ -1,8 +1,8 @@
-import { useDispatch } from 'react-redux'
 import { ICONS } from '../../../assets/icons'
-import { deleteProductToCart } from '../../../stores/modules/cart/actions'
 import { FormateMoney } from '../../../utils/formate-money'
 import { IProduct } from '../../../stores/modules/cart/types'
+import { useAppDispatch } from '../../../stores'
+import { deleteProduct } from '../../../stores/modules/cart'
 
 type CartListItemProps = {
   product: IProduct
@@ -11,7 +11,7 @@ type CartListItemProps = {
 
 export function CartListItem({ product, quantity }: CartListItemProps) {
   const subTotal = (product.price * quantity).toFixed(2)
-  const handleDeleteProductToCart = useDispatch()
+  const dispatch = useAppDispatch()
 
   return (
     <li className="flex items-center ">
@@ -34,9 +34,7 @@ export function CartListItem({ product, quantity }: CartListItemProps) {
       </div>
       <button
         className="ml-auto hover:opacity-50"
-        onClick={() =>
-          handleDeleteProductToCart(deleteProductToCart(product.id))
-        }
+        onClick={() => dispatch(deleteProduct({ productId: product.id }))}
       >
         <img src={ICONS['remove-item']} alt="remove-item icon" />
       </button>

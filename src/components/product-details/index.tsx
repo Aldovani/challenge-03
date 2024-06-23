@@ -1,30 +1,26 @@
-import { useDispatch, useSelector } from 'react-redux'
 import { Products } from '../../services/api/products'
 import { FormateMoney } from '../../utils/formate-money'
 import { Button } from '../button'
-import { Quantity } from '../cart-table/quantity'
 import { Gallery } from './gallery'
 import { Infos } from './Infos'
 import { SelectColor } from './select-color'
 import { SelectSize } from './select-size'
 import { StarsRate } from './stars-rate'
-import { IState } from '../../stores'
-import { ICartItem } from '../../stores/modules/cart/types'
-import {
-  addProductToCart,
-  deleteProductToCart,
-} from '../../stores/modules/cart/actions'
+
 import { toast } from 'sonner'
+import { useAppDispatch, useAppSelector } from '../../stores'
+import { Quantity } from '../cart-table/quantity'
+import { addProduct, deleteProduct } from '../../stores/modules/cart'
 
 type ProductDetailsProps = {
   product: Products
 }
 export function ProductDetails({ product }: ProductDetailsProps) {
-  const productInCar = useSelector<IState, ICartItem | undefined>((state) =>
+  const dispatch = useAppDispatch()
+
+  const productInCart = useAppSelector((state) =>
     state.cart.items.find((item) => item.product.id === product.id),
   )
-
-  const dispatch = useDispatch()
 
   return (
     <>
@@ -47,7 +43,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               <SelectColor />
 
               <div className="flex gap-4 mt-8">
-                {productInCar ? (
+                {productInCart ? (
                   <>
                     <Quantity
                       product={{
@@ -60,7 +56,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                     <Button
                       variants="outline"
                       onClick={() => {
-                        dispatch(deleteProductToCart(product.id))
+                        dispatch(deleteProduct({ productId: product.id }))
                         toast.success('Item removed from cart', {
                           duration: 2000,
                         })
@@ -74,7 +70,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                     variants="outline"
                     onClick={() => {
                       dispatch(
-                        addProductToCart({
+                        addProduct({
                           id: product.id,
                           imgUrl: product.images[0],
                           name: product.name,

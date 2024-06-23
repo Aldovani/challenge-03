@@ -1,14 +1,8 @@
-import { useEffect, useState } from 'react'
+import { , useState } from 'react'
 import { useFilter } from '../../hooks/use-filter'
-import { useSelector } from 'react-redux'
-import { IState } from '../../stores'
-import { fetchProducts } from '../../stores/modules/products/fetchProducts'
+import { useGetProductsQuery } from '../../stores/modules/products/productsRTK'
 
 export function useFilterBar() {
-  const numbeOfElements = useSelector<IState, number>(
-    (state) => state.products.totalOfElements || 0,
-  )
-
   const {
     handleChangePerPage,
     handleChangeSortBy,
@@ -23,6 +17,17 @@ export function useFilterBar() {
     dispatch,
   } = useFilter()
 
+  const { isError, isLoading, data } = useGetProductsQuery({
+    isNew,
+    isOnSales,
+    page,
+    perPage,
+    priceTo,
+    priceFrom,
+    sort: sortBy,
+    type,
+  })
+
   const [isFilterOpen, setIisFilterOpen] = useState(false)
 
   function handleOpenFilterDrawer() {
@@ -33,33 +38,8 @@ export function useFilterBar() {
     setIisFilterOpen(false)
   }
 
-  useEffect(() => {
-    dispatch(
-      fetchProducts({
-        page,
-        perPage,
-        priceFrom,
-        priceTo,
-        type,
-        sort: sortBy,
-        isNew,
-        isOnSales,
-      }),
-    )
-  }, [
-    dispatch,
-    perPage,
-    priceFrom,
-    priceTo,
-    sortBy,
-    type,
-    isNew,
-    isOnSales,
-    page,
-  ])
-
   return {
-    numbeOfElements,
+    numbeOfElements: data?.totalOfElements,
     handleCloseFilterDrawer,
     handleOpenFilterDrawer,
     isFilterOpen,

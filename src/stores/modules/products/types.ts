@@ -30,12 +30,13 @@ export interface IProductState {
   error: boolean | null
 }
 
-export type fetchDataSuccessProps = {
-  products: IProduct[]
-  first: number
-  prev: number | null
-  next: number | null
-  last: number | null
-  pages: number | null
-  items: number | null
+export type FetchProductsProps = {
+  perPage?: number
+  page?: number
+  sort?: string
+  priceFrom?: number | string
+  priceTo?: number | string
+  type?: string
+  isNew?: string
+  isOnSales?: string
 }

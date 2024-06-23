@@ -2,25 +2,25 @@ import { Route, Routes } from 'react-router-dom'
 import { DefaultLayout } from './layouts/default-layout'
 
 import { HomePage } from './pages/home'
-import { ShopPage } from './pages/shop'
+import { NotFoundPage } from './pages/not-found'
 import { ProductDetailsPage } from './pages/shop/id'
-import { ContactPage } from './pages/contact/'
-import { CartPage } from './pages/cart'
 import { AuthLayout } from './layouts/auth-layout'
 import { SignInPage } from './pages/auth/sign-in'
-import { CheckoutPage } from './pages/checkout/'
 import { CheckoutSuccessPage } from './pages/checkout/success'
-import { NotFoundPage } from './pages/not-found'
+import { CheckoutPage } from './pages/checkout'
 import { PrivateRouter } from './components/private-router'
+import { CartPage } from './pages/cart'
+import { ContactPage } from './pages/contact'
+import { ShopPage } from './pages/shop'
 
 export function Router() {
   return (
     <Routes>
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ShopPage />} />
         <Route path="/shop/:id" element={<ProductDetailsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        {/* <Route path="/shop" element={<ShopPage />} /> */}
+        {/* <Route path="/contact" element={<ContactPage />} /> */}
         <Route path="/cart" element={<CartPage />} />
         <Route
           path="/check-out"

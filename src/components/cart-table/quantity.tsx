@@ -1,11 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux'
-import {
-  addProductToCart,
-  removeProductToCart,
-} from '../../stores/modules/cart/actions'
 import { IProduct } from '../../stores/modules/cart/types'
-import { IState } from '../../stores'
 import { tv } from 'tailwind-variants'
+import { useAppDispatch, useAppSelector } from '../../stores'
+import { addProduct, removeProduct } from '../../stores/modules/cart'
 
 type QuantityProps = {
   product: IProduct
@@ -17,8 +13,8 @@ const quantity = tv({
 })
 
 export function Quantity({ product, className }: QuantityProps) {
-  const dispatch = useDispatch()
-  const productsQuantity = useSelector<IState, number>(
+  const dispatch = useAppDispatch()
+  const productsQuantity = useAppSelector(
     (state) =>
       state.cart.items.find((e) => e.product.id === product.id)?.quantity || 0,
   )
@@ -26,14 +22,14 @@ export function Quantity({ product, className }: QuantityProps) {
   return (
     <div className={quantity({ className })}>
       <button
-        onClick={() => dispatch(removeProductToCart(product.id))}
+        onClick={() => dispatch(removeProduct({ productId: product.id }))}
         className="py-4 px-3 hover:bg-primary-100 rounded-l-[10px]"
       >
         -
       </button>
       <span>{productsQuantity}</span>
       <button
-        onClick={() => dispatch(addProductToCart(product))}
+        onClick={() => dispatch(addProduct({ ...product }))}
         className="p-4 hover:bg-primary-100 rounded-r-[10px]"
       >
         +

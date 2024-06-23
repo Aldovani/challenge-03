@@ -1,10 +1,8 @@
-import { useSelector } from 'react-redux'
 import { CartTableItem } from './cart-table-item'
-import { IState } from '../../stores'
-import { ICartItem } from '../../stores/modules/cart/types'
+import { useAppSelector } from '../../stores'
 
 export function CartTable() {
-  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+  const products = useAppSelector((state) => state.cart.items)
 
   return (
     <table className="w-full">

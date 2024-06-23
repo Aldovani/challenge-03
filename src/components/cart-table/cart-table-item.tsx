@@ -1,9 +1,9 @@
-import { useDispatch } from 'react-redux'
 import { ICONS } from '../../assets/icons'
 import { IProduct } from '../../stores/modules/cart/types'
-import { deleteProductToCart } from '../../stores/modules/cart/actions'
 import { FormateMoney } from '../../utils/formate-money'
 import { Quantity } from './quantity'
+import { useAppDispatch } from '../../stores'
+import { deleteProduct } from '../../stores/modules/cart'
 
 type CartTableItemProps = {
   product: IProduct
@@ -11,7 +11,7 @@ type CartTableItemProps = {
 }
 
 export function CartTableItem({ product, quantity }: CartTableItemProps) {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const subTotal = product.price * quantity
 
   return (
@@ -28,11 +28,13 @@ export function CartTableItem({ product, quantity }: CartTableItemProps) {
         {FormateMoney(product.price)}
       </td>
       <td className="px-4 pt-14">
-        <Quantity product={product} quantity={quantity} />
+        <Quantity product={product} />
       </td>
       <td className="px-4 pt-14">{FormateMoney(subTotal)}</td>
       <td className="px-4 pt-14">
-        <button onClick={() => dispatch(deleteProductToCart(product.id))}>
+        <button
+          onClick={() => dispatch(deleteProduct({ productId: product.id }))}
+        >
           <img
             src={ICONS['delete-filled']}
             alt="delete-filled icon"

@@ -1,10 +1,8 @@
-import { useSelector } from 'react-redux'
-import { IState } from '../../../stores'
+import { useAppSelector } from '../../../stores'
 import { CartListItem } from './item'
-import { ICartItem } from '../../../stores/modules/cart/types'
 
 export function CartList() {
-  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+  const products = useAppSelector((state) => state.cart.items)
 
   return (
     <ul className="pr-10 pl-8 mt-10 flex flex-col gap-5 max-h-full overflow-y-auto ">

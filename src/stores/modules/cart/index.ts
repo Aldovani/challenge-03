@@ -1,18 +1,16 @@
-import { Reducer } from 'redux'
-import { ICartState, ActionTypes } from './types'
-import { ICartActions } from './actions'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { ICartState, IProduct } from './types'
 
 const INITIAL_STATE: ICartState = {
   items: [],
 }
 
-export const cart: Reducer<ICartState, ICartActions> = (
-  state = INITIAL_STATE,
-  action,
-) => {
-  switch (action.type) {
-    case ActionTypes.addProductToCart: {
-      const { product } = action.payload
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState: INITIAL_STATE,
+  reducers: {
+    addProduct(state, action: PayloadAction<IProduct>) {
+      const product = action.payload
       const productInCartIndex = state.items.findIndex(
         (item) => item.product.id === product.id,
       )
@@ -20,15 +18,11 @@ export const cart: Reducer<ICartState, ICartActions> = (
       if (productInCartIndex > -1) {
         state.items[productInCartIndex].quantity++
       } else {
-        return {
-          items: [...state.items, { ...action.payload, quantity: 1 }],
-        }
+        state.items.push({ product, quantity: 1 })
       }
+    },
 
-      return { items: [...state.items] }
-    }
-
-    case ActionTypes.removeProductToCart: {
+    removeProduct(state, action: PayloadAction<{ productId: string }>) {
       const { productId } = action.payload
       const productInCartIndex = state.items.findIndex(
         (item) => item.product.id === productId,
@@ -51,24 +45,24 @@ export const cart: Reducer<ICartState, ICartActions> = (
       }
 
       return { items: [...state.items] }
-    }
+    },
 
-    case ActionTypes.deleteProductToCart: {
+    deleteProduct(state, action: PayloadAction<{ productId: string }>) {
       const { productId } = action.payload
 
       const newState = state.items.filter(
         (item) => item.product.id !== productId,
       )
 
-      return { items: newState }
-    }
+      state.items = newState
+    },
 
-    case ActionTypes.clearProductToCart: {
-      return { items: [] }
-    }
+    clearCart(state) {
+      state.items = []
+    },
+  },
+})
 
-    default: {
-      return state
-    }
-  }
-}
+export const { addProduct, removeProduct, clearCart, deleteProduct } =
+  cartSlice.actions
+export const cart = cartSlice.reducer
