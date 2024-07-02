@@ -19,15 +19,15 @@ export interface IProduct {
 }
 
 export interface IProductState {
-  items: IProduct[]
+  data: IProduct[]
   first: number
-  prev: number | null
-  next: number | null
-  last: number | null
-  pages: number | null
+  prev: number
+  next: number
+  last: number
+  pages: number
   loading: boolean
-  totalOfElements: number | null
-  error: boolean | null
+  items: number
+  error: boolean
 }
 
 export type FetchProductsProps = {
