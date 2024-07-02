@@ -3,6 +3,10 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        lato: 'Lato',
+      },
+
       colors: {
         primary: {
           500: '#B88E2F',
