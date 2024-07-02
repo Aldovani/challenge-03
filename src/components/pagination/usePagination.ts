@@ -1,6 +1,9 @@
-import { IState } from '../../stores'
-import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
+
+type UsePaginationProps = {
+  pages?: number
+  lastPage?: number
+}
 
 export const SIBLINGS_COUNT = 1
 
@@ -12,14 +15,8 @@ function generatePagesArray(from: number, to: number) {
     .filter((page) => page > 0)
 }
 
-export function usePagination() {
+export function usePagination({ lastPage = 1, pages = 1 }: UsePaginationProps) {
   const [searchParams, setSearchParams] = useSearchParams()
-
-  const pages =
-    useSelector<IState, number | null>((state) => state.products.pages) || 1
-
-  const lastPage =
-    useSelector<IState, number | null>((state) => state.products.last) || 0
 
   const currentPage = Number(searchParams.get('page')) || 1
 

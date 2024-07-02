@@ -1,7 +1,15 @@
 import { SIBLINGS_COUNT, usePagination } from './usePagination'
 import { PaginationItem } from './item'
 
-export function Pagination() {
+type PaginationProps = {
+  totalOfPages?: number
+  lastPages?: number
+}
+
+export function Pagination({
+  lastPages = 1,
+  totalOfPages = 1,
+}: PaginationProps) {
   const {
     lastPage,
     nextPages,
@@ -9,7 +17,7 @@ export function Pagination() {
     currentPage,
     handleChangePage,
     pages,
-  } = usePagination()
+  } = usePagination({ lastPage: lastPages, pages: totalOfPages })
   return (
     <footer className="flex justify-center items-center gap-4 sm:gap-8 my-16">
       {currentPage > 1 && (
