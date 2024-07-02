@@ -19,8 +19,8 @@ export function Router() {
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop/:id" element={<ProductDetailsPage />} />
-        {/* <Route path="/shop" element={<ShopPage />} /> */}
-        {/* <Route path="/contact" element={<ContactPage />} /> */}
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route
           path="/check-out"
