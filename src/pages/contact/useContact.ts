@@ -1,10 +1,10 @@
 import { z } from 'zod'
 import { useForms } from '../../hooks/use-forms'
-import { useDispatch } from 'react-redux'
-import { saveContact } from '../../stores/modules/contact/actions'
+import { saveContact } from '../../stores/modules/contact'
 import { delay } from '../../utils/delay'
 import { useState } from 'react'
 import { toast } from 'sonner'
+import { useAppDispatch } from '../../stores'
 
 const contactSchema = z.object({
   name: z.string().min(4),
@@ -16,7 +16,7 @@ const contactSchema = z.object({
 type ContactSchema = z.infer<typeof contactSchema>
 
 export function useContact() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const [isSaveContactIsLoading, setIsSaveContactIsLoading] = useState(false)
   const {
     register,

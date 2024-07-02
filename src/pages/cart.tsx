@@ -1,15 +1,13 @@
-import { useSelector } from 'react-redux'
 import { Banner } from '../components/banner'
 import { Benefits } from '../components/benefits'
 import { CartTable } from '../components/cart-table'
 
 import { Link } from 'react-router-dom'
-import { IState } from '../stores'
-import { ICartItem } from '../stores/modules/cart/types'
+import { useAppSelector } from '../stores'
 import { FormateMoney } from '../utils/formate-money'
 import { CalcTotal } from '../utils/calc-total'
 export function CartPage() {
-  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+  const products = useAppSelector((state) => state.cart.items)
 
   const { total } = CalcTotal(products)
 

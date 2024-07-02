@@ -1,13 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { cart } from './modules/cart'
+import { cart, contact } from './modules'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import { productsApi } from './modules/products/productsRTK'
+import { productsApi } from './modules/products/products-api'
 import { setupListeners } from '@reduxjs/toolkit/query'
 
 export const store = configureStore({
   devTools: true,
   reducer: {
     cart,
+    contact,
     [productsApi.reducerPath]: productsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>

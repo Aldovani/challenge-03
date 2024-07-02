@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom'
 import { ICONS } from '../../assets/icons'
 import { FormateMoney } from '../../utils/formate-money'
 import { toast } from 'sonner'
+import { useAppDispatch } from '../../stores'
+import { addProduct } from '../../stores/modules/cart'
 
 type Product = {
   name: string
@@ -24,6 +26,7 @@ export function ProductItem({ product }: ProductItemProps) {
     navigate(`/shop/${product.id}`)
   }
 
+  const dispatch = useAppDispatch()
   return (
     <div
       onClick={handleNavigateTo}
@@ -79,6 +82,14 @@ export function ProductItem({ product }: ProductItemProps) {
         <button
           onClick={(e) => {
             e.stopPropagation()
+            dispatch(
+              addProduct({
+                id: product.id,
+                imgUrl: product.images[0],
+                name: product.name,
+                price: product.price,
+              }),
+            )
             toast.success('Item adicionado ao carinho')
           }}
           className="hover:bg-primary-500 hover:text-white transition-colors px-14 py-3 bg-white text-primary-500 font-semibold"

@@ -1,32 +1,9 @@
-import { , useState } from 'react'
+import { useState } from 'react'
 import { useFilter } from '../../hooks/use-filter'
-import { useGetProductsQuery } from '../../stores/modules/products/productsRTK'
 
 export function useFilterBar() {
-  const {
-    handleChangePerPage,
-    handleChangeSortBy,
-    isNew,
-    isOnSales,
-    page,
-    perPage,
-    priceFrom,
-    priceTo,
-    type,
-    sortBy,
-    dispatch,
-  } = useFilter()
-
-  const { isError, isLoading, data } = useGetProductsQuery({
-    isNew,
-    isOnSales,
-    page,
-    perPage,
-    priceTo,
-    priceFrom,
-    sort: sortBy,
-    type,
-  })
+  const { page, perPage, sortBy, handleChangePerPage, handleChangeSortBy } =
+    useFilter()
 
   const [isFilterOpen, setIisFilterOpen] = useState(false)
 
@@ -39,14 +16,13 @@ export function useFilterBar() {
   }
 
   return {
-    numbeOfElements: data?.totalOfElements,
     handleCloseFilterDrawer,
     handleOpenFilterDrawer,
     isFilterOpen,
-    handleChangePerPage,
-    handleChangeSortBy,
     page,
     perPage,
     sortBy,
+    handleChangePerPage,
+    handleChangeSortBy,
   }
 }

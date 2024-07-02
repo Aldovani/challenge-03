@@ -1,13 +1,11 @@
-import { useSelector } from 'react-redux'
 import { Banner } from '../../components/banner'
 import { Benefits } from '../../components/benefits'
 import { CheckoutForm } from '../../components/checkout-form'
-import { IState } from '../../stores'
-import { ICartItem } from '../../stores/modules/cart/types'
 import { Navigate } from 'react-router-dom'
+import { useAppSelector } from '../../stores'
 
 export function CheckoutPage() {
-  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+  const products = useAppSelector((state) => state.cart.items)
 
   if (products.length === 0) return <Navigate to="/shop" />
 

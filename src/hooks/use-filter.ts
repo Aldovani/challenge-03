@@ -1,8 +1,5 @@
-import { useDispatch } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
-import { AppDispatch } from '../stores'
-import { fetchProducts } from '../stores/modules/products/fetchProducts'
-import { useGetProductsQuery } from '../stores/modules/products/productsRTK'
+import { useAppDispatch } from '../stores'
 
 export function useFilter() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -15,19 +12,22 @@ export function useFilter() {
   const priceTo = Number(searchParams.get('priceTo')) || ''
   const isNew = searchParams.get('isNew') || ''
   const isOnSales = searchParams.get('isOnSales') || ''
-  const dispatch = useDispatch<AppDispatch>()
+  const dispatch = useAppDispatch()
 
-  // function handleChangePerPage(value: number) {
-  //   useGetProductsQuery({ page: 1, perPage: value, sort: sortBy })
-
-  //   setSearchParams((state) => {
-  //     state.set('perPage', value.toString())
-  //     state.set('page', '1')
-  //     return state
-  //   })
-  // }
-
- 
+  function handleChangePerPage(value: number) {
+    setSearchParams((state) => {
+      state.set('perPage', value.toString())
+      state.set('page', '1')
+      return state
+    })
+  }
+  function handleChangeSortBy(value: string) {
+    setSearchParams((state) => {
+      state.set('sortBy', value.toString())
+      state.set('page', '1')
+      return state
+    })
+  }
 
   return {
     dispatch,
@@ -40,7 +40,7 @@ export function useFilter() {
     isNew,
     isOnSales,
     setSearchParams,
-    handleChangeSortBy,
     handleChangePerPage,
+    handleChangeSortBy,
   }
 }

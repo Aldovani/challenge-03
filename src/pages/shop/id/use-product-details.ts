@@ -1,15 +1,33 @@
 import { useParams } from 'react-router-dom'
-import { useGetProductByIDQuery } from '../../../stores/modules/products/productsRTK'
+import {
+  useGetProductByIDQuery,
+  useGetProductsQuery,
+} from '../../../stores/modules/products/products-api'
 
 export function useProductDetails() {
   const { id } = useParams()
 
-  const { isError, isLoading, data } = useGetProductByIDQuery(id || '')
+  const {
+    isError: productError,
+    isLoading,
+    data: product,
+  } = useGetProductByIDQuery(id || '')
+
+  const { isLoading: isProductsRelatedLoading, data: productsRelated } =
+    useGetProductsQuery(
+      {
+        perPage: 8,
+        page: 1,
+        type: product?.category,
+      },
+      { refetchOnMountOrArgChange: false },
+    )
 
   return {
-    product: data,
-    productError: isError,
+    isProductsRelatedLoading,
+    product,
+    productError,
     isProductLoading: isLoading,
-    productCategory: data?.category,
+    productsRelated,
   }
 }

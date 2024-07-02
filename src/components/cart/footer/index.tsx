@@ -1,16 +1,14 @@
-import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { IState } from '../../../stores'
-import { ICartItem } from '../../../stores/modules/cart/types'
 import { FormateMoney } from '../../../utils/formate-money'
 import { CalcTotal } from '../../../utils/calc-total'
+import { useAppSelector } from '../../../stores'
 
 type CartFooterProps = {
   onCloseCart: () => void
 }
 
 export function CartFooter({ onCloseCart }: CartFooterProps) {
-  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+  const products = useAppSelector((state) => state.cart.items)
 
   const { total } = CalcTotal(products)
 

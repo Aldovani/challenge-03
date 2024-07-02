@@ -1,8 +1,14 @@
 import { IMAGES } from '../assets/images'
 import { Link } from '../components/Link'
+import { ProductList } from '../components/product/product-list'
 import { Slide } from '../components/slide'
+import { useGetProductsQuery } from '../stores/modules/products/products-api'
 
 export function HomePage() {
+  const { isLoading, data: products } = useGetProductsQuery({
+    perPage: 8,
+    page: 1,
+  })
   return (
     <>
       <div className="pt-28">
@@ -75,7 +81,7 @@ export function HomePage() {
           Our Products
         </h3>
 
-        {/* <ProductList items={products} isLoading={loading} /> */}
+        <ProductList items={products?.data} isLoading={isLoading} />
 
         <Link to="/shop" variants="outline" className="mt-11 w-fit mx-auto">
           Show More

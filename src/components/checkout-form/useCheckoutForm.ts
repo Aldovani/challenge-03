@@ -1,6 +1,4 @@
-import { useSelector } from 'react-redux'
-import { IState } from '../../stores'
-import { ICartItem } from '../../stores/modules/cart/types'
+import { useAppSelector } from '../../stores'
 import { CalcTotal } from '../../utils/calc-total'
 import { useForms } from '../../hooks/use-forms'
 import { z } from 'zod'
@@ -41,7 +39,7 @@ type Address = {
   siafi: string
 }
 export function useCheckoutForm() {
-  const products = useSelector<IState, ICartItem[]>((state) => state.cart.items)
+  const products = useAppSelector((state) => state.cart.items)
   const navigation = useNavigate()
 
   const { total } = CalcTotal(products)
