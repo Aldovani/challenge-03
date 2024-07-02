@@ -3,15 +3,16 @@ import { tv, VariantProps } from 'tailwind-variants'
 import { Spinner } from '../spinner'
 
 const button = tv({
-  base: 'w-full py-3 rounded-[0.3125rem] ',
+  base: 'w-full py-3  uppercase font-medium ',
   variants: {
     variants: {
       outline:
-        'border  rounded-2xl hover:bg-primary-500 transition-colors hover:border-primary-500 hover:text-white',
-      primary: ' bg-primary-500 text-white  hover:bg-opacity-80',
+        'border border-zinc-200   hover:bg-emerald-700 transition-colors text-zinc-400  hover:border-emerald-700 hover:text-white',
+      primary:
+        ' bg-emerald-700 text-white  hover:bg-emerald-600 transition-colors',
     },
     isLoading: {
-      true: 'text-white gap-2 bg-primary-500 flex items-center justify-center border-primary-500',
+      true: 'text-white gap-2 bg-emerald-700 flex items-center justify-center border-emerald-700',
     },
   },
   defaultVariants: {
