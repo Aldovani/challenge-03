@@ -2,17 +2,20 @@ import { ICONS } from '../../assets/icons'
 import { FilterDrawer } from '../filter-drawer'
 import { useFilterBar } from './use-filter-bar'
 
-export function FilterBar() {
+type FilterBarProps = {
+  numberOfProducts?: number
+}
+
+export function FilterBar({ numberOfProducts = 0 }: FilterBarProps) {
   const {
-    handleChangePerPage,
-    handleChangeSortBy,
     handleCloseFilterDrawer,
     handleOpenFilterDrawer,
     isFilterOpen,
-    numbeOfElements,
     page,
     perPage,
     sortBy,
+    handleChangePerPage,
+    handleChangeSortBy,
   } = useFilterBar()
 
   return (
@@ -46,10 +49,8 @@ export function FilterBar() {
           <span className="max-sm:hidden block h-[37px] w-[1px] bg-gray-300 "></span>
           <p>
             Showing {(page - 1) * perPage + 1}-
-            {page * perPage > numbeOfElements
-              ? numbeOfElements
-              : page * perPage}{' '}
-            of {numbeOfElements} results
+            {page * perPage > numberOfProducts ? 150 : page * perPage} of{' '}
+            {numberOfProducts} results
           </p>
         </div>
 
