@@ -3,7 +3,7 @@ import { tv, VariantProps } from 'tailwind-variants'
 import { Spinner } from '../spinner'
 
 const field = tv({
-  base: 'w-full border border-gray-200 bg-white py-6 rounded-[0.625rem] placeholder:text-gray-200 px-8 outline-none disabled:opacity-50',
+  base: 'w-full border border-zinc-200 bg-white py-4 placeholder:text-gray-200 px-8 outline-none disabled:opacity-50',
   variants: {
     isError: { true: 'border-action-error' },
   },
