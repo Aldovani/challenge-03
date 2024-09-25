@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react'
-import { describe, expect, it, vi } from 'vitest'
-import { Products } from '../../services/api/products'
+import { describe, expect, it } from 'vitest'
 import { MemoryRouter } from 'react-router-dom'
 import { ProductItem } from './product-item'
+import type { Products } from '@/types/products'
+import { Providers } from '@/providers'
 
 const product: Products = {
   name: 'Plush Velvet Sofa',
@@ -19,17 +20,16 @@ const product: Products = {
   isNew: true,
   category: 'Sofas',
   tags: ['Velvet', 'Glamorous', 'Luxurious', 'Inviting'],
+  colors: [{ hex: '', name: '' }],
 }
-
-vi.mock('react-redux', () => ({
-  useDispatch: () => vi.fn(),
-}))
 
 describe('<ProductItem/>', () => {
   it('should be able to render the component', () => {
     render(
       <MemoryRouter>
-        <ProductItem product={product} />
+        <Providers>
+          <ProductItem product={product} />
+        </Providers>
       </MemoryRouter>,
     )
 

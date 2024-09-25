@@ -1,46 +1,32 @@
-import { useDispatch } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
-import { AppDispatch } from '../stores'
-import { fetchProducts } from '../stores/modules/products/fetchProducts'
+import { useAppDispatch } from '../stores'
 
 export function useFilter() {
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const perPage = Number(searchParams.get('perPage')) || 16
+  const perPage = Number(searchParams.get('perPage')) || 24
   const page = Number(searchParams.get('page')) || 1
   const sortBy = searchParams.get('sortBy') || ''
   const type = searchParams.get('category') || ''
-  const priceFrom = Number(searchParams.get('priceFrom')) || ''
-  const priceTo = Number(searchParams.get('priceTo')) || ''
+  const price = [
+    Number(searchParams.get('priceFrom')) || 0,
+    Number(searchParams.get('priceTo')) || 10000,
+  ]
   const isNew = searchParams.get('isNew') || ''
   const isOnSales = searchParams.get('isOnSales') || ''
-  const dispatch = useDispatch<AppDispatch>()
+  const dispatch = useAppDispatch()
 
   function handleChangePerPage(value: number) {
-    dispatch(fetchProducts({ page: 1, perPage: value, sort: sortBy }))
-
     setSearchParams((state) => {
       state.set('perPage', value.toString())
       state.set('page', '1')
       return state
     })
   }
-
-  function handleChangeSortBy(sortBy: string) {
-    dispatch(
-      fetchProducts({
-        page: 1,
-        perPage,
-        sort: sortBy,
-        type,
-        isNew,
-        isOnSales,
-        priceFrom,
-        priceTo,
-      }),
-    )
+  function handleChangeSortBy(value: string) {
     setSearchParams((state) => {
-      state.set('sortBy', sortBy)
+      state.set('sortBy', value.toString())
+      state.set('page', '1')
       return state
     })
   }
@@ -51,12 +37,11 @@ export function useFilter() {
     page,
     sortBy,
     type,
-    priceFrom,
-    priceTo,
+    price,
     isNew,
     isOnSales,
     setSearchParams,
-    handleChangeSortBy,
     handleChangePerPage,
+    handleChangeSortBy,
   }
 }

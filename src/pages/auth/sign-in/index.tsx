@@ -1,68 +1,54 @@
 import { Link } from 'react-router-dom'
-import { Button } from '../../../components/button'
-import { Input } from '../../../components/input'
+import { Button } from '@/components/ui/button'
 import { useSignIn } from './use-sign-in'
-import { ICONS } from '../../../assets/icons'
+import FacebookIcon from '@/assets/facebook-icon.svg'
+import GoogleIcon from '@/assets/google-icon.svg'
+import { SignInForm } from './components/sign-in-form'
+import { Logo } from '@/components/ui/logo'
 
 export function SignInPage() {
-  const {
-    errors,
-    handleSubmit,
-    register,
-    handleSignInWithFacebook,
-    handleSignInWithGoogle,
-    handleSignInWithEmail,
-  } = useSignIn()
+  const { handleSignInWithFacebook, handleSignInWithGoogle } = useSignIn()
 
   return (
     <main className="flex flex-col py-8  sm:py-10 px-8 sm:px-20">
       <Link to="/">
-        <img src={ICONS.logo} alt="Logo Furniro" className="w-32" />
+        <Logo variants="black" />
       </Link>
 
-      <div className="mt-10">
-        <h1 className="sm:text-64 text-4xl font-eb-garamond font-bold  text-gray-500">
-          Welcome back
-        </h1>
-        <p className="mt-2 text-gray-200 max-w-96  ">
-          Browse our wide selection of comfortable and stylish sofas.
-        </p>
-      </div>
+      <div className="xl:px-16 mt-8">
+        <header className="mt-10">
+          <h1 className="sm:text-64 text-4xl font-manrope font-medium  text-zinc-900 max-w-[280px] leading-[120%] ">
+            Welcome back to Furniro Login
+          </h1>
+          <p className="mt-2 text-zinc-400  ">
+            Vorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </header>
 
-      <form
-        className="mt-12"
-        onSubmit={handleSubmit((data) => handleSignInWithEmail(data.email))}
-      >
-        <Input.Label name="Email" htmlFor="email">
-          <Input.Field
-            id="email"
-            placeholder="abc@exemple.com"
-            className="mt-5"
-            isError={!!errors.email}
-            type="email"
-            {...register('email')}
-          />
-          <Input.MessageError error={errors.email?.message} />
-        </Input.Label>
+        <div className="flex flex-col gap-4 mt-8">
+          <Button
+            variants="outline"
+            className="flex gap-3 py-4  justify-center "
+            onClick={handleSignInWithGoogle}
+          >
+            <img src={GoogleIcon} alt="google icon" /> Sign-in with Google
+          </Button>
+          <Button
+            variants="outline"
+            className="flex gap-3 py-4  justify-center"
+            onClick={handleSignInWithFacebook}
+          >
+            <img src={FacebookIcon} alt="facebook icon" /> Sign-in with Facebook
+          </Button>
+        </div>
 
-        <Button type="submit" className="mt-4">
-          Sign-in
-        </Button>
-      </form>
+        <div className="flex gap-3 items-center mt-6 ">
+          <span className="h-[1px] w-full block bg-zinc-200"> </span>
+          <span className="text-zinc-400">Or </span>
+          <span className="h-[1px] w-full bg-zinc-200 block"> </span>
+        </div>
 
-      <div className="flex gap-3 items-center mt-6 ">
-        <span className="h-[1px] w-full block bg-gray-100"> </span>
-        <span className="text-gray-200">Or </span>
-        <span className="h-[1px] w-full bg-gray-100 block"> </span>
-      </div>
-
-      <div className="flex flex-col gap-4 mt-8">
-        <Button variants="outline" onClick={handleSignInWithGoogle}>
-          Sign-in with Google
-        </Button>
-        <Button variants="outline" onClick={handleSignInWithFacebook}>
-          Sign-in with Facebook
-        </Button>
+        <SignInForm />
       </div>
     </main>
   )

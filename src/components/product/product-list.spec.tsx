@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react'
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { ProductList } from './product-list'
-import { Products } from '../../services/api/products'
 import { MemoryRouter } from 'react-router-dom'
+import type { Products } from '@/types/products'
+import { Providers } from '@/providers'
 
 const products: Products[] = [
   {
@@ -20,6 +21,7 @@ const products: Products[] = [
     isNew: true,
     category: 'Sofas',
     tags: ['Velvet', 'Glamorous', 'Luxurious', 'Inviting'],
+    colors: [{ hex: '', name: '' }],
   },
   {
     name: 'Scandinavian Sofa',
@@ -36,18 +38,17 @@ const products: Products[] = [
     isNew: false,
     category: 'Sofas',
     tags: ['Scandinavian', 'Minimalist', 'Functional', 'Relaxing'],
+    colors: [{ hex: '', name: '' }],
   },
 ]
-
-vi.mock('react-redux', () => ({
-  useDispatch: () => vi.fn(),
-}))
 
 describe('<ProductList/>', () => {
   it('should be able to render the component', () => {
     render(
       <MemoryRouter>
-        <ProductList items={products} />
+        <Providers>
+          <ProductList items={products} />
+        </Providers>
       </MemoryRouter>,
     )
 
@@ -65,7 +66,9 @@ describe('<ProductList/>', () => {
   it('should be able to render the loading component', () => {
     render(
       <MemoryRouter>
-        <ProductList items={[]} isLoading />
+        <Providers>
+          <ProductList items={[]} isLoading />
+        </Providers>
       </MemoryRouter>,
     )
 

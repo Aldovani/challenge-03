@@ -1,54 +1,33 @@
-import { useCallback, useEffect, useState } from 'react'
-import { Products } from '../../../services/api/products'
 import { useParams } from 'react-router-dom'
+import {
+  useGetProductByIDQuery,
+  useGetProductsQuery,
+} from '../../../stores/modules/products/products-api'
 
 export function useProductDetails() {
   const { id } = useParams()
 
-  const [product, setProduct] = useState<Products>()
-  const [isProductLoading, setIsProductLoading] = useState(true)
-  const [productsRelated, setProductsRelated] = useState<Products[]>([])
-  const [isProductsRelatedLoading, setIsProductsRelatedLoading] = useState(true)
-  const [productError, setProductError] = useState(false)
+  const {
+    isError: productError,
+    isLoading,
+    data: product,
+  } = useGetProductByIDQuery(id || '')
 
-  const getProduct = useCallback(async (id: string) => {
-    try {
-      setIsProductLoading(true)
-      setIsProductsRelatedLoading(true)
-
-      const { product } = await Products.GetProduct({ id })
-      setProduct(product)
-
-      Products.FindProducts({
-        type: product.category,
+  const { isLoading: isProductsRelatedLoading, data: productsRelated } =
+    useGetProductsQuery(
+      {
+        perPage: 6,
         page: 1,
-        perPage: 4,
-      })
-        .then((data) => {
-          setProductsRelated(data.products)
-        })
-        .finally(() => {
-          setIsProductsRelatedLoading(false)
-        })
-    } catch (err) {
-      setProductError(true)
-    } finally {
-      setIsProductLoading(false)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!id) return
-
-    getProduct(id)
-  }, [getProduct, id])
+        type: product?.category,
+      },
+      { refetchOnMountOrArgChange: false },
+    )
 
   return {
-    product,
     isProductsRelatedLoading,
+    product,
     productError,
+    isProductLoading: isLoading,
     productsRelated,
-    isProductLoading,
-    productCategory: product?.category,
   }
 }

@@ -1,7 +1,3 @@
-export enum ActionTypes {
-  saveContact = 'SAVE_CONTACT',
-}
-
 export interface IContact {
   name: string
   email: string
@@ -10,5 +6,5 @@ export interface IContact {
 }
 
 export interface IContactState {
-  contact: IContact | undefined
+  contacts: IContact[]
 }

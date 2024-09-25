@@ -1,2856 +1,1226 @@
 {
+  "favorites": [],
+  "orders": [
+    {
+      "id": "11c45c39-53fa-4ae2-963d-f10e3fe456ab",
+      "items": [
+        {
+          "product": {
+            "id": "1",
+            "imgUrl": "/products/image 11.png",
+            "name": "Scandinavian Sofa",
+            "price": 1199,
+            "discount": 0,
+            "color": "blue",
+            "size": "Extra Large"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "2",
+            "imgUrl": "/products/image 67.png",
+            "name": "Modern Wooden Chair",
+            "price": 299,
+            "discount": 50,
+            "color": "brown",
+            "size": "Medium"
+          },
+          "quantity": 1
+        }
+      ],
+      "orderData": "07/09/2024",
+      "orderID": "172574",
+      "paymentMethod": "google",
+      "userId": ""
+    },
+    {
+      "id": "ff7954bf-12ba-49b9-a154-2c3ee21cbfac",
+      "items": [
+        {
+          "product": {
+            "id": "1",
+            "imgUrl": "/products/image 11.png",
+            "name": "Scandinavian Sofa",
+            "price": 1199,
+            "color": "blue",
+            "discount": 8,
+            "size": "Extra Large"
+          },
+          "quantity": 1
+        }
+      ],
+      "orderData": "10/09/2024",
+      "orderID": "172594",
+      "paymentMethod": "credit-card",
+      "userId": "2e3xWeOBXqQedmQe1wYBzjZIyja2"
+    },
+    {
+      "id": "3eae6266-bca5-4aec-ae41-cb13d997f649",
+      "items": [
+        {
+          "product": {
+            "id": "2",
+            "imgUrl": "/products/image 67.png",
+            "name": "Modern Wooden Chair",
+            "price": 299,
+            "discount": 50,
+            "color": "brown",
+            "size": "Medium"
+          },
+          "quantity": 1
+        }
+      ],
+      "orderData": "11/09/2024",
+      "orderID": "172607",
+      "paymentMethod": "pay-pal",
+      "userId": "2e3xWeOBXqQedmQe1wYBzjZIyja2"
+    }
+  ],
   "products": [
     {
       "name": "Scandinavian Sofa",
       "id": "1",
       "style": "Scandinavian",
-      "price": 1199.0,
+      "price": 1199,
       "description": "Embrace the minimalist beauty of Scandinavian design with this sleek and functional Scandinavian sofa. Its clean lines and neutral tones create a sense of calm and tranquility.",
-      "rate": 4.6,
+      "rate": 2.6,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+1.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+1.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+1.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+1.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+1.png"
+        "/products/image 11.png",
+        "/products/image 22.png",
+        "/products/image 33.png",
+        "/products/image 44.png",
+        "/products/image 55.png"
       ],
       "priceDiscount": 0,
       "isNew": false,
       "category": "sofas",
-      "tags": ["Scandinavian", "Minimalist", "Functional", "Relaxing"]
+      "colors": [
+        {
+          "hex": "#00f",
+          "name": "blue"
+        },
+        {
+          "hex": "#058fff",
+          "name": "blue2"
+        },
+        {
+          "hex": "#00879f",
+          "name": "blue4"
+        },
+        {
+          "hex": "#04120f",
+          "name": "blue5"
+        },
+        {
+          "hex": "#00f89f",
+          "name": "blue3"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "LG",
+          "name": "Extra Large"
+        },
+        {
+          "acronym": "L",
+          "name": "large"
+        }
+      ],
+      "tags": [
+        "Scandinavian",
+        "Minimalist",
+        "Functional",
+        "Relaxing"
+      ]
     },
     {
-      "name": "Modern Armchair",
+      "name": "Modern Wooden Chair",
       "id": "2",
       "style": "Modern",
-      "price": 799.0,
-      "description": "A stylish modern armchair that combines comfort and elegance. Perfect for any contemporary living space.",
-      "rate": 4.8,
+      "price": 299,
+      "description": "Experience the blend of natural wood and modern design with this elegant chair. Perfect for dining rooms or as a statement piece.",
+      "rate": 3.5,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+2.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+2.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+2.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+2.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+2.png"
-      ],
-      "priceDiscount": 40,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Modern", "Elegant", "Comfortable"]
-    },
-    {
-      "name": "Vintage Chair",
-      "id": "3",
-      "style": "Vintage",
-      "price": 299.0,
-      "description": "Add a touch of nostalgia with this beautifully crafted vintage chair. Its classic design and rich texture make it a timeless piece.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+3.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+3.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+3.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+3.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+3.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Vintage", "Classic", "Timeless"]
-    },
-    {
-      "name": "Contemporary Sofa",
-      "id": "4",
-      "style": "Contemporary",
-      "price": 1299.0,
-      "description": "Experience luxury and comfort with this contemporary sofa. Its plush cushions and sleek design make it a perfect addition to any modern home.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+4.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+4.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+4.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+4.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+4.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Contemporary", "Luxurious", "Comfortable"]
-    },
-    {
-      "name": "Rustic Armchair",
-      "id": "5",
-      "style": "Rustic",
-      "price": 699.0,
-      "description": "Bring the charm of the countryside to your home with this rustic armchair. Its sturdy build and cozy fabric make it perfect for relaxation.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+5.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+5.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+5.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+5.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+5.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Rustic", "Cozy", "Sturdy"]
-    },
-    {
-      "name": "Industrial Chair",
-      "id": "6",
-      "style": "Industrial",
-      "price": 349.0,
-      "description": "Add an edgy vibe to your space with this industrial chair. Its metal frame and leather seat create a bold, contemporary look.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+6.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+6.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+6.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+6.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+6.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Industrial", "Bold", "Contemporary"]
-    },
-    {
-      "name": "Classic Sofa",
-      "id": "7",
-      "style": "Classic",
-      "price": 1399.0,
-      "description": "This classic sofa brings elegance and sophistication to any room. Its detailed craftsmanship and high-quality fabric ensure durability and style.",
-      "rate": 4.9,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+7.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+7.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+7.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+7.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+7.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Classic", "Elegant", "Durable"]
-    },
-    {
-      "name": "Bohemian Armchair",
-      "id": "8",
-      "style": "Bohemian",
-      "price": 649.0,
-      "description": "Infuse your home with a free-spirited vibe with this bohemian armchair. Its vibrant patterns and plush cushions make it a standout piece.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+8.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+8.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+8.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+8.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/Image+8.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Bohemian", "Vibrant", "Plush"]
-    },
-    {
-      "name": "Minimalist Chair",
-      "id": "9",
-      "style": "Minimalist",
-      "price": 279.0,
-      "description": "Simplicity at its finest, this minimalist chair features clean lines and a sleek design. Perfect for modern, uncluttered spaces.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Minimalist", "Sleek", "Modern"]
-    },
-    {
-      "name": "Mid-Century Sofa",
-      "id": "10",
-      "style": "Mid-Century",
-      "price": 1099.0,
-      "description": "This mid-century sofa combines retro charm with modern comfort. Its unique design and quality construction make it a great addition to any home.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png"
+        "/products/image 67.png",
+        "/products/image 78.png"
       ],
       "priceDiscount": 50,
       "isNew": false,
+      "category": "chairs",
+      "colors": [
+        {
+          "hex": "#A52A2A",
+          "name": "brown"
+        },
+        {
+          "hex": "#DEB887",
+          "name": "beige"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Modern",
+        "Wood",
+        "Elegant"
+      ]
+    },
+    {
+      "name": "Vintage Coffee Table",
+      "id": "3",
+      "style": "Vintage",
+      "price": 399,
+      "description": "Add a touch of nostalgia to your living room with this vintage coffee table. Its weathered finish and sturdy construction make it both beautiful and functional.",
+      "rate": 4.3,
+      "images": [
+        "/products/image 85.png",
+        "/products/image 94.png"
+      ],
+      "priceDiscount": 20,
+      "isNew": false,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#8B4513",
+          "name": "saddle brown"
+        },
+        {
+          "hex": "#A0522D",
+          "name": "sienna"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "S",
+          "name": "Small"
+        },
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Vintage",
+        "Rustic",
+        "Nostalgic"
+      ]
+    },
+    {
+      "name": "Industrial Bookshelf",
+      "id": "4",
+      "style": "Industrial",
+      "price": 599,
+      "description": "This industrial bookshelf combines metal and wood for a strong, stylish look. Perfect for showcasing books, plants, and decor.",
+      "rate": 4.7,
+      "images": [
+        "/products/image 11.png",
+        "/products/image 48.png"
+      ],
+      "priceDiscount": 5,
+      "isNew": false,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#2F4F4F",
+          "name": "dark slate gray"
+        },
+        {
+          "hex": "#696969",
+          "name": "dim gray"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "XL",
+          "name": "Extra Large"
+        },
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
+      ],
+      "tags": [
+        "Industrial",
+        "Metal",
+        "Wood"
+      ]
+    },
+    {
+      "name": "Bohemian Rug",
+      "id": "5",
+      "style": "Bohemian",
+      "price": 199,
+      "description": "Brighten up your space with this colorful Bohemian rug. Its intricate patterns and vibrant colors add warmth and personality to any room.",
+      "rate": 4.5,
+      "images": [
+        "/products/image 12.png",
+        "/products/image 13.png"
+      ],
+      "priceDiscount": 30,
+      "isNew": false,
       "category": "sofas",
-      "tags": ["Mid-Century", "Retro", "Comfortable"]
+      "colors": [
+        {
+          "hex": "#FF4500",
+          "name": "orange red"
+        },
+        {
+          "hex": "#FFD700",
+          "name": "gold"
+        },
+        {
+          "hex": "#8A2BE2",
+          "name": "blue violet"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        },
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Bohemian",
+        "Colorful",
+        "Warm"
+      ]
+    },
+    {
+      "name": "Contemporary Floor Lamp",
+      "id": "6",
+      "style": "Contemporary",
+      "price": 149,
+      "description": "Illuminate your home with this sleek, contemporary floor lamp. Its minimalist design fits perfectly in any modern setting.",
+      "rate": 4.4,
+      "images": [
+        "/products/image 14.png",
+        "/products/image 15.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#000000",
+          "name": "black"
+        },
+        {
+          "hex": "#FFFFFF",
+          "name": "white"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "H",
+          "name": "Height"
+        }
+      ],
+      "tags": [
+        "Contemporary",
+        "Minimalist",
+        "Sleek"
+      ]
+    },
+    {
+      "name": "Art Deco Wall Mirror",
+      "id": "7",
+      "style": "Art Deco",
+      "price": 349,
+      "description": "This stunning Art Deco wall mirror features geometric patterns and bold lines, making it a striking addition to any room.",
+      "rate": 4.9,
+      "images": [
+        "/products/image 16.png",
+        "/products/image 17.png"
+      ],
+      "priceDiscount": 25,
+      "isNew": false,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#D3D3D3",
+          "name": "light gray"
+        },
+        {
+          "hex": "#C0C0C0",
+          "name": "silver"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
+      ],
+      "tags": [
+        "Art Deco",
+        "Geometric",
+        "Elegant"
+      ]
+    },
+    {
+      "name": "Mid-Century Modern Sofa",
+      "id": "8",
+      "style": "Mid-Century Modern",
+      "price": 1099,
+      "description": "This mid-century modern sofa blends comfort with style. Its tufted upholstery and wooden legs bring a touch of retro chic to your living space.",
+      "rate": 4.7,
+      "images": [
+        "/products/image 18.png",
+        "/products/image 19.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#B22222",
+          "name": "firebrick"
+        },
+        {
+          "hex": "#FF6347",
+          "name": "tomato"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        },
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Mid-Century",
+        "Modern",
+        "Retro"
+      ]
+    },
+    {
+      "name": "Rustic Dining Table",
+      "id": "9",
+      "style": "Rustic",
+      "price": 899,
+      "description": "This rustic dining table is perfect for family gatherings. Its solid wood construction and distressed finish add a cozy, homey feel to your dining area.",
+      "rate": 4.8,
+      "images": [
+        "/products/image 20.png",
+        "/products/image 21.png"
+      ],
+      "priceDiscount": 80,
+      "isNew": false,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#8B4513",
+          "name": "saddle brown"
+        },
+        {
+          "hex": "#A0522D",
+          "name": "sienna"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "XL",
+          "name": "Extra Large"
+        },
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
+      ],
+      "tags": [
+        "Rustic",
+        "Wood",
+        "Cozy"
+      ]
     },
     {
       "name": "Eclectic Armchair",
-      "id": "11",
+      "id": "10",
       "style": "Eclectic",
-      "price": 599.0,
-      "description": "Add a touch of personality to your space with this eclectic armchair. Its bold colors and unique patterns make it a standout piece.",
-      "rate": 4.2,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+11.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+11.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+11.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+11.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+11.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Eclectic", "Bold", "Unique"]
-    },
-    {
-      "name": "Luxury Chair",
-      "id": "12",
-      "style": "Luxury",
-      "price": 399.0,
-      "description": "Experience opulence with this luxury chair. Its high-end materials and exquisite design make it a perfect addition to any sophisticated space.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+12.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+12.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+12.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+12.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+12.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Luxury", "Opulent", "Sophisticated"]
-    },
-    {
-      "name": "Casual Sofa",
-      "id": "13",
-      "style": "Casual",
-      "price": 999.0,
-      "description": "Relax in style with this casual sofa. Its comfortable cushions and laid-back design make it perfect for everyday lounging.",
+      "price": 499,
+      "description": "This eclectic armchair is a conversation starter. Its bold patterns and mix of materials create a unique and comfortable seating experience.",
       "rate": 4.5,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+13.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+13.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+13.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+13.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+13.png"
+        "/products/image 22.png",
+        "/products/image 23.png"
       ],
-      "priceDiscount": 40,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Casual", "Comfortable", "Laid-Back"]
-    },
-    {
-      "name": "Elegant Armchair",
-      "id": "14",
-      "style": "Elegant",
-      "price": 749.0,
-      "description": "This elegant armchair combines sophistication and comfort. Its timeless design and plush fabric make it a great addition to any refined space.",
-      "rate": 4.8,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+14.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+14.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+14.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+14.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+14.png"
-      ],
-      "priceDiscount": 50,
+      "priceDiscount": 0,
       "isNew": false,
-      "category": "armchairs",
-      "tags": ["Elegant", "Sophisticated", "Timeless"]
-    },
-    {
-      "name": "Modernist Chair",
-      "id": "15",
-      "style": "Modernist",
-      "price": 299.0,
-      "description": "Add a touch of modernist flair to your home with this sleek chair. Its innovative design and high-quality materials make it a standout piece.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+15.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+15.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+15.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+15.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+15.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
       "category": "chairs",
-      "tags": ["Modernist", "Sleek", "Innovative"]
+      "colors": [
+        {
+          "hex": "#800080",
+          "name": "purple"
+        },
+        {
+          "hex": "#FF00FF",
+          "name": "magenta"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Eclectic",
+        "Bold",
+        "Comfortable"
+      ]
     },
     {
-      "name": "Traditional Sofa",
-      "id": "16",
+      "name": "Traditional Wooden Bed Frame",
+      "id": "11",
       "style": "Traditional",
-      "price": 1199.0,
-      "description": "This traditional sofa brings classic elegance to any room. Its refined design and quality craftsmanship ensure it will be a favorite for years to come.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+16.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+16.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+16.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+16.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+16.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Traditional", "Classic", "Elegant"]
-    },
-    {
-      "name": "Urban Armchair",
-      "id": "17",
-      "style": "Urban",
-      "price": 799.0,
-      "description": "Bring urban style to your home with this chic armchair. Its modern design and comfortable cushions make it perfect for city living.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+17.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+17.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+17.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+17.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+17.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Urban", "Chic", "Comfortable"]
-    },
-    {
-      "name": "Art Deco Chair",
-      "id": "18",
-      "style": "Art Deco",
-      "price": 349.0,
-      "description": "Add a touch of glamour to your space with this Art Deco chair. Its luxurious materials and bold design make it a standout piece.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+18.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+18.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+18.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+18.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+18.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Art Deco", "Glamorous", "Bold"]
-    },
-    {
-      "name": "Boho Sofa",
-      "id": "19",
-      "style": "Boho",
-      "price": 1099.0,
-      "description": "Bring a relaxed, bohemian vibe to your home with this Boho sofa. Its vibrant colors and comfortable cushions make it perfect for lounging.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+19.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+19.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+19.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+19.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+19.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Boho", "Relaxed", "Vibrant"]
-    },
-    {
-      "name": "Industrial Armchair",
-      "id": "20",
-      "style": "Industrial",
-      "price": 699.0,
-      "description": "Add an industrial edge to your home with this armchair. Its metal frame and leather upholstery create a bold, modern look.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+20.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+20.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+20.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+20.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+20.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Industrial", "Bold", "Modern"]
-    },
-    {
-      "name": "Retro Chair",
-      "id": "21",
-      "style": "Retro",
-      "price": 329.0,
-      "description": "Bring a touch of the past to your home with this retro chair. Its vintage design and vibrant colors make it a fun addition to any room.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+21.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+21.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+21.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+21.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+21.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Retro", "Vintage", "Fun"]
-    },
-    {
-      "name": "Luxury Sofa",
-      "id": "22",
-      "style": "Luxury",
-      "price": 1499.0,
-      "description": "Experience the ultimate in luxury with this high-end sofa. Its premium materials and exquisite design make it a perfect addition to any sophisticated home.",
+      "price": 1299,
+      "description": "Sleep soundly in this traditional wooden bed frame. Its classic design and durable construction make it a timeless addition to any bedroom.",
       "rate": 4.9,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+22.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+22.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+22.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+22.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+22.png"
+        "/products/image 24.png",
+        "/products/image 25.png"
       ],
-      "priceDiscount": 60,
+      "priceDiscount": 0,
       "isNew": false,
-      "category": "sofas",
-      "tags": ["Luxury", "High-End", "Sophisticated"]
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#8B0000",
+          "name": "dark red"
+        },
+        {
+          "hex": "#CD5C5C",
+          "name": "indian red"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "Q",
+          "name": "Queen"
+        },
+        {
+          "acronym": "K",
+          "name": "King"
+        }
+      ],
+      "tags": [
+        "Traditional",
+        "Wooden",
+        "Durable"
+      ]
     },
     {
-      "name": "Contemporary Armchair",
+      "name": "Minimalist Desk",
+      "id": "12",
+      "style": "Minimalist",
+      "price": 349,
+      "description": "Keep your workspace clean and clutter-free with this minimalist desk. Its simple design and functional features make it ideal for modern home offices.",
+      "rate": 4.6,
+      "images": [
+        "/products/image 26.png",
+        "/products/image 27.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#4682B4",
+          "name": "steel blue"
+        },
+        {
+          "hex": "#5F9EA0",
+          "name": "cadet blue"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Minimalist",
+        "Functional",
+        "Modern"
+      ]
+    },
+    {
+      "name": "Classic Rocking Chair",
+      "id": "13",
+      "style": "Classic",
+      "price": 299,
+      "description": "Relax in style with this classic rocking chair. Its curved wooden frame and comfortable seat make it a perfect addition to any porch or living room.",
+      "rate": 1.8,
+      "images": [
+        "/products/image 28.png",
+        "/products/image 29.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": false,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#B8860B",
+          "name": "dark goldenrod"
+        },
+        {
+          "hex": "#DAA520",
+          "name": "goldenrod"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Classic",
+        "Comfortable",
+        "Relaxing"
+      ]
+    },
+    {
+      "name": "Scandinavian Dining Chair",
+      "id": "14",
+      "style": "Scandinavian",
+      "price": 199,
+      "description": "Enhance your dining space with this Scandinavian dining chair. Its minimalist design and natural wood finish create a calm, inviting atmosphere.",
+      "rate": 4.7,
+      "images": [
+        "/products/image 30.png",
+        "/products/image 31.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "chairs",
+      "colors": [
+        {
+          "hex": "#D2691E",
+          "name": "chocolate"
+        },
+        {
+          "hex": "#F4A460",
+          "name": "sandy brown"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "S",
+          "name": "Small"
+        }
+      ],
+      "tags": [
+        "Scandinavian",
+        "Minimalist",
+        "Natural"
+      ]
+    },
+    {
+      "name": "Artisan Coffee Table",
+      "id": "15",
+      "style": "Artisan",
+      "price": 549,
+      "description": "This artisan coffee table is a masterpiece of craftsmanship. Its hand-carved details and unique design make it a true work of art.",
+      "rate": 4.9,
+      "images": [
+        "/products/image 32.png",
+        "/products/image 33.png"
+      ],
+      "priceDiscount": 40,
+      "isNew": false,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#8B4513",
+          "name": "saddle brown"
+        },
+        {
+          "hex": "#D2691E",
+          "name": "chocolate"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Artisan",
+        "Handmade",
+        "Unique"
+      ]
+    },
+    {
+      "name": "Boho Pouf",
+      "id": "16",
+      "style": "Boho",
+      "price": 129,
+      "description": "Add a touch of bohemian charm to your living room with this boho pouf. Its vibrant colors and soft fabric make it perfect for extra seating or as a footrest.",
+      "rate": 4.6,
+      "images": [
+        "/products/image 34.png",
+        "/products/image 35.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#FF4500",
+          "name": "orange red"
+        },
+        {
+          "hex": "#FFD700",
+          "name": "gold"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "S",
+          "name": "Small"
+        }
+      ],
+      "tags": [
+        "Boho",
+        "Colorful",
+        "Comfortable"
+      ]
+    },
+    {
+      "name": "Modern Minimalist Bedside Table",
+      "id": "17",
+      "style": "Modern",
+      "price": 249,
+      "description": "This modern minimalist bedside table is perfect for small spaces. Its clean lines and compact design provide a stylish and practical storage solution.",
+      "rate": 4.5,
+      "images": [
+        "/products/image 36.png",
+        "/products/image 37.png"
+      ],
+      "priceDiscount": 20,
+      "isNew": false,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#808080",
+          "name": "gray"
+        },
+        {
+          "hex": "#D3D3D3",
+          "name": "light gray"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "S",
+          "name": "Small"
+        }
+      ],
+      "tags": [
+        "Modern",
+        "Minimalist",
+        "Compact"
+      ]
+    },
+    {
+      "name": "Eclectic Patchwork Sofa",
+      "id": "18",
+      "style": "Eclectic",
+      "price": 1199,
+      "description": "Make a statement with this eclectic patchwork sofa. Its mix of colors and patterns creates a one-of-a-kind piece that's sure to be the focal point of any room.",
+      "rate": 4.7,
+      "images": [
+        "/products/image 38.png",
+        "/products/image 39.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#FF6347",
+          "name": "tomato"
+        },
+        {
+          "hex": "#FFD700",
+          "name": "gold"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        },
+        {
+          "acronym": "XL",
+          "name": "Extra Large"
+        }
+      ],
+      "tags": [
+        "Eclectic",
+        "Patchwork",
+        "Bold"
+      ]
+    },
+    {
+      "name": "Traditional Wooden Bookshelf",
+      "id": "19",
+      "style": "Traditional",
+      "price": 799,
+      "description": "This traditional wooden bookshelf offers ample storage space for books and decor. Its classic design and sturdy construction make it a timeless addition to any home.",
+      "rate": 4.8,
+      "images": [
+        "/products/image 40.png",
+        "/products/image 41.png"
+      ],
+      "priceDiscount": 70,
+      "isNew": false,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#8B4513",
+          "name": "saddle brown"
+        },
+        {
+          "hex": "#A0522D",
+          "name": "sienna"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
+      ],
+      "tags": [
+        "Traditional",
+        "Wooden",
+        "Sturdy"
+      ]
+    },
+    {
+      "name": "Scandinavian Wood Frame Mirror",
+      "id": "20",
+      "style": "Scandinavian",
+      "price": 229,
+      "description": "This Scandinavian wood frame mirror combines natural materials with simple design, adding a sense of openness and light to your space.",
+      "rate": 4.6,
+      "images": [
+        "/products/image 42.png",
+        "/products/image 43.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": false,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#D2B48C",
+          "name": "tan"
+        },
+        {
+          "hex": "#F5DEB3",
+          "name": "wheat"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Scandinavian",
+        "Natural",
+        "Open"
+      ]
+    },
+    {
+      "name": "Rustic Wooden Bench",
+      "id": "21",
+      "style": "Rustic",
+      "price": 399,
+      "description": "This rustic wooden bench is perfect for entryways or at the foot of the bed. Its sturdy design and natural wood finish bring a warm, inviting feel to any space.",
+      "rate": 4.7,
+      "images": [
+        "/products/image 44.png",
+        "/products/image 45.png"
+      ],
+      "priceDiscount": 35,
+      "isNew": false,
+      "category": "chairs",
+      "colors": [
+        {
+          "hex": "#8B4513",
+          "name": "saddle brown"
+        },
+        {
+          "hex": "#A0522D",
+          "name": "sienna"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Rustic",
+        "Wood",
+        "Warm"
+      ]
+    },
+    {
+      "name": "Mid-Century Modern Sofa",
+      "id": "22",
+      "style": "Mid-Century Modern",
+      "price": 1349,
+      "description": "This mid-century modern sofa combines retro style with modern comfort. Its sleek lines and tapered legs make it a stylish centerpiece for any living room.",
+      "rate": 4.7,
+      "images": [
+        "/products/image 46.png",
+        "/products/image 47.png"
+      ],
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#FF5733",
+          "name": "burnt orange"
+        },
+        {
+          "hex": "#C70039",
+          "name": "crimson"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        },
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
+      ],
+      "tags": [
+        "Mid-Century",
+        "Modern",
+        "Retro"
+      ]
+    },
+    {
+      "name": "Contemporary Leather Armchair",
       "id": "23",
       "style": "Contemporary",
-      "price": 749.0,
-      "description": "This contemporary armchair combines style and comfort. Its sleek design and plush cushions make it a great addition to any modern living space.",
-      "rate": 4.6,
+      "price": 799,
+      "description": "This contemporary leather armchair offers a blend of luxury and comfort. Its sleek design and premium leather upholstery make it a sophisticated addition to any space.",
+      "rate": 4.8,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+23.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+23.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+23.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+23.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+23.png"
+        "/products/image 48.png",
+        "/products/image 49.png"
       ],
-      "priceDiscount": 45,
-      "isNew": true,
+      "priceDiscount": 70,
+      "isNew": false,
       "category": "armchairs",
-      "tags": ["Contemporary", "Stylish", "Comfortable"]
+      "colors": [
+        {
+          "hex": "#000000",
+          "name": "black"
+        },
+        {
+          "hex": "#808080",
+          "name": "gray"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
+      ],
+      "tags": [
+        "Contemporary",
+        "Leather",
+        "Luxury"
+      ]
     },
     {
-      "name": "Scandinavian Chair",
+      "name": "Rustic Farmhouse Sofa",
       "id": "24",
-      "style": "Scandinavian",
-      "price": 299.0,
-      "description": "Embrace the clean lines and neutral tones of Scandinavian design with this chair. Its minimalist style and functional design make it a great addition to any home.",
-      "rate": 4.5,
+      "style": "Rustic",
+      "price": 1199,
+      "description": "Bring warmth and charm to your living room with this rustic farmhouse sofa. Its plush cushions and weathered wood frame evoke the cozy feeling of country living.",
+      "rate": 4.6,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+24.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+24.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+24.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+24.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+24.png"
+        "/products/image 50.png",
+        "/products/image 51.png"
       ],
-      "priceDiscount": 25,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Scandinavian", "Minimalist", "Functional"]
+      "priceDiscount": 0,
+      "isNew": true,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#8B4513",
+          "name": "saddle brown"
+        },
+        {
+          "hex": "#A0522D",
+          "name": "sienna"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
+      ],
+      "tags": [
+        "Rustic",
+        "Farmhouse",
+        "Cozy"
+      ]
     },
     {
-      "name": "Modern Sofa",
+      "name": "Boho Wicker Armchair",
       "id": "25",
-      "style": "Modern",
-      "price": 1299.0,
-      "description": "Add a touch of modern elegance to your home with this sofa. Its clean lines and comfortable cushions make it perfect for any contemporary living space.",
+      "style": "Boho",
+      "price": 449,
+      "description": "This boho wicker armchair adds a touch of relaxed, earthy style to any space. Its natural materials and unique design make it perfect for a laid-back, comfortable vibe.",
       "rate": 4.7,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+25.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+25.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+25.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+25.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+25.png"
+        "/products/image 52.png",
+        "/products/image 53.png"
       ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Modern", "Elegant", "Comfortable"]
+      "priceDiscount": 40,
+      "isNew": false,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#F4A460",
+          "name": "sandy brown"
+        },
+        {
+          "hex": "#D2691E",
+          "name": "chocolate"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Boho",
+        "Wicker",
+        "Natural"
+      ]
     },
     {
-      "name": "Vintage Armchair",
+      "name": "Art Deco Velvet Sofa",
       "id": "26",
-      "style": "Vintage",
-      "price": 699.0,
-      "description": "Add a touch of nostalgia to your home with this vintage armchair. Its classic design and rich texture make it a timeless piece.",
-      "rate": 4.5,
+      "style": "Art Deco",
+      "price": 1499,
+      "description": "This art deco velvet sofa is a luxurious and glamorous addition to any living space. Its rich velvet upholstery and elegant design make it a true statement piece.",
+      "rate": 4.9,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+26.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+26.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+26.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+26.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+26.png"
+        "/products/image 54.png",
+        "/products/image 55.png"
       ],
-      "priceDiscount": 40,
+      "priceDiscount": 0,
       "isNew": false,
-      "category": "armchairs",
-      "tags": ["Vintage", "Classic", "Timeless"]
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#800080",
+          "name": "purple"
+        },
+        {
+          "hex": "#FFD700",
+          "name": "gold"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        },
+        {
+          "acronym": "XL",
+          "name": "Extra Large"
+        }
+      ],
+      "tags": [
+        "Art Deco",
+        "Velvet",
+        "Glamorous"
+      ]
     },
     {
-      "name": "Minimalist Chair",
+      "name": "Modern Sectional Sofa",
       "id": "27",
-      "style": "Minimalist",
-      "price": 279.0,
-      "description": "Simplicity at its finest, this minimalist chair features clean lines and a sleek design. Perfect for modern, uncluttered spaces.",
-      "rate": 4.5,
+      "style": "Modern",
+      "price": 1899,
+      "description": "This modern sectional sofa offers ample seating and a sleek design. Its clean lines and modular configuration make it versatile for any living space.",
+      "rate": 4.7,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+27.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+27.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+27.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+27.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+27.png"
+        "/products/image 56.png",
+        "/products/image 57.png"
       ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Minimalist", "Sleek", "Modern"]
+      "priceDiscount": 30,
+      "isNew": false,
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#2F4F4F",
+          "name": "dark slate gray"
+        },
+        {
+          "hex": "#708090",
+          "name": "slate gray"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        },
+        {
+          "acronym": "XL",
+          "name": "Extra Large"
+        }
+      ],
+      "tags": [
+        "Modern",
+        "Sectional",
+        "Sleek"
+      ]
     },
     {
-      "name": "Classic Sofa",
+      "name": "Vintage Leather Armchair",
       "id": "28",
-      "style": "Classic",
-      "price": 1399.0,
-      "description": "This classic sofa brings elegance and sophistication to any room. Its detailed craftsmanship and high-quality fabric ensure durability and style.",
-      "rate": 4.9,
+      "style": "Vintage",
+      "price": 899,
+      "description": "This vintage leather armchair exudes timeless elegance. Its distressed leather and classic silhouette make it a perfect choice for traditional or eclectic interiors.",
+      "rate": 4.8,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+28.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+28.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+28.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+28.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+28.png"
+        "/products/image 58.png",
+        "/products/image 59.png"
       ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Classic", "Elegant", "Durable"]
+      "priceDiscount": 0,
+      "isNew": false,
+      "category": "armchairs",
+      "colors": [
+        {
+          "hex": "#8B4513",
+          "name": "saddle brown"
+        },
+        {
+          "hex": "#A0522D",
+          "name": "sienna"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "M",
+          "name": "Medium"
+        }
+      ],
+      "tags": [
+        "Vintage",
+        "Leather",
+        "Elegant"
+      ]
     },
     {
-      "name": "Bohemian Armchair",
+      "name": "Industrial Loft Sofa",
       "id": "29",
-      "style": "Bohemian",
-      "price": 649.0,
-      "description": "Infuse your home with a free-spirited vibe with this bohemian armchair. Its vibrant patterns and plush cushions make it a standout piece.",
-      "rate": 4.3,
+      "style": "Industrial",
+      "price": 1599,
+      "description": "This industrial loft sofa features a rugged design with metal accents and distressed leather. Its bold aesthetic is perfect for urban or loft-style living spaces.",
+      "rate": 3.6,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+29.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+29.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+29.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+29.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+29.png"
+        "/products/image 60.png",
+        "/products/image 61.png"
       ],
-      "priceDiscount": 45,
+      "priceDiscount": 120,
       "isNew": false,
-      "category": "armchairs",
-      "tags": ["Bohemian", "Vibrant", "Plush"]
+      "category": "sofas",
+      "colors": [
+        {
+          "hex": "#4B3621",
+          "name": "sepia"
+        },
+        {
+          "hex": "#696969",
+          "name": "dim gray"
+        }
+      ],
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
+      ],
+      "tags": [
+        "Industrial",
+        "Loft",
+        "Rugged"
+      ]
     },
     {
-      "name": "Modernist Chair",
+      "name": "Classic Wingback Armchair",
       "id": "30",
-      "style": "Modernist",
-      "price": 299.0,
-      "description": "Add a touch of modernist flair to your home with this sleek chair. Its innovative design and high-quality materials make it a standout piece.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+30.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+30.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+30.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+30.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+30.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Modernist", "Sleek", "Innovative"]
-    },
-    {
-      "name": "Rustic Sofa",
-      "id": "31",
-      "style": "Rustic",
-      "price": 1199.0,
-      "description": "This rustic sofa brings the charm of the countryside to your home. Its sturdy build and cozy fabric make it perfect for relaxation.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+31.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+31.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+31.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+31.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+31.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Rustic", "Cozy", "Sturdy"]
-    },
-    {
-      "name": "Urban Armchair",
-      "id": "32",
-      "style": "Urban",
-      "price": 799.0,
-      "description": "Bring urban style to your home with this chic armchair. Its modern design and comfortable cushions make it perfect for city living.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+32.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+32.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+32.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+32.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+32.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Urban", "Chic", "Comfortable"]
-    },
-    {
-      "name": "Art Deco Chair",
-      "id": "33",
-      "style": "Art Deco",
-      "price": 349.0,
-      "description": "Add a touch of glamour to your space with this Art Deco chair. Its luxurious materials and bold design make it a standout piece.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+33.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+33.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+33.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+33.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+33.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Art Deco", "Glamorous", "Bold"]
-    },
-    {
-      "name": "Boho Sofa",
-      "id": "34",
-      "style": "Boho",
-      "price": 1099.0,
-      "description": "Bring a relaxed, bohemian vibe to your home with this Boho sofa. Its vibrant colors and comfortable cushions make it perfect for lounging.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+34.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+34.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+34.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+34.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+34.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Boho", "Relaxed", "Vibrant"]
-    },
-    {
-      "name": "Industrial Armchair",
-      "id": "35",
-      "style": "Industrial",
-      "price": 699.0,
-      "description": "Add an industrial edge to your home with this armchair. Its metal frame and leather upholstery create a bold, modern look.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+35.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+35.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+35.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+35.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+35.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Industrial", "Bold", "Modern"]
-    },
-    {
-      "name": "Retro Chair",
-      "id": "36",
-      "style": "Retro",
-      "price": 329.0,
-      "description": "Bring a touch of the past to your home with this retro chair. Its vintage design and vibrant colors make it a fun addition to any room.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+36.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+36.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+36.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+36.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+36.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Retro", "Vintage", "Fun"]
-    },
-    {
-      "name": "Luxury Sofa",
-      "id": "37",
-      "style": "Luxury",
-      "price": 1499.0,
-      "description": "Experience the ultimate in luxury with this high-end sofa. Its premium materials and exquisite design make it a perfect addition to any sophisticated home.",
-      "rate": 4.9,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+37.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+37.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+37.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+37.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+37.png"
-      ],
-      "priceDiscount": 60,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Luxury", "High-End", "Sophisticated"]
-    },
-    {
-      "name": "Contemporary Armchair",
-      "id": "38",
-      "style": "Contemporary",
-      "price": 749.0,
-      "description": "This contemporary armchair combines style and comfort. Its sleek design and plush cushions make it a great addition to any modern living space.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+38.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+38.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+38.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+38.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+38.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Contemporary", "Stylish", "Comfortable"]
-    },
-    {
-      "name": "Scandinavian Chair",
-      "id": "39",
-      "style": "Scandinavian",
-      "price": 299.0,
-      "description": "Embrace the clean lines and neutral tones of Scandinavian design with this chair. Its minimalist style and functional design make it a great addition to any home.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+39.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+39.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+39.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+39.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+39.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Scandinavian", "Minimalist", "Functional"]
-    },
-    {
-      "name": "Modern Sofa",
-      "id": "40",
-      "style": "Modern",
-      "price": 1299.0,
-      "description": "Add a touch of modern elegance to your home with this sofa. Its clean lines and comfortable cushions make it perfect for any contemporary living space.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+40.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+40.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+40.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+40.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+40.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Modern", "Elegant", "Comfortable"]
-    },
-    {
-      "name": "Vintage Armchair",
-      "id": "41",
-      "style": "Vintage",
-      "price": 699.0,
-      "description": "Add a touch of nostalgia to your home with this vintage armchair. Its classic design and rich texture make it a timeless piece.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+41.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+41.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+41.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+41.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+41.png"
-      ],
-      "priceDiscount": 40,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Vintage", "Classic", "Timeless"]
-    },
-    {
-      "name": "Minimalist Chair",
-      "id": "42",
-      "style": "Minimalist",
-      "price": 279.0,
-      "description": "Simplicity at its finest, this minimalist chair features clean lines and a sleek design. Perfect for modern, uncluttered spaces.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+42.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+42.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+42.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+42.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+42.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Minimalist", "Sleek", "Modern"]
-    },
-    {
-      "name": "Classic Sofa",
-      "id": "43",
       "style": "Classic",
-      "price": 1399.0,
-      "description": "This classic sofa brings elegance and sophistication to any room. Its detailed craftsmanship and high-quality fabric ensure durability and style.",
-      "rate": 4.9,
+      "price": 749,
+      "description": "This classic wingback armchair offers timeless style and comfort. Its high back and plush cushioning provide support while adding a touch of elegance to any room.",
+      "rate": 1.9,
       "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+43.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+43.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+43.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+43.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+43.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Classic", "Elegant", "Durable"]
-    },
-    {
-      "name": "Bohemian Armchair",
-      "id": "44",
-      "style": "Bohemian",
-      "price": 649.0,
-      "description": "Infuse your home with a free-spirited vibe with this bohemian armchair. Its vibrant patterns and plush cushions make it a standout piece.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+44.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+44.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+44.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+44.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+44.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Bohemian", "Vibrant", "Plush"]
-    },
-    {
-      "name": "Modernist Chair",
-      "id": "45",
-      "style": "Modernist",
-      "price": 299.0,
-      "description": "Add a touch of modernist flair to your home with this sleek chair. Its innovative design and high-quality materials make it a standout piece.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+45.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+45.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+45.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+45.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+45.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Modernist", "Sleek", "Innovative"]
-    },
-    {
-      "name": "Rustic Sofa",
-      "id": "46",
-      "style": "Rustic",
-      "price": 1199.0,
-      "description": "This rustic sofa brings the charm of the countryside to your home. Its sturdy build and cozy fabric make it perfect for relaxation.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+46.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+46.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+46.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+46.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+46.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Rustic", "Cozy", "Sturdy"]
-    },
-    {
-      "name": "Urban Armchair",
-      "id": "47",
-      "style": "Urban",
-      "price": 799.0,
-      "description": "Bring urban style to your home with this chic armchair. Its modern design and comfortable cushions make it perfect for city living.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+47.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+47.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+47.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+47.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+47.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Urban", "Chic", "Comfortable"]
-    },
-    {
-      "name": "Art Deco Chair",
-      "id": "48",
-      "style": "Art Deco",
-      "price": 349.0,
-      "description": "Add a touch of glamour to your space with this Art Deco chair. Its luxurious materials and bold design make it a standout piece.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+48.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+48.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+48.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+48.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+48.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Art Deco", "Glamorous", "Bold"]
-    },
-    {
-      "name": "Boho Sofa",
-      "id": "49",
-      "style": "Boho",
-      "price": 1099.0,
-      "description": "Bring a relaxed, bohemian vibe to your home with this Boho sofa. Its vibrant colors and comfortable cushions make it perfect for lounging.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+49.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+49.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+49.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+49.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+49.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Boho", "Relaxed", "Vibrant"]
-    },
-    {
-      "name": "Industrial Armchair",
-      "id": "50",
-      "style": "Industrial",
-      "price": 699.0,
-      "description": "Add an industrial edge to your home with this armchair. Its metal frame and leather upholstery create a bold, modern look.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+50.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+50.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+50.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+50.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+50.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Industrial", "Bold", "Modern"]
-    },
-    {
-      "name": "Retro Chair",
-      "id": "51",
-      "style": "Retro",
-      "price": 329.0,
-      "description": "Bring a touch of the past to your home with this retro chair. Its vintage design and vibrant colors make it a fun addition to any room.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+51.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+51.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+51.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+51.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+51.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Retro", "Vintage", "Fun"]
-    },
-    {
-      "name": "Luxury Sofa",
-      "id": "52",
-      "style": "Luxury",
-      "price": 1499.0,
-      "description": "Experience the ultimate in luxury with this high-end sofa. Its premium materials and exquisite design make it a perfect addition to any sophisticated home.",
-      "rate": 4.9,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+52.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+52.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+52.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+52.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+52.png"
-      ],
-      "priceDiscount": 60,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Luxury", "High-End", "Sophisticated"]
-    },
-    {
-      "name": "Contemporary Armchair",
-      "id": "53",
-      "style": "Contemporary",
-      "price": 749.0,
-      "description": "This contemporary armchair combines style and comfort. Its sleek design and plush cushions make it a great addition to any modern living space.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+53.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+53.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+53.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+53.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+53.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Contemporary", "Stylish", "Comfortable"]
-    },
-    {
-      "name": "Scandinavian Chair",
-      "id": "54",
-      "style": "Scandinavian",
-      "price": 299.0,
-      "description": "Embrace the clean lines and neutral tones of Scandinavian design with this chair. Its minimalist style and functional design make it a great addition to any home.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+54.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+54.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+54.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+54.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+54.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Scandinavian", "Minimalist", "Functional"]
-    },
-    {
-      "name": "Modern Sofa",
-      "id": "55",
-      "style": "Modern",
-      "price": 1299.0,
-      "description": "Add a touch of modern elegance to your home with this sofa. Its clean lines and comfortable cushions make it perfect for any contemporary living space.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+55.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Modern", "Elegant", "Comfortable"]
-    },
-    {
-      "name": "Vintage Armchair",
-      "id": "56",
-      "style": "Vintage",
-      "price": 699.0,
-      "description": "Add a touch of nostalgia to your home with this vintage armchair. Its classic design and rich texture make it a timeless piece.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+56.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+56.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+56.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+56.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+56.png"
-      ],
-      "priceDiscount": 40,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Vintage", "Classic", "Timeless"]
-    },
-    {
-      "name": "Minimalist Chair",
-      "id": "57",
-      "style": "Minimalist",
-      "price": 279.0,
-      "description": "Simplicity at its finest, this minimalist chair features clean lines and a sleek design. Perfect for modern, uncluttered spaces.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+57.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+57.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+57.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+57.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+57.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Minimalist", "Sleek", "Modern"]
-    },
-    {
-      "name": "Classic Sofa",
-      "id": "58",
-      "style": "Classic",
-      "price": 1399.0,
-      "description": "This classic sofa brings elegance and sophistication to any room. Its detailed craftsmanship and high-quality fabric ensure durability and style.",
-      "rate": 4.9,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+58.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+58.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+58.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+58.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+58.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Classic", "Elegant", "Durable"]
-    },
-
-    {
-      "name": "Modernist Chair",
-      "id": "59",
-      "style": "Modernist",
-      "price": 299.0,
-      "description": "Add a touch of modernist flair to your home with this sleek chair. Its innovative design and high-quality materials make it a standout piece.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+59.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+59.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+59.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+59.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+59.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Modernist", "Sleek", "Innovative"]
-    },
-    {
-      "name": "Rustic Sofa",
-      "id": "60",
-      "style": "Rustic",
-      "price": 1199.0,
-      "description": "This rustic sofa brings the charm of the countryside to your home. Its sturdy build and cozy fabric make it perfect for relaxation.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+60.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+60.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+60.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+60.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+60.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Rustic", "Cozy", "Sturdy"]
-    },
-    {
-      "name": "Urban Armchair",
-      "id": "61",
-      "style": "Urban",
-      "price": 799.0,
-      "description": "Bring urban style to your home with this chic armchair. Its modern design and comfortable cushions make it perfect for city living.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+61.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+61.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+61.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+61.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+61.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Urban", "Chic", "Comfortable"]
-    },
-    {
-      "name": "Art Deco Chair",
-      "id": "62",
-      "style": "Art Deco",
-      "price": 349.0,
-      "description": "Add a touch of glamour to your space with this Art Deco chair. Its luxurious materials and bold design make it a standout piece.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+62.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+62.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+62.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+62.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+62.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Art Deco", "Glamorous", "Bold"]
-    },
-    {
-      "name": "Boho Sofa",
-      "id": "63",
-      "style": "Boho",
-      "price": 1099.0,
-      "description": "Bring a relaxed, bohemian vibe to your home with this Boho sofa. Its vibrant colors and comfortable cushions make it perfect for lounging.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+63.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+63.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+63.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+63.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+63.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Boho", "Relaxed", "Vibrant"]
-    },
-    {
-      "name": "Industrial Armchair",
-      "id": "64",
-      "style": "Industrial",
-      "price": 699.0,
-      "description": "Add an industrial edge to your home with this armchair. Its metal frame and leather upholstery create a bold, modern look.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+64.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+64.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+64.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+64.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+64.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Industrial", "Bold", "Modern"]
-    },
-    {
-      "name": "Retro Chair",
-      "id": "65",
-      "style": "Retro",
-      "price": 329.0,
-      "description": "Bring a touch of the past to your home with this retro chair. Its vintage design and vibrant colors make it a fun addition to any room.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+65.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+65.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+65.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+65.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+65.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Retro", "Vintage", "Fun"]
-    },
-    {
-      "name": "Luxury Sofa",
-      "id": "66",
-      "style": "Luxury",
-      "price": 1499.0,
-      "description": "Experience the ultimate in luxury with this high-end sofa. Its premium materials and exquisite design make it a perfect addition to any sophisticated home.",
-      "rate": 4.9,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+66.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+66.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+66.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+66.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+66.png"
-      ],
-      "priceDiscount": 60,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Luxury", "High-End", "Sophisticated"]
-    },
-    {
-      "name": "Contemporary Armchair",
-      "id": "67",
-      "style": "Contemporary",
-      "price": 749.0,
-      "description": "This contemporary armchair combines style and comfort. Its sleek design and plush cushions make it a great addition to any modern living space.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+67.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+67.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+67.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+67.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+67.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Contemporary", "Stylish", "Comfortable"]
-    },
-    {
-      "name": "Scandinavian Chair",
-      "id": "68",
-      "style": "Scandinavian",
-      "price": 299.0,
-      "description": "Embrace the clean lines and neutral tones of Scandinavian design with this chair. Its minimalist style and functional design make it a great addition to any home.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+68.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+68.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+68.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+68.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+68.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Scandinavian", "Minimalist", "Functional"]
-    },
-    {
-      "name": "Modern Sofa",
-      "id": "69",
-      "style": "Modern",
-      "price": 1299.0,
-      "description": "Add a touch of modern elegance to your home with this sofa. Its clean lines and comfortable cushions make it perfect for any contemporary living space.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+69.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+69.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+69.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+69.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+69.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Modern", "Elegant", "Comfortable"]
-    },
-    {
-      "name": "Vintage Armchair",
-      "id": "70",
-      "style": "Vintage",
-      "price": 699.0,
-      "description": "Add a touch of nostalgia to your home with this vintage armchair. Its classic design and rich texture make it a timeless piece.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+70.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+70.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+70.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+70.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+70.png"
-      ],
-      "priceDiscount": 40,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Vintage", "Classic", "Timeless"]
-    },
-    {
-      "name": "Minimalist Chair",
-      "id": "71",
-      "style": "Minimalist",
-      "price": 279.0,
-      "description": "Simplicity at its finest, this minimalist chair features clean lines and a sleek design. Perfect for modern, uncluttered spaces.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+71.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+71.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+71.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+71.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+71.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Minimalist", "Sleek", "Modern"]
-    },
-    {
-      "name": "Classic Sofa",
-      "id": "72",
-      "style": "Classic",
-      "price": 1399.0,
-      "description": "This classic sofa brings elegance and sophistication to any room. Its detailed craftsmanship and high-quality fabric ensure durability and style.",
-      "rate": 4.9,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+72.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+72.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+72.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+72.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+72.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Classic", "Elegant", "Durable"]
-    },
-    {
-      "name": "Bohemian Armchair",
-      "id": "73",
-      "style": "Bohemian",
-      "price": 649.0,
-      "description": "Infuse your home with a free-spirited vibe with this bohemian armchair. Its vibrant patterns and plush cushions make it a standout piece.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+73.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+73.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+73.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+73.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+73.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Bohemian", "Vibrant", "Plush"]
-    },
-    {
-      "name": "Mid-Century Sofa",
-      "id": "74",
-      "style": "Mid-Century",
-      "price": 1199.0,
-      "description": "Capture the essence of mid-century modern design with this stylish sofa. Its sleek lines and tapered legs create a timeless look.",
-      "rate": 4.8,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+74.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+74.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+74.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+74.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+74.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Mid-Century", "Modern", "Timeless"]
-    },
-    {
-      "name": "Traditional Armchair",
-      "id": "75",
-      "style": "Traditional",
-      "price": 799.0,
-      "description": "Bring classic comfort to your home with this traditional armchair. Its rich upholstery and sturdy construction ensure both style and durability.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+75.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+75.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+75.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+75.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+75.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Traditional", "Comfortable", "Sturdy"]
-    },
-    {
-      "name": "Elegant Chair",
-      "id": "76",
-      "style": "Elegant",
-      "price": 399.0,
-      "description": "Add a touch of elegance to your living space with this sophisticated chair. Its graceful curves and premium fabric make it a luxurious addition.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+76.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+76.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+76.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+76.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+76.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Elegant", "Sophisticated", "Premium"]
-    },
-    {
-      "name": "Scandinavian Sofa",
-      "id": "77",
-      "style": "Scandinavian",
-      "price": 1299.0,
-      "description": "Embrace the minimalist beauty of Scandinavian design with this sleek and functional Scandinavian sofa. Its clean lines and neutral tones create a sense of calm and tranquility.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+77.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+77.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+77.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+77.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+77.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Scandinavian", "Minimalist", "Functional", "Relaxing"]
-    },
-    {
-      "name": "Bohemian Chair",
-      "id": "78",
-      "style": "Bohemian",
-      "price": 349.0,
-      "description": "Infuse your space with eclectic charm with this Bohemian chair. Its vibrant colors and unique patterns make it a conversation starter.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+78.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+78.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+78.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+78.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+78.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Bohemian", "Eclectic", "Colorful"]
-    },
-    {
-      "name": "Contemporary Sofa",
-      "id": "79",
-      "style": "Contemporary",
-      "price": 1399.0,
-      "description": "This contemporary sofa combines sleek design with plush comfort. It's perfect for modern homes looking to balance style and relaxation.",
-      "rate": 4.8,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+79.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+79.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+79.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+79.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+79.png"
-      ],
-      "priceDiscount": 60,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Contemporary", "Sleek", "Comfortable"]
-    },
-    {
-      "name": "Vintage Sofa",
-      "id": "80",
-      "style": "Vintage",
-      "price": 1099.0,
-      "description": "Bring nostalgic charm to your living space with this vintage-inspired sofa. Its tufted back and rolled arms evoke a sense of old-world elegance.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+80.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+80.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+80.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+80.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+80.png"
-      ],
-      "priceDiscount": 40,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Vintage", "Nostalgic", "Charming"]
-    },
-    {
-      "name": "Mid-Century Armchair",
-      "id": "81",
-      "style": "Mid-Century",
-      "price": 599.0,
-      "description": "Add a touch of mid-century flair to your space with this stylish armchair. Its sleek lines and wooden accents capture the essence of retro design.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+81.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+81.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+81.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+81.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+81.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Mid-Century", "Stylish", "Retro"]
-    },
-    {
-      "name": "Minimalist Sofa",
-      "id": "82",
-      "style": "Minimalist",
-      "price": 999.0,
-      "description": "Achieve a clutter-free aesthetic with this minimalist sofa. Its clean lines and understated design bring a sense of calm to any contemporary space.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+82.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+82.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+82.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+82.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+82.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Minimalist", "Clean", "Calming"]
-    },
-    {
-      "name": "Traditional Chair",
-      "id": "83",
-      "style": "Traditional",
-      "price": 299.0,
-      "description": "Bring timeless elegance to your home with this traditional chair. Its classic silhouette and rich upholstery make it a versatile addition to any room.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+83.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+83.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+83.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+83.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+83.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Traditional", "Elegant", "Versatile"]
-    },
-    {
-      "name": "Scandinavian Armchair",
-      "id": "84",
-      "style": "Scandinavian",
-      "price": 399.0,
-      "description": "Experience the simplicity and functionality of Scandinavian design with this armchair. Its ergonomic shape and neutral tones promote comfort and relaxation.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+84.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+84.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+84.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+84.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+84.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Scandinavian", "Functional", "Comfortable"]
-    },
-    {
-      "name": "Industrial Sofa",
-      "id": "85",
-      "style": "Industrial",
-      "price": 1199.0,
-      "description": "Add industrial charm to your living space with this rugged sofa. Its metal frame and distressed leather upholstery create a bold statement.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+85.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Industrial", "Rugged", "Bold"]
-    },
-    {
-      "name": "Bohemian Sofa",
-      "id": "86",
-      "style": "Bohemian",
-      "price": 1299.0,
-      "description": "Embrace bohemian style with this vibrant sofa. Its eclectic patterns and plush cushions create a cozy and inviting atmosphere.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+86.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+86.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+86.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+86.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+86.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Bohemian", "Eclectic", "Cozy"]
-    },
-    {
-      "name": "Art Deco Armchair",
-      "id": "87",
-      "style": "Art Deco",
-      "price": 449.0,
-      "description": "Elevate your space with the glamour of Art Deco design. This armchair features luxurious materials and geometric patterns for a sophisticated look.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+87.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+87.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+87.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+87.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+87.png"
-      ],
-      "priceDiscount": 35,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Art Deco", "Luxurious", "Geometric"]
-    },
-    {
-      "name": "Scandinavian Chair",
-      "id": "88",
-      "style": "Scandinavian",
-      "price": 349.0,
-      "description": "Enhance your home with Scandinavian simplicity. This chair combines clean lines with natural materials for a calming and functional addition.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+88.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+88.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+88.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+88.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+88.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Scandinavian", "Simple", "Functional"]
-    },
-    {
-      "name": "Vintage Chair",
-      "id": "89",
-      "style": "Vintage",
-      "price": 329.0,
-      "description": "Capture the charm of yesteryear with this vintage-inspired chair. Its distressed finish and ornate details add character to any room.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+89.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+89.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+89.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+89.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+89.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Vintage", "Distressed", "Charming"]
-    },
-    {
-      "name": "Mid-Century Chair",
-      "id": "90",
-      "style": "Mid-Century",
-      "price": 379.0,
-      "description": "Add retro charm to your space with this mid-century modern chair. Its sleek lines and tapered legs evoke a sense of nostalgia and style.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+90.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+90.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+90.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+90.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+90.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Mid-Century", "Retro", "Stylish"]
-    },
-    {
-      "name": "Modern Armchair",
-      "id": "91",
-      "style": "Modern",
-      "price": 499.0,
-      "description": "Update your living space with this sleek modern armchair. Its clean lines and comfortable cushions offer both style and relaxation.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+91.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+91.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+91.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+91.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+91.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Modern", "Sleek", "Comfortable"]
-    },
-    {
-      "name": "Traditional Sofa",
-      "id": "92",
-      "style": "Traditional",
-      "price": 1399.0,
-      "description": "Bring timeless elegance to your home with this traditional sofa. Its rolled arms and rich upholstery create a classic look that never goes out of style.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+92.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+92.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+92.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+92.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+92.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Traditional", "Elegant", "Timeless"]
-    },
-    {
-      "name": "Elegant Armchair",
-      "id": "93",
-      "style": "Elegant",
-      "price": 549.0,
-      "description": "Add sophistication to your space with this elegant armchair. Its graceful curves and premium fabric upholstery create a luxurious seating option.",
-      "rate": 4.8,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+93.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+93.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+93.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+93.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+93.png"
-      ],
-      "priceDiscount": 40,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Elegant", "Sophisticated", "Luxurious"]
-    },
-    {
-      "name": "Minimalist Armchair",
-      "id": "94",
-      "style": "Minimalist",
-      "price": 299.0,
-      "description": "Achieve a minimalist look with this armchair. Its clean lines and understated design make it a perfect fit for modern interiors.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+94.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+94.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+94.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+94.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+94.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Minimalist", "Clean", "Modern"]
-    },
-    {
-      "name": "Classic Chair",
-      "id": "95",
-      "style": "Classic",
-      "price": 369.0,
-      "description": "Bring classic charm to your home with this timeless chair. Its detailed craftsmanship and sturdy construction ensure durability and style.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+95.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+95.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+95.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+95.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+95.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Classic", "Charming", "Durable"]
-    },
-    {
-      "name": "Cozy Sofa",
-      "id": "96",
-      "style": "Cozy",
-      "price": 1099.0,
-      "description": "Create a cozy retreat with this inviting sofa. Its plush cushions and soft fabric provide comfort and warmth for relaxing moments.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+96.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+96.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+96.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+96.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+96.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Cozy", "Inviting", "Comfortable"]
-    },
-    {
-      "name": "Chic Armchair",
-      "id": "97",
-      "style": "Chic",
-      "price": 599.0,
-      "description": "Add a touch of chic sophistication to your space with this stylish armchair. Its sleek design and premium upholstery elevate any room.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+97.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+97.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+97.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+97.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+97.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Chic", "Sophisticated", "Stylish"]
-    },
-    {
-      "name": "Scandinavian Armchair",
-      "id": "98",
-      "style": "Scandinavian",
-      "price": 379.0,
-      "description": "Enjoy the simplicity of Scandinavian design with this armchair. Its ergonomic shape and natural materials promote comfort and relaxation.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+98.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+98.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+98.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+98.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+98.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Scandinavian", "Comfortable", "Functional"]
-    },
-    {
-      "name": "Art Deco Sofa",
-      "id": "99",
-      "style": "Art Deco",
-      "price": 1499.0,
-      "description": "Transform your living space with the opulence of Art Deco style. This sofa features luxurious velvet upholstery and geometric shapes for a glamorous look.",
-      "rate": 4.8,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+99.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+99.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+99.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+99.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+99.png"
-      ],
-      "priceDiscount": 60,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Art Deco", "Opulent", "Luxurious"]
-    },
-    {
-      "name": "Retro Armchair",
-      "id": "100",
-      "style": "Retro",
-      "price": 349.0,
-      "description": "Add a retro touch to your home with this stylish armchair. Its vibrant colors and curved lines evoke the spirit of mid-century design.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+100.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+100.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+100.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+100.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+100.png"
+        "/products/image 62.png",
+        "/products/image 63.png"
       ],
       "priceDiscount": 30,
       "isNew": false,
       "category": "armchairs",
-      "tags": ["Retro", "Stylish", "Colorful"]
-    },
-    {
-      "name": "Modern Chair",
-      "id": "101",
-      "style": "Modern",
-      "price": 329.0,
-      "description": "Update your space with this modern chair. Its sleek silhouette and comfortable seat make it ideal for contemporary interiors.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+101.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+101.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+101.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+101.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+101.png"
+      "colors": [
+        {
+          "hex": "#556B2F",
+          "name": "dark olive green"
+        },
+        {
+          "hex": "#8B0000",
+          "name": "dark red"
+        }
       ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Modern", "Sleek", "Contemporary"]
-    },
-    {
-      "name": "Traditional Sofa",
-      "id": "102",
-      "style": "Traditional",
-      "price": 1299.0,
-      "description": "Bring classic comfort to your home with this traditional sofa. Its rolled arms and rich fabric create a timeless piece for any living room.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+102.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+102.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+102.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+102.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+102.png"
+      "sizes": [
+        {
+          "acronym": "L",
+          "name": "Large"
+        }
       ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Traditional", "Classic", "Comfortable"]
-    },
-    {
-      "name": "Vintage Armchair",
-      "id": "103",
-      "style": "Vintage",
-      "price": 399.0,
-      "description": "Add vintage charm to your space with this upholstered armchair. Its distressed wood frame and soft fabric upholstery create a warm and inviting look.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+103.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+103.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+103.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+103.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+103.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Vintage", "Charming", "Inviting"]
-    },
-    {
-      "name": "Minimalist Sofa",
-      "id": "104",
-      "style": "Minimalist",
-      "price": 999.0,
-      "description": "Achieve a minimalist look with this sleek sofa. Its clean lines and understated design complement modern interiors effortlessly.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+104.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+104.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+104.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+104.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+104.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Minimalist", "Clean", "Modern"]
-    },
-    {
-      "name": "Classic Armchair",
-      "id": "105",
-      "style": "Classic",
-      "price": 449.0,
-      "description": "Enhance your space with the timeless elegance of this classic armchair. Its rolled arms and durable fabric upholstery offer both comfort and style.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+105.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+105.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+105.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+105.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+105.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Classic", "Timeless", "Comfortable"]
-    },
-    {
-      "name": "Bohemian Armchair",
-      "id": "106",
-      "style": "Bohemian",
-      "price": 379.0,
-      "description": "Add eclectic charm to your space with this Bohemian armchair. Its vibrant patterns and plush cushions create a cozy and inviting atmosphere.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+106.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+106.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+106.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+106.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+106.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Bohemian", "Eclectic", "Cozy"]
-    },
-    {
-      "name": "Industrial Armchair",
-      "id": "107",
-      "style": "Industrial",
-      "price": 399.0,
-      "description": "Infuse industrial style into your home with this rugged armchair. Its metal frame and distressed leather upholstery create a bold statement.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+107.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+107.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+107.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+107.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+107.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Industrial", "Rugged", "Bold"]
-    },
-    {
-      "name": "Scandinavian Chair",
-      "id": "108",
-      "style": "Scandinavian",
-      "price": 299.0,
-      "description": "Enhance your home with Scandinavian simplicity. This chair combines clean lines with natural materials for a calming and functional addition.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+108.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+108.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+108.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+108.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+108.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Scandinavian", "Simple", "Functional"]
-    },
-    {
-      "name": "Art Deco Chair",
-      "id": "109",
-      "style": "Art Deco",
-      "price": 329.0,
-      "description": "Add a touch of Art Deco glamour to your space with this stylish chair. Its luxurious materials and geometric shapes create a sophisticated look.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+109.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+109.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+109.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+109.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+109.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Art Deco", "Glamour", "Sophisticated"]
-    },
-    {
-      "name": "Retro Sofa",
-      "id": "110",
-      "style": "Retro",
-      "price": 1199.0,
-      "description": "Bring retro vibes to your living space with this stylish sofa. Its vibrant colors and curved lines evoke the spirit of mid-century design.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+110.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+110.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+110.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+110.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+110.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Retro", "Stylish", "Colorful"]
-    },
-    {
-      "name": "Modern Sofa",
-      "id": "111",
-      "style": "Modern",
-      "price": 1399.0,
-      "description": "Update your living space with this sleek modern sofa. Its clean lines and comfortable cushions offer both style and relaxation.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+111.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+111.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+111.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+111.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+111.png"
-      ],
-      "priceDiscount": 60,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Modern", "Sleek", "Comfortable"]
-    },
-    {
-      "name": "Traditional Chair",
-      "id": "112",
-      "style": "Traditional",
-      "price": 349.0,
-      "description": "Bring classic elegance to your home with this traditional chair. Its detailed craftsmanship and sturdy construction ensure both comfort and durability.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+112.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+112.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+112.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+112.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+112.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Traditional", "Elegant", "Durable"]
-    },
-    {
-      "name": "Vintage Sofa",
-      "id": "113",
-      "style": "Vintage",
-      "price": 1099.0,
-      "description": "Add nostalgic charm to your living space with this vintage-inspired sofa. Its tufted back and rolled arms evoke a sense of old-world elegance.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+113.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+113.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+113.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+113.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+113.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Vintage", "Nostalgic", "Charming"]
-    },
-    {
-      "name": "Minimalist Chair",
-      "id": "114",
-      "style": "Minimalist",
-      "price": 279.0,
-      "description": "Achieve a minimalist aesthetic with this chair. Its clean lines and simple design make it a versatile addition to modern interiors.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+114.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+114.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+114.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+114.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+114.png"
-      ],
-      "priceDiscount": 15,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Minimalist", "Clean", "Versatile"]
-    },
-    {
-      "name": "Classic Sofa",
-      "id": "115",
-      "style": "Classic",
-      "price": 1299.0,
-      "description": "Bring timeless elegance to your living room with this classic sofa. Its rolled arms and rich upholstery create a sophisticated focal point.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+115.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+115.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+115.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+115.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+115.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Classic", "Timeless", "Elegant"]
-    },
-    {
-      "name": "Elegant Sofa",
-      "id": "116",
-      "style": "Elegant",
-      "price": 1499.0,
-      "description": "Add a touch of elegance to your living space with this sophisticated sofa. Its graceful curves and premium fabric upholstery create a luxurious seating option.",
-      "rate": 4.8,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+116.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+116.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+116.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+116.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+116.png"
-      ],
-      "priceDiscount": 60,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Elegant", "Sophisticated", "Luxurious"]
-    },
-
-    {
-      "name": "Cozy Armchair",
-      "id": "117",
-      "style": "Cozy",
-      "price": 329.0,
-      "description": "Create a cozy corner in your home with this inviting armchair. Its plush cushions and soft fabric provide comfort for relaxing evenings.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+117.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+117.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+117.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+117.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+117.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Cozy", "Comfortable", "Inviting"]
-    },
-    {
-      "name": "Chic Sofa",
-      "id": "118",
-      "style": "Chic",
-      "price": 1199.0,
-      "description": "Add a touch of chic sophistication to your living room with this stylish sofa. Its sleek design and premium upholstery elevate any decor.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+118.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+118.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+118.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+118.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+118.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": true,
-      "category": "sofas",
-      "tags": ["Chic", "Sophisticated", "Stylish"]
-    },
-    {
-      "name": "Scandinavian Chair",
-      "id": "119",
-      "style": "Scandinavian",
-      "price": 269.0,
-      "description": "Enhance your home with Scandinavian simplicity. This chair combines clean lines with natural materials for a calming and functional addition.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+119.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+119.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+119.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+119.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+119.png"
-      ],
-      "priceDiscount": 15,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Scandinavian", "Simple", "Functional"]
-    },
-    {
-      "name": "Art Deco Chair",
-      "id": "120",
-      "style": "Art Deco",
-      "price": 299.0,
-      "description": "Infuse Art Deco glamour into your space with this stylish chair. Its luxurious materials and geometric shapes create a sophisticated look.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+120.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+120.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+120.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+120.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+120.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Art Deco", "Glamour", "Sophisticated"]
-    },
-    {
-      "name": "Retro Chair",
-      "id": "121",
-      "style": "Retro",
-      "price": 279.0,
-      "description": "Add a retro vibe to your space with this stylish chair. Its vibrant colors and curved lines evoke the spirit of mid-century design.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+121.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+121.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+121.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+121.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+121.png"
-      ],
-      "priceDiscount": 15,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Retro", "Stylish", "Colorful"]
-    },
-    {
-      "name": "Modern Chair",
-      "id": "122",
-      "style": "Modern",
-      "price": 249.0,
-      "description": "Update your space with this modern chair. Its sleek silhouette and comfortable seat make it ideal for contemporary interiors.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+122.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+122.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+122.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+122.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+122.png"
-      ],
-      "priceDiscount": 10,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Modern", "Sleek", "Contemporary"]
-    },
-    {
-      "name": "Traditional Chair",
-      "id": "123",
-      "style": "Traditional",
-      "price": 329.0,
-      "description": "Bring classic elegance to your home with this traditional chair. Its detailed craftsmanship and sturdy construction ensure both comfort and durability.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+123.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+123.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+123.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+123.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+123.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Traditional", "Elegant", "Durable"]
-    },
-    {
-      "name": "Vintage Chair",
-      "id": "124",
-      "style": "Vintage",
-      "price": 299.0,
-      "description": "Add vintage charm to your space with this upholstered chair. Its distressed wood frame and soft fabric upholstery create a warm and inviting look.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+124.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+124.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+124.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+124.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+124.png"
-      ],
-      "priceDiscount": 15,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Vintage", "Charming", "Inviting"]
-    },
-    {
-      "name": "Minimalist Chair",
-      "id": "125",
-      "style": "Minimalist",
-      "price": 259.0,
-      "description": "Achieve a minimalist aesthetic with this chair. Its clean lines and simple design make it a versatile addition to modern interiors.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+125.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+125.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+125.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+125.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+125.png"
-      ],
-      "priceDiscount": 10,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Minimalist", "Clean", "Versatile"]
-    },
-    {
-      "name": "Classic Chair",
-      "id": "126",
-      "style": "Classic",
-      "price": 299.0,
-      "description": "Enhance your space with the timeless elegance of this classic chair. Its rolled arms and durable fabric upholstery offer both comfort and style.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+126.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+126.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+126.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+126.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+126.png"
-      ],
-      "priceDiscount": 15,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Classic", "Timeless", "Comfortable"]
-    },
-    {
-      "name": "Bohemian Sofa",
-      "id": "127",
-      "style": "Bohemian",
-      "price": 1299.0,
-      "description": "Add eclectic charm to your living space with this Bohemian sofa. Its vibrant patterns and plush cushions create a cozy and inviting atmosphere.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+127.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+127.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+127.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+127.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+127.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Bohemian", "Eclectic", "Cozy"]
-    },
-    {
-      "name": "Industrial Sofa",
-      "id": "128",
-      "style": "Industrial",
-      "price": 1399.0,
-      "description": "Infuse industrial style into your home with this rugged sofa. Its metal frame and distressed leather upholstery create a bold statement.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+128.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+128.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+128.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+128.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+128.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Industrial", "Rugged", "Bold"]
-    },
-    {
-      "name": "Scandinavian Sofa",
-      "id": "129",
-      "style": "Scandinavian",
-      "price": 1099.0,
-      "description": "Embrace the minimalist beauty of Scandinavian design with this sleek and functional Scandinavian sofa. Its clean lines and neutral tones create a sense of calm and tranquility.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+129.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+129.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+129.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+129.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+129.png"
-      ],
-      "priceDiscount": 50,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Scandinavian", "Minimalist", "Functional", "Relaxing"]
-    },
-    {
-      "name": "Art Deco Sofa",
-      "id": "130",
-      "style": "Art Deco",
-      "price": 1499.0,
-      "description": "Transform your living space with the opulence of Art Deco style. This sofa features luxurious velvet upholstery and geometric shapes for a glamorous look.",
-      "rate": 4.8,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+130.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+130.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+130.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+130.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+130.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Art Deco", "Opulent", "Luxurious"]
-    },
-    {
-      "name": "Retro Armchair",
-      "id": "131",
-      "style": "Retro",
-      "price": 349.0,
-      "description": "Add a retro touch to your home with this stylish armchair. Its vibrant colors and curved lines evoke the spirit of mid-century design.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+131.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+131.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+131.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+131.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+131.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Retro", "Stylish", "Colorful"]
-    },
-    {
-      "name": "Modern Chair",
-      "id": "132",
-      "style": "Modern",
-      "price": 329.0,
-      "description": "Update your space with this modern chair. Its sleek silhouette and comfortable seat make it ideal for contemporary interiors.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+132.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+132.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+132.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+132.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+132.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Modern", "Sleek", "Contemporary"]
-    },
-    {
-      "name": "Traditional Sofa",
-      "id": "133",
-      "style": "Traditional",
-      "price": 1299.0,
-      "description": "Bring classic comfort to your home with this traditional sofa. Its rolled arms and rich fabric create a timeless piece for any living room.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+133.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+133.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+133.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+133.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+133.png"
-      ],
-      "priceDiscount": 55,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Traditional", "Classic", "Comfortable"]
-    },
-    {
-      "name": "Vintage Armchair",
-      "id": "134",
-      "style": "Vintage",
-      "price": 399.0,
-      "description": "Add vintage charm to your space with this upholstered armchair. Its distressed wood frame and soft fabric upholstery create a warm and inviting look.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+134.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+134.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+134.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+134.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+134.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Vintage", "Charming", "Inviting"]
-    },
-    {
-      "name": "Minimalist Sofa",
-      "id": "135",
-      "style": "Minimalist",
-      "price": 999.0,
-      "description": "Achieve a minimalist look with this sleek sofa. Its clean lines and understated design complement modern interiors effortlessly.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+135.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+135.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+135.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+135.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+135.png"
-      ],
-      "priceDiscount": 45,
-      "isNew": false,
-      "category": "sofas",
-      "tags": ["Minimalist", "Clean", "Modern"]
-    },
-    {
-      "name": "Classic Armchair",
-      "id": "136",
-      "style": "Classic",
-      "price": 449.0,
-      "description": "Enhance your space with the timeless elegance of this classic armchair. Its rolled arms and durable fabric upholstery offer both comfort and style.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+136.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+136.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+136.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+136.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+136.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Classic", "Timeless", "Comfortable"]
-    },
-    {
-      "name": "Bohemian Chair",
-      "id": "137",
-      "style": "Bohemian",
-      "price": 279.0,
-      "description": "Add eclectic charm to your space with this Bohemian chair. Its vibrant patterns and plush cushions create a cozy and inviting atmosphere.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+137.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+137.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+137.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+137.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+137.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Bohemian", "Eclectic", "Cozy"]
-    },
-    {
-      "name": "Industrial Chair",
-      "id": "138",
-      "style": "Industrial",
-      "price": 299.0,
-      "description": "Infuse industrial style into your home with this rugged chair. Its metal frame and distressed leather upholstery create a bold statement.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+138.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+138.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+138.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+138.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+138.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Industrial", "Rugged", "Bold"]
-    },
-    {
-      "name": "Scandinavian Armchair",
-      "id": "139",
-      "style": "Scandinavian",
-      "price": 349.0,
-      "description": "Enhance your home with Scandinavian simplicity. This armchair combines clean lines with natural materials for a calming and functional addition.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+139.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+139.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+139.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+139.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+139.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Scandinavian", "Simple", "Functional"]
-    },
-    {
-      "name": "Art Deco Armchair",
-      "id": "140",
-      "style": "Art Deco",
-      "price": 329.0,
-      "description": "Infuse Art Deco glamour into your space with this stylish armchair. Its luxurious materials and geometric shapes create a sophisticated look.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+140.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+140.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+140.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+140.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+140.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Art Deco", "Glamour", "Sophisticated"]
-    },
-    {
-      "name": "Retro Chair",
-      "id": "141",
-      "style": "Retro",
-      "price": 279.0,
-      "description": "Add a retro touch to your home with this stylish chair. Its vibrant colors and curved lines evoke the spirit of mid-century design.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+141.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+141.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+141.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+141.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+141.png"
-      ],
-      "priceDiscount": 15,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Retro", "Stylish", "Colorful"]
-    },
-    {
-      "name": "Modern Armchair",
-      "id": "142",
-      "style": "Modern",
-      "price": 299.0,
-      "description": "Update your space with this modern armchair. Its sleek silhouette and comfortable seat make it ideal for contemporary interiors.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+142.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+142.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+142.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+142.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+142.png"
-      ],
-      "priceDiscount": 25,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Modern", "Sleek", "Contemporary"]
-    },
-    {
-      "name": "Traditional Chair",
-      "id": "143",
-      "style": "Traditional",
-      "price": 329.0,
-      "description": "Bring classic elegance to your home with this traditional chair. Its detailed craftsmanship and sturdy construction ensure both comfort and durability.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+143.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+143.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+143.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+143.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+143.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Traditional", "Elegant", "Durable"]
-    },
-    {
-      "name": "Vintage Chair",
-      "id": "144",
-      "style": "Vintage",
-      "price": 299.0,
-      "description": "Add vintage charm to your space with this upholstered chair. Its distressed wood frame and soft fabric upholstery create a warm and inviting look.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+144.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+144.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+144.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+144.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+144.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Vintage", "Charming", "Inviting"]
-    },
-    {
-      "name": "Minimalist Chair",
-      "id": "145",
-      "style": "Minimalist",
-      "price": 259.0,
-      "description": "Achieve a minimalist aesthetic with this chair. Its clean lines and simple design make it a versatile addition to modern interiors.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+145.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+145.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+145.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+145.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+145.png"
-      ],
-      "priceDiscount": 10,
-      "isNew": false,
-      "category": "chairs",
-      "tags": ["Minimalist", "Clean", "Versatile"]
-    },
-    {
-      "name": "Classic Chair",
-      "id": "146",
-      "style": "Classic",
-      "price": 299.0,
-      "description": "Enhance your space with the timeless elegance of this classic chair. Its rolled arms and durable fabric upholstery offer both comfort and style.",
-      "rate": 4.5,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+146.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+146.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+146.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+146.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+146.png"
-      ],
-      "priceDiscount": 15,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Classic", "Timeless", "Comfortable"]
-    },
-    {
-      "name": "Elegant Chair",
-      "id": "147",
-      "style": "Elegant",
-      "price": 349.0,
-      "description": "Add a touch of elegance to your living space with this sophisticated chair. Its graceful curves and premium fabric upholstery create a luxurious seating option.",
-      "rate": 4.7,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+147.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+147.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+147.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+147.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+147.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Elegant", "Sophisticated", "Luxurious"]
-    },
-    {
-      "name": "Bohemian Armchair",
-      "id": "148",
-      "style": "Bohemian",
-      "price": 349.0,
-      "description": "Add eclectic charm to your space with this Bohemian armchair. Its vibrant patterns and plush cushions create a cozy and inviting atmosphere.",
-      "rate": 4.4,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+148.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+148.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+148.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+148.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+148.png"
-      ],
-      "priceDiscount": 0,
-      "isNew": false,
-      "category": "armchairs",
-      "tags": ["Bohemian", "Eclectic", "Cozy"]
-    },
-    {
-      "name": "Industrial Armchair",
-      "id": "149",
-      "style": "Industrial",
-      "price": 379.0,
-      "description": "Infuse industrial style into your home with this rugged armchair. Its metal frame and distressed leather upholstery create a bold statement.",
-      "rate": 4.3,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+149.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+149.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+149.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+149.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+149.png"
-      ],
-      "priceDiscount": 30,
-      "isNew": true,
-      "category": "armchairs",
-      "tags": ["Industrial", "Rugged", "Bold"]
-    },
-    {
-      "name": "Scandinavian Chair",
-      "id": "150",
-      "style": "Scandinavian",
-      "price": 289.0,
-      "description": "Enhance your home with Scandinavian simplicity. This chair combines clean lines with natural materials for a calming and functional addition.",
-      "rate": 4.6,
-      "images": [
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+150.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+150.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+150.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+150.png",
-        "https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+150.png"
-      ],
-      "priceDiscount": 20,
-      "isNew": true,
-      "category": "chairs",
-      "tags": ["Scandinavian", "Simple", "Functional"]
+      "tags": [
+        "Classic",
+        "Wingback",
+        "Elegant"
+      ]
     }
   ]
 }

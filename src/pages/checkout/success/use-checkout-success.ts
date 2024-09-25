@@ -1,29 +1,21 @@
-import { useDispatch } from 'react-redux'
-import { ICartItem } from '../../../stores/modules/cart/types'
-import { clearProductToCart } from '../../../stores/modules/cart/actions'
-import { useEffect } from 'react'
+import { useAppDispatch } from '@/stores'
 import { CalcTotal } from '../../../utils/calc-total'
-
-type FinishedCart = {
-  items: ICartItem[]
-  orderData: Date
-  orderID: string
-  paymentMethod: string
-}
+import { useEffect } from 'react'
+import { clearCart } from '@/stores/modules/cart'
+import { useParams } from 'react-router-dom'
+import { useGetOrderByIDQuery } from '@/stores/modules/orders'
 
 export function useCheckoutSuccess() {
-  const finishedCart =
-    (JSON.parse(
-      sessionStorage.getItem('finishedCart') || '[]',
-    ) as FinishedCart) || []
+  const dispatch = useAppDispatch()
+  const { id } = useParams()
 
-  const dispatch = useDispatch()
+  const { isLoading, data } = useGetOrderByIDQuery(id || '')
+
+  const { total } = CalcTotal(data?.items || [])
 
   useEffect(() => {
-    dispatch(clearProductToCart())
+    dispatch(clearCart())
   }, [dispatch])
 
-  const { total } = CalcTotal(finishedCart.items || [])
-
-  return { total, finishedCart }
+  return { total, isLoading, data }
 }

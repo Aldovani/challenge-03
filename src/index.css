@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   body {
     overflow-x: hidden;
@@ -16,7 +16,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -24,14 +24,13 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-400;
-
+  @apply bg-gray-500;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-500;
-
+  @apply bg-gray-500;
 }
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;

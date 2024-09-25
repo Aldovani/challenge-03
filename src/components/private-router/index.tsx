@@ -7,7 +7,6 @@ type PrivateRouterProps = {
 }
 export function PrivateRouter({ children, to }: PrivateRouterProps) {
   const { user } = useAuth()
-  console.log({ user })
   if (!user) return <Navigate to={to || '/auth/sign-in'} />
 
   return <>{children}</>

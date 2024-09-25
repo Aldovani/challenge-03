@@ -2,16 +2,19 @@ import { render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { NotFoundPage } from '../../pages/not-found'
 import { MemoryRouter } from 'react-router-dom'
+import { Providers } from '@/providers'
 
-vi.mock('react-redux', () => ({
-  useSelector: () => {},
+vi.mock('@/components/header', () => ({
+  Header: () => 'header',
 }))
 
 describe('<NotFoundPage/>', () => {
   it('should be able to rende the page', () => {
     render(
       <MemoryRouter>
-        <NotFoundPage />
+        <Providers>
+          <NotFoundPage />
+        </Providers>
       </MemoryRouter>,
     )
 

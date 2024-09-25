@@ -8,7 +8,12 @@ vi.mock('react-redux', () => ({
   useSelector: () => FactoryICartItem(7),
   useDispatch: () => vi.fn(),
 }))
-vi.mock('../../components/slide', () => ({
+
+vi.mock('@/pages/home/components/products', () => ({
+  Products: () => 'products',
+}))
+
+vi.mock('@/pages/home/components/slide', () => ({
   Slide: () => <div>slide</div>,
 }))
 

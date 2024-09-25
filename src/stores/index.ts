@@ -1,35 +1,28 @@
-import { applyMiddleware, createStore, Reducer } from 'redux'
-import rootReducer from './modules/root-reducer'
-import { ICartState } from './modules/cart/types'
-import { thunk } from 'redux-thunk'
-import { IProductState } from './modules/products/types'
+import { configureStore } from '@reduxjs/toolkit'
+import { cart, contact, ordersApi, productsApi } from './modules'
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
+import { setupListeners } from '@reduxjs/toolkit/query'
 
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
-import { composeWithDevTools } from 'redux-devtools-extension'
+export const store = configureStore({
+  devTools: true,
+  reducer: {
+    cart,
+    contact,
+    [productsApi.reducerPath]: productsApi.reducer,
+    [ordersApi.reducerPath]: ordersApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat([
+      productsApi.middleware,
+      ordersApi.middleware,
+    ]),
+})
 
-export interface IState {
-  cart: ICartState
-  products: IProductState
-}
+setupListeners(store.dispatch)
 
-const persistConfig = {
-  key: 'root',
-  storage,
-}
-
-const persistedReducer = persistReducer(
-  persistConfig,
-  rootReducer as unknown as Reducer,
-)
-
-const store = createStore(
-  persistedReducer,
-  composeWithDevTools(applyMiddleware(thunk)),
-)
-
+export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 
-const persistor = persistStore(store)
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
-export { store, persistor }
+export const useAppDispatch: () => AppDispatch = useDispatch
