@@ -5,14 +5,17 @@ const INITIAL_STATE: ICartState = {
   items: [],
 }
 
-const cartSlice = createSlice({
+export const cartSlice = createSlice({
   name: 'cart',
   initialState: INITIAL_STATE,
   reducers: {
     addProduct(state, action: PayloadAction<IProduct>) {
       const product = action.payload
       const productInCartIndex = state.items.findIndex(
-        (item) => item.product.id === product.id,
+        (item) =>
+          item.product.id === product.id &&
+          item.product.color === product.color &&
+          item.product.size === product.size,
       )
 
       if (productInCartIndex > -1) {
@@ -22,10 +25,13 @@ const cartSlice = createSlice({
       }
     },
 
-    removeProduct(state, action: PayloadAction<{ productId: string }>) {
-      const { productId } = action.payload
+    removeProduct(state, action: PayloadAction<IProduct>) {
+      const product = action.payload
       const productInCartIndex = state.items.findIndex(
-        (item) => item.product.id === productId,
+        (item) =>
+          item.product.id === product.id &&
+          item.product.color === product.color &&
+          item.product.size === product.size,
       )
 
       if (productInCartIndex === -1) {
@@ -37,22 +43,25 @@ const cartSlice = createSlice({
       if (productQuantity > 1) {
         state.items[productInCartIndex].quantity--
       } else {
-        const newState = state.items.filter(
-          (item) => item.product.id !== productId,
-        )
-
-        return { items: newState }
+        state.items.splice(productInCartIndex, 1)
       }
 
-      return { items: [...state.items] }
+      state.items = [...state.items]
     },
 
-    deleteProduct(state, action: PayloadAction<{ productId: string }>) {
-      const { productId } = action.payload
+    deleteProduct(state, action: PayloadAction<IProduct>) {
+      const product = action.payload
 
-      const newState = state.items.filter(
-        (item) => item.product.id !== productId,
-      )
+      const newState = state.items.filter((item) => {
+        if (
+          item.product.id === product.id &&
+          item.product.color === product.color &&
+          item.product.size === product.size
+        )
+          return false
+
+        return true
+      })
 
       state.items = newState
     },

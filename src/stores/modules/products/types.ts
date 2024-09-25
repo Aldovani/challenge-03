@@ -1,9 +1,3 @@
-export enum ActionTypes {
-  fetchDataRequest = 'FETCH_DATA_REQUEST',
-  fetchDataSuccess = 'FETCH_DATA_SUCCESS',
-  fetchDataFailure = 'FETCH_DATA_FAILURE',
-}
-
 export interface IProduct {
   id: string
   name: string
@@ -16,6 +10,8 @@ export interface IProduct {
   isNew: boolean
   category: string
   tags: string[]
+  colors: { name: string; hex: string }[]
+  sizes?: { name: string; acronym: string }[]
 }
 
 export interface IProductState {

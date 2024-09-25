@@ -3,8 +3,16 @@ import { describe, expect, it, vi } from 'vitest'
 import { CheckoutSuccessPage } from '../../pages/checkout/success'
 import { MemoryRouter } from 'react-router-dom'
 
-vi.mock('react-redux', () => ({
-  useDispatch: () => vi.fn(),
+vi.mock('@/pages/checkout/success/use-checkout-success.ts', () => ({
+  useCheckoutSuccess: () => ({
+    data: undefined,
+    isLoading: false,
+    total: 100,
+  }),
+}))
+vi.mock('@splidejs/react-splide', () => ({
+  Splide: 'Splide',
+  SplideSlide: 'SplideSlide',
 }))
 
 describe('<CheckoutSuccessPage/>', () => {
@@ -19,6 +27,6 @@ describe('<CheckoutSuccessPage/>', () => {
       name: /Your order is on its way!/i,
     })
 
-    expect(title).not.toBeInTheDocument()
+    expect(title).toBeInTheDocument()
   })
 })

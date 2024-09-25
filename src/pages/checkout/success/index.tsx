@@ -1,72 +1,70 @@
-import { Link as LinkReactRouter, Navigate } from 'react-router-dom'
-import { ICONS } from '../../../assets/icons'
-import { IMAGES } from '../../../assets/images'
-import { Link } from '../../../components/Link'
-import { Splide, SplideSlide } from '@splidejs/react-splide'
-import { FormateMoney } from '../../../utils/formate-money'
+import { Link as LinkReactRouter } from 'react-router-dom'
+import BGCheckoutSuccess from '@/assets/checkout-success.png'
+import { Link } from '../../../components/ui/Link'
 import { useCheckoutSuccess } from './use-checkout-success'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { FormateMoney } from '@/utils/formate-money'
+import { Logo } from '@/components/ui/logo'
 
 export function CheckoutSuccessPage() {
-  const { finishedCart, total } = useCheckoutSuccess()
+  const { data, total, isLoading } = useCheckoutSuccess()
 
-  if (total === 0) return <Navigate to="/shop" />
+  if (isLoading) return <h1>Loading</h1>
 
   return (
-    <div className="grid lg:grid-cols-[50%_50%] overflow-y-hidden min-h-screen ">
+    <div className="grid lg:grid-cols-[.5fr_1fr] overflow-y-hidden min-h-screen ">
       <div
-        style={{ backgroundImage: `url(${IMAGES['auth-background']})` }}
+        style={{ backgroundImage: `url(${BGCheckoutSuccess})` }}
         className="hidden lg:block h-full bg-[100%] bg-cover"
       ></div>
 
       <div>
         <main className="flex flex-col py-8  sm:py-10 px-8 sm:px-20">
           <LinkReactRouter to="/">
-            <img src={ICONS.logo} alt="Logo Furniro" className="w-32" />
+            <Logo variants="black" />
           </LinkReactRouter>
 
           <section className="mt-10">
-            <h1 className="sm:text-64 text-4xl font-eb-garamond font-bold  text-gray-500">
+            <h1 className="sm:text-64 text-4xl font-manrope font-bold  text-zinc-900">
               Your order is on its way!
             </h1>
-            <p className="mt-2 text-gray-200 max-w-96  ">
+            <p className="mt-2 text-zinc-400 max-w-96  ">
               Thank you for your purchase from our store! We are very happy to
               have you as a customer.
             </p>
           </section>
 
           <section className="mt-8">
-            <h3 className="font-semibold text-gray-200 text-xl">
-              Order Details:
-            </h3>
+            <h3 className="text-zinc-400">Details</h3>
 
-            <ul className="flex flex-col  sm:gap-2 mt-5 max-w-[320px]">
+            <ul className="flex flex-col  sm:gap-2 mt-4 max-w-[320px]">
               <li>
                 <div className="flex justify-between">
-                  <span className="text-gray-200">Order Number</span>
-                  <span className="font-medium">#{finishedCart.orderID}</span>
+                  <span className="text-zinc-400">Order Number</span>
+                  <span className="font-medium">#{data?.orderID}</span>
                 </div>
               </li>
               <li>
                 <div className="flex justify-between">
-                  <span className="text-gray-200">Order Date: </span>
-                  <span className="font-medium">
-                    {new Date(finishedCart.orderData).toLocaleDateString(
-                      'pt-br',
-                    )}
+                  <span className="text-zinc-400">Order Date: </span>
+                  <span className="font-medium text-zinc-800">
+                    {data?.orderData}
                   </span>
                 </div>
               </li>
               <li>
                 <div className="flex justify-between">
-                  <span className="text-gray-200">Total Amount: </span>
-                  <span className="font-medium">{FormateMoney(total)}</span>
+                  <span className="text-zinc-400">Total Amount: </span>
+                  <span className="font-medium text-zinc-800">
+                    {FormateMoney(total)}
+                  </span>
                 </div>
               </li>
               <li>
                 <div className="flex justify-between">
-                  <span className="text-gray-200">Payment Method: </span>
-                  <span className="font-medium">
-                    {finishedCart.paymentMethod}
+                  <span className="text-zinc-400">Payment Method: </span>
+                  <span className="font-medium text-zinc-800">
+                    {data?.paymentMethod}
                   </span>
                 </div>
               </li>
@@ -74,7 +72,7 @@ export function CheckoutSuccessPage() {
           </section>
 
           <section className="mt-8 ">
-            <h3 className="font-semibold text-gray-200 text-xl">Products</h3>
+            <h3 className=" text-zinc-400 ">Products</h3>
 
             <div className="mt-3 w-full">
               <Splide
@@ -88,7 +86,7 @@ export function CheckoutSuccessPage() {
                   },
                 }}
               >
-                {finishedCart?.items.map((item) => (
+                {data?.items.map((item) => (
                   <SplideSlide key={item.product.id}>
                     <LinkReactRouter
                       to={`/shop/${item.product.id}`}
@@ -105,18 +103,25 @@ export function CheckoutSuccessPage() {
                           {item.product.name}
                         </h3>
 
-                        <div className="mt-2">
-                          <strong className="text-gray-500 text-xl font-semibold">
-                            {FormateMoney(item.product.price)}
+                        <div className="mt-2 flex gap-4">
+                          <strong className="text-zinc-900 text-xl font-semibold">
+                            {FormateMoney(item.product.price * item.quantity)}
                           </strong>
+                          <span className="text-zinc-400 text-xl font-semibold">
+                            x{item.quantity}
+                          </span>
                         </div>
-                        <div className="mt-2 flex justify-between items-center">
-                          <strong className="text-gray-500 text-xl font-semibold">
-                            {item.quantity}
-                          </strong>
-                          <strong className="text-gray-500 text-xl font-semibold">
-                            {FormateMoney(item.product.price)}
-                          </strong>
+                        <div className="mt-2 flex gap-4 items-center">
+                          <div className=" text-zinc-400">
+                            <span> color:</span>
+                            <span> {item.product.color}</span>
+                          </div>
+                          {item.product.size && (
+                            <div className=" text-zinc-400">
+                              <span> Size:</span>
+                              <span> {item.product.size}</span>
+                            </div>
+                          )}
                         </div>
                       </main>
                     </LinkReactRouter>
@@ -125,7 +130,7 @@ export function CheckoutSuccessPage() {
               </Splide>
             </div>
           </section>
-          <Link to="/shop" className="max-w-[400px] mt-8">
+          <Link to="/shop" className="max-sm:px-8 sm:max-w-[400px] mt-8">
             Continue shopping
           </Link>
         </main>

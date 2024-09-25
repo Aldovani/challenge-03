@@ -5,7 +5,7 @@ const INITIAL_STATE: IContactState = {
   contacts: [],
 }
 
-const contactSlice = createSlice({
+export const contactSlice = createSlice({
   name: 'contact',
   initialState: INITIAL_STATE,
   reducers: {

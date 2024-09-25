@@ -14,11 +14,11 @@ export const productsApi = createApi({
       query: (data) => {
         const filterPayload = {
           isNew: data.isNew || '',
-          isOnSales: data.isOnSales || '',
+          priceDiscount_gte: data.isOnSales || '0',
           _page: String(data.page || '1'),
           _per_page: String(data.perPage || '16'),
-          priceFrom: String(data.priceFrom || ''),
-          priceTo: String(data.priceTo || ''),
+          price_lte: String(data.priceTo || ''),
+          price_gte: String(data.priceFrom || ''),
           _sort: data.sort || '',
           category: data.type || '',
         }

@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { cart, contact } from './modules'
+import { cart, contact, ordersApi, productsApi } from './modules'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import { productsApi } from './modules/products/products-api'
 import { setupListeners } from '@reduxjs/toolkit/query'
 
 export const store = configureStore({
@@ -10,9 +9,13 @@ export const store = configureStore({
     cart,
     contact,
     [productsApi.reducerPath]: productsApi.reducer,
+    [ordersApi.reducerPath]: ordersApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(productsApi.middleware),
+    getDefaultMiddleware().concat([
+      productsApi.middleware,
+      ordersApi.middleware,
+    ]),
 })
 
 setupListeners(store.dispatch)

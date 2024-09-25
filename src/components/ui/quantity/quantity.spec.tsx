@@ -1,0 +1,34 @@
+import { render, screen } from '@testing-library/react'
+import { Quantity } from './index'
+import { describe, expect, it, vi } from 'vitest'
+
+const product = {
+  id: '1',
+  imgUrl: 'https://furniro-pb.s3.us-east-2.amazonaws.com/products/image+2.png',
+  name: 'Mid-Century Modern Sofa',
+  price: 5000,
+  color: 'black',
+  size: 'Entra large',
+  discount: 0,
+}
+
+const mockDispatch = vi.fn()
+
+vi.mock('react-redux', () => ({
+  useSelector: () => 0,
+  useDispatch: () => mockDispatch,
+}))
+
+describe('<Quantity/>', () => {
+  it('Render the Quantity component', () => {
+    render(<Quantity product={product} />)
+    const minuisButton = screen.getByRole('button', {
+      name: '-',
+    })
+    const addButton = screen.getByRole('button', {
+      name: '+',
+    })
+    expect(minuisButton).toBeInTheDocument()
+    expect(addButton).toBeInTheDocument()
+  })
+})

@@ -1,18 +1,28 @@
-import { Products } from '../../services/api/products'
+import type { Products } from '@/types/products'
 import { ProductListLoading } from './loading'
 import { ProductItem } from './product-item'
+import { ProductListEmpty } from './empty'
 
 type ProductListProps = {
   items: Products[] | undefined
   isLoading?: boolean
+  className?: string
 }
 
-export function ProductList({ items, isLoading = false }: ProductListProps) {
+export function ProductList({
+  items,
+  isLoading = false,
+  className,
+}: ProductListProps) {
+  const isProductListEmpty = items?.length === 0
   return (
     <>
       {isLoading && <ProductListLoading />}
-      {!isLoading && (
-        <section className="grid px-8 sm:px-0 grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  xl:grid-cols-4 gap-x-8 gap-y-10">
+
+      {!isLoading && isProductListEmpty && <ProductListEmpty />}
+
+      {!isLoading && !isProductListEmpty && (
+        <section className={className}>
           {items?.map((item) => <ProductItem key={item.id} product={item} />)}
         </section>
       )}

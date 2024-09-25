@@ -2,7 +2,6 @@ import { AuthProvider } from './auth-provider'
 import { Provider as ReduxProvider } from 'react-redux'
 
 import { store } from '../stores'
-
 type ProvidersProps = {
   children?: React.ReactNode
 }

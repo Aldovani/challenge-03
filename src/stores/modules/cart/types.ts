@@ -3,6 +3,9 @@ export type IProduct = {
   name: string
   imgUrl: string
   price: number
+  discount: number
+  color: string
+  size: string | null
 }
 
 export type ICartItem = {

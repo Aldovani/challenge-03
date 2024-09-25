@@ -16,7 +16,7 @@ export function useProductDetails() {
   const { isLoading: isProductsRelatedLoading, data: productsRelated } =
     useGetProductsQuery(
       {
-        perPage: 8,
+        perPage: 6,
         page: 1,
         type: product?.category,
       },

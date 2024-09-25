@@ -1,19 +1,21 @@
+import { useAppDispatch } from '@/stores'
 import { CalcTotal } from '../../../utils/calc-total'
-
-type FinishedCart = {
-  orderData: Date
-  orderID: string
-  paymentMethod: string
-  items: any
-}
+import { useEffect } from 'react'
+import { clearCart } from '@/stores/modules/cart'
+import { useParams } from 'react-router-dom'
+import { useGetOrderByIDQuery } from '@/stores/modules/orders'
 
 export function useCheckoutSuccess() {
-  const finishedCart =
-    (JSON.parse(
-      sessionStorage.getItem('finishedCart') || '[]',
-    ) as FinishedCart) || []
+  const dispatch = useAppDispatch()
+  const { id } = useParams()
 
-  const { total } = CalcTotal(finishedCart.items || [])
+  const { isLoading, data } = useGetOrderByIDQuery(id || '')
 
-  return { total, finishedCart }
+  const { total } = CalcTotal(data?.items || [])
+
+  useEffect(() => {
+    dispatch(clearCart())
+  }, [dispatch])
+
+  return { total, isLoading, data }
 }

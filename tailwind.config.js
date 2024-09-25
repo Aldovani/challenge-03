@@ -4,9 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        lato: 'Lato',
+        lato: 'Lato,  sans-serif',
+        manrope: 'Manrope, sans-serif',
       },
-
+      fontSize: { '3.5xl': '2rem' },
       colors: {
         primary: {
           500: '#B88E2F',
@@ -34,8 +35,8 @@ export default {
       },
       keyframes: {
         'open-cart': {
-          '0%': { transform: 'translateX(100%)', opacity: 0 },
-          '100%': { transform: 'translateX(0)', opacity: 1 },
+          '0%': { transform: 'translateX(100%) ', opacity: 0 },
+          '100%': { transform: 'translateX(0) ', opacity: 1 },
         },
         'open-filter': {
           '0%': { transform: 'translateX(-100%)', opacity: 0 },
